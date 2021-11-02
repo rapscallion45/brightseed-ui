@@ -1,0 +1,123 @@
+/**
+ * File Name: _social.scss
+ * Description: Brightseed website theme social component styling
+ * Version: 1.0.0
+ * Author: Carl Scrivener
+ * Author URI: http://brightseed.io
+ * Theme URI: http://brightseed.io
+ *
+ * Copyright: ©, 2020, Carl Scrivener. All rights reserved.
+ */
+#social {
+	background-color: $secondary-background-color;
+	padding: 0;
+	.overlay {
+		padding: 100px 0 120px;
+		padding: 50px 0 100px;
+	}
+	.sec-title {
+		margin-bottom: 0;
+		h1 {
+			margin-bottom: 30px;
+		}
+	}
+	.social-bar {
+		margin-top: 10px !important;
+	}
+	@include lg {
+		.overlay {
+			padding: 50px 0 50px;
+		}
+		.sec-title {
+			padding: 0 20px;
+			h1 {
+				float: left;
+			}
+		}
+	};
+	@include rwd(992) {
+		.sec-title {
+			padding: 0 100px;
+		}
+	}
+	@include xl {
+		.sec-title {
+			padding: 0 200px;
+		}
+	}
+}
+.social-button {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+	li {
+		display: inline-block;
+		margin: 0 5px;
+		a {
+			border: 2px solid $text-color;
+			padding-top: 3px;
+			border-radius: 50%;
+			color: $text-color;
+			display: block;
+			height: 50px;
+			line-height: 56px;
+			width: 50px;
+			font-size: 20px;
+			-webkit-transition: all 0.2s ease 0s;
+			-moz-transition: all 0.2s ease 0s;
+			-ms-transition: all 0.2s ease 0s;
+			-o-transition: all 0.2s ease 0s;
+			transition: all 0.2s ease 0s;
+			i {
+				font-size: 1.5em !important;
+			}
+			&:hover {
+				color: $brand-color;
+				border: 2px solid $brand-color;
+			}
+			@include rwd(450) {
+				height: 65px;
+				line-height: 71px;
+				width: 65px;
+			}
+			@include md {
+				height: 90px;
+				line-height: 96px;
+				width: 90px;
+			}
+		}
+		@include rwd(450) {
+			margin: 0 10px;
+		}
+	}
+}
+.contact-bar-button {
+	padding: 15px 0;
+	li {
+		a {
+			border-radius: 50px;
+			width: 100% !important;
+			display: block;
+			border: 2px solid $text-color;
+			font-size: 26px;
+			padding-top: 0;
+			padding-left: 30px;
+			padding-right: 30px;
+			@include rwd(450) {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+	}
+}
+.social-button-w {
+	li {
+		margin-top: -5px;
+		a {
+			&:hover {
+				background-color: $secondary-text-color;
+			}
+		}
+	}
+}

@@ -1,0 +1,169 @@
+/**
+ * File Name: _typography.scss
+ * Description: Brightseed website theme typography styling
+ * Version: 1.0.0
+ * Author: Carl Scrivener
+ * Author URI: http://brightseed.io
+ * Theme URI: http://brightseed.io
+ *
+ * Copyright: ©, 2020, Carl Scrivener. All rights reserved.
+ */
+ 
+ body {
+    background-color: $primary-background-color;
+    font-family: $text-font-stack;
+    line-height: 24px;
+    font-size: 16px;
+    color: $text-color;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	@include md {
+		font-size: 18px;
+	}
+}
+
+h4 {
+	font-size: 20px;
+}
+
+p {
+	margin: 0;
+	line-height: 1.5;
+}
+
+.caption-content {
+	h1 {
+		font-family: $brand-font-stack;
+		color: $text-color;
+		font-size: 52px;
+		font-weight: 400;
+		margin-bottom: 25px;
+	}
+	h2 {
+		font-size: 18px;
+		padding: 0 20px;
+	}
+	>span {
+		display: block;
+		font-size: 16px;
+		margin-top: 30px;
+		margin-bottom: 20px;
+		color: black;
+		padding: 0 20px;
+	}
+	p {
+		font-size: 16px;
+		margin-bottom: 30px;
+	}
+	strong {
+		font-size: 22px;
+	}
+	@include rwd(480) {
+		h2 {
+			font-size: 25px;
+		}
+		p {
+			font-size: 25px;
+		}
+		strong {
+			font-size: 35px;
+		}
+	}
+	@include sm {
+		h1 {
+			font-size: 5em;
+		}
+	}
+	@include md {
+		h2 {
+			font-size: 40px;
+			padding: 0 20px;
+		}
+		p {
+			font-size: 29px;
+			margin-bottom: 65px;
+		}
+		strong {
+			font-size: 45px;
+		}
+		>span {
+			font-size: 24px;
+			margin-bottom: 45px;
+			padding: 0 120px;
+		}
+	}
+	@include lg {
+		p {
+			font-size: 29px;
+		}
+	}
+}
+
+.caption-content-inverse {
+	h1 {
+		color: $secondary-text-color !important;
+	}
+	span {
+		color: $secondary-text-color !important;
+	}
+}
+
+.home-title {
+	font-weight: 900 !important;
+	color: $secondary-text-color !important;
+	a {
+		color: $secondary-text-color !important;
+		&:hover {
+			color: $brand-color !important;
+		}
+	}
+}
+
+.home-sub-title {
+	color: $secondary-text-color !important;
+	text-transform: none;
+	a {
+		color: $secondary-text-color !important;
+		&:hover {
+			color: $brand-color !important;
+		}
+	}
+	@include lg {
+		font-size: 30px !important;
+	}
+}
+
+.brand-text {
+	font-weight: 700;
+	font-family: $brand-font-stack;
+}
+
+.bold {
+	font-weight: bold !important;
+}
+
+.quote {
+	font-style: italic;
+}
+
+.sec-title {
+	margin: 50px 0 50px 0;
+	h2 {
+		font-size: 35px;
+		font-weight: bold;
+		margin: 0 0 30px;
+		position: relative;
+		@include md {
+			font-size: 46px;
+		}
+	}
+}
+
+.sec-title.white {
+	h2 {
+		color: white;
+	}
+}
+
