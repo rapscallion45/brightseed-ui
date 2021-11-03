@@ -1,6 +1,5 @@
 import parse from "html-react-parser";
 import Head from "next/head";
-import Container from "../components/container";
 import Layout from "../components/layout";
 import { getPageDataByUri, getPrimaryMenu } from "../lib/api";
 import { CMS_NAME } from "../lib/constants";
@@ -11,7 +10,7 @@ const Contact = ({ menuData, pageData: { title, content }, preview }) => (
       <title>This is the {CMS_NAME} contact page</title>
     </Head>
     <section id="contact-header">
-      <div className="container mx-auto pt-20 pb-5 px-5">
+      <div className="container max-w-6xl mx-auto pt-20 pb-5 px-5">
         <div class="sec-title text-center wow animated fadeInDown">
           <h2>{title}</h2>
           {parse(content)}

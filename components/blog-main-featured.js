@@ -3,7 +3,7 @@ import PostPreview from "./post-preview";
 export default function BlogMainFeatured({ posts }) {
   return (
     <section id="main-articles">
-      <div class="container m-t-30 grid grid-cols-1 md:grid-cols-12">
+      <div class="container mx-auto m-t-30 grid grid-cols-1 md:grid-cols-12">
         <div class="col-span-1 md:col-span-8 main-article">
           <PostPreview
             title={posts[0].node.title}

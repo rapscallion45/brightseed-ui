@@ -16,7 +16,7 @@ const Blog = ({ menuData, allPosts: { edges }, preview }) => {
         <Head>
           <title>Next.js Blog Example with {CMS_NAME}</title>
         </Head>
-        <div className="container mx-auto pt-20 pb-5 px-5">
+        <div className="container max-w-6xl mx-auto pt-20 pb-5 px-5">
           <BlogMainFeatured posts={featuredPosts} />
           {morePosts.length > 0 && <ArticlesList posts={morePosts} />}
         </div>
