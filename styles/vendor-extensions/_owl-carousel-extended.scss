@@ -9,12 +9,12 @@
  * Copyright: ©, 2020, Carl Scrivener. All rights reserved.
  */
 .owl-buttons {
-	border: 2px solid $secondary-text-color;
-	display: inline-block;
-	padding: 6px 8px 4px;
-	border-radius: 50px;
-	>div {
-		display: inline-block;
-		padding: 0 5px;
-	}
+  border: 2px solid $secondary-text-color;
+  display: inline-block;
+  padding: 6px 8px 4px;
+  border-radius: 50px;
+  > div {
+    display: inline-block;
+    padding: 0 5px;
+  }
 }

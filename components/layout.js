@@ -1,16 +1,20 @@
-import Alert from '../components/alert'
-import Footer from '../components/footer'
-import Meta from '../components/meta'
+import Alert from "../components/alert";
+import NavBar from "../components/navbar";
+import Footer from "../components/footer";
+import Meta from "../components/meta";
 
-export default function Layout({ preview, children }) {
+export default function Layout({ navMenuItems, preview, children }) {
   return (
     <>
       <Meta />
       <div className="min-h-screen">
         <Alert preview={preview} />
-        <main>{children}</main>
+        <NavBar menuItems={navMenuItems} />
+        <main className="site-content" role="main">
+          {children}
+        </main>
       </div>
       <Footer />
     </>
-  )
+  );
 }

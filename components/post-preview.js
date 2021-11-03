@@ -1,7 +1,7 @@
-import Avatar from '../components/avatar'
-import Date from '../components/date'
-import CoverImage from './cover-image'
-import Link from 'next/link'
+import Avatar from "../components/avatar";
+import Date from "../components/date";
+import CoverImage from "./cover-image";
+import Link from "next/link";
 
 export default function PostPreview({
   title,
@@ -10,7 +10,9 @@ export default function PostPreview({
   excerpt,
   author,
   slug,
+  smallTitle,
 }) {
+  const titleTextSize = smallTitle ? "text-xl" : "text-3xl";
   return (
     <div>
       <div className="mb-5">
@@ -18,7 +20,7 @@ export default function PostPreview({
           <CoverImage title={title} coverImage={coverImage} slug={slug} />
         )}
       </div>
-      <h3 className="text-3xl mb-3 leading-snug">
+      <h3 className={titleTextSize + " mb-3 leading-snug"}>
         <Link href={`/posts/${slug}`}>
           <a
             className="hover:underline"
@@ -29,11 +31,13 @@ export default function PostPreview({
       <div className="text-lg mb-4">
         <Date dateString={date} />
       </div>
-      <div
-        className="text-lg leading-relaxed mb-4"
-        dangerouslySetInnerHTML={{ __html: excerpt }}
-      />
-      <Avatar author={author} />
+      {excerpt && (
+        <div
+          className="text-lg leading-relaxed mb-4"
+          dangerouslySetInnerHTML={{ __html: excerpt }}
+        />
+      )}
+      {author && <Avatar author={author} />}
     </div>
-  )
+  );
 }

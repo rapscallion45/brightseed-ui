@@ -9,176 +9,176 @@
  * Copyright: ©, 2020, Carl Scrivener. All rights reserved.
  */
 .quick-contact-container {
-	display: none;
-	position: fixed;
-	left: -340px;
-	top: 15%;
-	width: 400px;
-	height: 60px;
-	background-color: $tertiary-background-color;
-	color: $secondary-text-color;
-	z-index: 999;
-	text-align: center;
-	border-radius: 50px;
-	-webkit-transition: all 0.3s ease 0s;
-	-moz-transition: all 0.3s ease 0s;
-	-ms-transition: all 0.3s ease 0s;
-	-o-transition: all 0.3s ease 0s;
-	transition: all 0.3s ease 0s;
-	a {
-		color: $secondary-text-color;
-	}
-	&:hover {
-		text-align: right;
-		padding-right: 25px;
-		cursor: pointer;
-		left: -60px;
-		.quick-contact {
-			display: none;
-		}
-		.quick-contact-slideout {
-			display: block;
-			opacity: 1;
-			a {
-				color: $secondary-text-color;
-			}
-		}
-	}
-	@include xl {
-		display: block;
-	}
+  display: none;
+  position: fixed;
+  left: -340px;
+  top: 15%;
+  width: 400px;
+  height: 60px;
+  background-color: $tertiary-background-color;
+  color: $secondary-text-color;
+  z-index: 999;
+  text-align: center;
+  border-radius: 50px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  a {
+    color: $secondary-text-color;
+  }
+  &:hover {
+    text-align: right;
+    padding-right: 25px;
+    cursor: pointer;
+    left: -60px;
+    .quick-contact {
+      display: none;
+    }
+    .quick-contact-slideout {
+      display: block;
+      opacity: 1;
+      a {
+        color: $secondary-text-color;
+      }
+    }
+  }
+  @include xl {
+    display: block;
+  }
 }
 .quick-contact {
-	display: block;
-	padding: 13px 10px 8px 60px;
-	margin-left: 280px;
+  display: block;
+  padding: 13px 10px 8px 60px;
+  margin-left: 280px;
 }
 .quick-contact-slideout {
-	display: none;
-	padding: 20px 15px 20px 75px;
-	p {
-		font-weight: bolder;
-		opacity: 0;
-		-webkit-transition: all 0.7s ease 0s;
-		-moz-transition: all 0.7s ease 0s;
-		-ms-transition: all 0.7s ease 0s;
-		-o-transition: all 0.7s ease 0s;
-		transition: all 0.7s ease 0s;
-	}
-	.ssk-group {
-		font-weight: bolder;
-		opacity: 0;
-		-webkit-transition: all 0.7s ease 0s;
-		-moz-transition: all 0.7s ease 0s;
-		-ms-transition: all 0.7s ease 0s;
-		-o-transition: all 0.7s ease 0s;
-		transition: all 0.7s ease 0s;
-		-webkit-transition: all 0.7s ease 0s;
-		-moz-transition: all 0.7s ease 0s;
-		-ms-transition: all 0.7s ease 0s;
-		-o-transition: all 0.7s ease 0s;
-		transition: all 2s ease 0s;
-	}
-	form {
-		font-weight: bolder;
-		opacity: 0;
-		-webkit-transition: all 0.7s ease 0s;
-		-moz-transition: all 0.7s ease 0s;
-		-ms-transition: all 0.7s ease 0s;
-		-o-transition: all 0.7s ease 0s;
-		transition: all 0.7s ease 0s;
-	}
-	.subscribe-response {
-		font-weight: bolder;
-		opacity: 0;
-		-webkit-transition: all 0.7s ease 0s;
-		-moz-transition: all 0.7s ease 0s;
-		-ms-transition: all 0.7s ease 0s;
-		-o-transition: all 0.7s ease 0s;
-		transition: all 0.7s ease 0s;
-	}
-	&:hover {
-		p {
-			opacity: 1;
-		}
-		.ssk-group {
-			opacity: 1;
-		}
-		form {
-			opacity: 1;
-		}
-		.subscribe-response {
-			opacity: 1;
-		}
-	}
+  display: none;
+  padding: 20px 15px 20px 75px;
+  p {
+    font-weight: bolder;
+    opacity: 0;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -ms-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+  }
+  .ssk-group {
+    font-weight: bolder;
+    opacity: 0;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -ms-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -ms-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 2s ease 0s;
+  }
+  form {
+    font-weight: bolder;
+    opacity: 0;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -ms-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+  }
+  .subscribe-response {
+    font-weight: bolder;
+    opacity: 0;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -ms-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+  }
+  &:hover {
+    p {
+      opacity: 1;
+    }
+    .ssk-group {
+      opacity: 1;
+    }
+    form {
+      opacity: 1;
+    }
+    .subscribe-response {
+      opacity: 1;
+    }
+  }
 }
 .quick-contact-slideout-share {
-	margin-top: -12px;
+  margin-top: -12px;
 }
 .quick-subscribe-container {
-	&:hover {
-		padding-right: 0;
-	}
+  &:hover {
+    padding-right: 0;
+  }
 }
 .quick-subscribe-slideout {
-	padding: 4px 5px 0 50px;
-	background-color: $tertiary-background-color;
-	border-radius: 30px;
+  padding: 4px 5px 0 50px;
+  background-color: $tertiary-background-color;
+  border-radius: 30px;
 }
 #quickShare {
-	margin-top: 60px;
+  margin-top: 60px;
 }
 #quickTestimonial {
-	margin-top: 120px;
+  margin-top: 120px;
 }
 #quickSubscribe {
-	margin-top: 120px;
+  margin-top: 120px;
 }
 .st-btn {
-	display: none !important;
+  display: none !important;
 }
 #slideout-subscribe-input {
-	border: 2px solid $secondary-text-color;
-	color: $secondary-text-color;
-	&::placeholder {
-		color: $secondary-text-color;
-	}
-	&:hover {
-		border: 2px solid $secondary-text-color;
-	}
-	&:focus {
-		border: 2px solid $secondary-text-color;
-	}
-	&:active {
-		border: 2px solid $secondary-text-color;
-	}
+  border: 2px solid $secondary-text-color;
+  color: $secondary-text-color;
+  &::placeholder {
+    color: $secondary-text-color;
+  }
+  &:hover {
+    border: 2px solid $secondary-text-color;
+  }
+  &:focus {
+    border: 2px solid $secondary-text-color;
+  }
+  &:active {
+    border: 2px solid $secondary-text-color;
+  }
 }
 #slideout-subscribe-form {
-	height: 50px;
-	.input-field {
-		.submit-icon {
-			background-color: transparent;
-			border: 2px solid $secondary-text-color;
-		}
-	}
+  height: 50px;
+  .input-field {
+    .submit-icon {
+      background-color: transparent;
+      border: 2px solid $secondary-text-color;
+    }
+  }
 }
 #slideout-subscribe-input.form-control {
-	width: 60%;
+  width: 60%;
 }
 #slideout-subscribe-form-messages {
-	color: $secondary-text-color;
+  color: $secondary-text-color;
 }
 #slideout-subscribe-form-messages.subscribe-response-success {
-	-webkit-transition: all 0.3s ease 0.2s;
-	-moz-transition: all 0.3s ease 0.2s;
-	-ms-transition: all 0.3s ease 0.2s;
-	-o-transition: all 0.3s ease 0.2s;
-	transition: all 0.3s ease 0.2s;
+  -webkit-transition: all 0.3s ease 0.2s;
+  -moz-transition: all 0.3s ease 0.2s;
+  -ms-transition: all 0.3s ease 0.2s;
+  -o-transition: all 0.3s ease 0.2s;
+  transition: all 0.3s ease 0.2s;
 }
 #slideout-subscribe-form-messages.subscribe-response-error {
-	-webkit-transition: all 0.3s ease 0.2s;
-	-moz-transition: all 0.3s ease 0.2s;
-	-ms-transition: all 0.3s ease 0.2s;
-	-o-transition: all 0.3s ease 0.2s;
-	transition: all 0.3s ease 0.2s;
+  -webkit-transition: all 0.3s ease 0.2s;
+  -moz-transition: all 0.3s ease 0.2s;
+  -ms-transition: all 0.3s ease 0.2s;
+  -o-transition: all 0.3s ease 0.2s;
+  transition: all 0.3s ease 0.2s;
 }

@@ -20,7 +20,7 @@ html {
  * Set minimum body width of 320px
  */
 body {
-	min-width: 320px;
+  min-width: 320px;
 }
 
 /**
@@ -38,156 +38,156 @@ body {
 /**
  * Basic styles for links
  */
- a {
-	color: $brand-color;
-	-webkit-transition: all 0.3s ease-out 0s;
-	-moz-transition: all 0.3s ease-out 0s;
-	-ms-transition: all 0.3s ease-out 0s;
-	-o-transition: all 0.3s ease-out 0s;
-	transition: all 0.3s ease-out 0s;
-	text-decoration: none;
-	outline: none;
+a {
+  color: $brand-color;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  text-decoration: none;
+  outline: none;
 
-	&:hover {
-		text-decoration: none;
-		outline: none;
-		color: $brand-color;
-	}
-	&:focus {
-		text-decoration: none;
-		outline: none;
-		color: $brand-color;
-	}
-	&:active {
-		text-decoration: none;
-		outline: none;
-		color: $brand-color;
-	}
+  &:hover {
+    text-decoration: none;
+    outline: none;
+    color: $brand-color;
+  }
+  &:focus {
+    text-decoration: none;
+    outline: none;
+    color: $brand-color;
+  }
+  &:active {
+    text-decoration: none;
+    outline: none;
+    color: $brand-color;
+  }
 }
 
 /**
  * Basic styling for tags
  */
- figure {
-	margin: 0;
+figure {
+  margin: 0;
 }
 
 address {
-	margin: 0;
+  margin: 0;
 }
 
 iframe {
-	border: 0;
+  border: 0;
 }
 
 svg {
-	display: block;
+  display: block;
 }
 
 input,
 textarea {
-	line-height: 1.5;
+  line-height: 1.5;
 }
 
 /**
  * Fullwidth image
  */
 .fullwidth-img {
-	width: 100%;
-	max-width: none;
+  width: 100%;
+  max-width: none;
 }
 
 /**
  * Margin definitions
  */
 .m-t-10 {
-	margin-top: 10px !important;
+  margin-top: 10px !important;
 }
 .m-b-10 {
-	margin-bottom: 10px !important;
+  margin-bottom: 10px !important;
 }
 .m-t-20 {
-	margin-top: 20px !important;
+  margin-top: 20px !important;
 }
 .m-b-20 {
-	margin-bottom: 20px !important;
+  margin-bottom: 20px !important;
 }
 .m-t-30 {
-	margin-top: 30px !important;
+  margin-top: 30px !important;
 }
 .m-b-30 {
-	margin-bottom: 30px !important;
+  margin-bottom: 30px !important;
 }
 .m-t-70 {
-	margin-top: 70px !important;
+  margin-top: 70px !important;
 }
 .m-b-70 {
-	margin-bottom: 70px !important;
+  margin-bottom: 70px !important;
 }
 
 /**
  * Padding definitions
  */
 .p-t-50 {
-	padding-top: 50px !important;
+  padding-top: 50px !important;
 }
 .p-b-50 {
-	padding-bottom: 50px !important;
+  padding-bottom: 50px !important;
 }
 
 /**
  * Main styling
  */
 main {
-	>section {
-		padding: 70px 0;
-	}
-	>article {
-		&:last-child {
-			padding: 0px 0 100px 0;
-		}
-	}
-	>section.no-padding {
-		padding: 0 !important;
-	}
-	>section.no-padding-top {
-		padding-top: 0 !important;
-	}
-	>section.no-padding-bottom {
-		padding-bottom: 0 !important;
-	}
+  > section {
+    padding: 70px 0;
+  }
+  > article {
+    &:last-child {
+      padding: 0px 0 100px 0;
+    }
+  }
+  > section.no-padding {
+    padding: 0 !important;
+  }
+  > section.no-padding-top {
+    padding-top: 0 !important;
+  }
+  > section.no-padding-bottom {
+    padding-bottom: 0 !important;
+  }
 }
 
 /**
  * Background color styling
  */
 .bg-brand-color {
-	background-color: $brand-color;
+  background-color: $brand-color;
 }
 .bg-light-grey {
-	background-color: $light-grey;
+  background-color: $light-grey;
 }
 
 /**
  * Parallax section styling
  */
 .parallax {
-	background-attachment: fixed;
-	background-position: center top;
-	background-repeat: no-repeat;
-	background-size: cover;
+  background-attachment: fixed;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /**
  * Hide Google's reCAPTCHA badge
  */
 .grecaptcha-badge {
-	visibility: hidden !important;
+  visibility: hidden !important;
 }
 
 /**
  * 404 background image
  */
 .error404-slider {
-	background-image: #{image('slider/Containerterminal-1.jpg')};
+  background-image: #{image("slider/Containerterminal-1.jpg")};
 }

@@ -9,53 +9,53 @@
  * Copyright: ©, 2020, Carl Scrivener. All rights reserved.
  */
 #article-filter {
-	padding: 0;
+  padding: 0;
 }
 .article-filter-outer {
-	border-top: 2px solid $tertiary-text-color;
-	overflow-x: scroll;
-	overflow-y: hidden;
-	height: 90px;
-	scrollbar-width: none;
-	-ms-overflow-style: none;
-	overflow: auto;
-	&::-webkit-scrollbar {
-		display: none;
-	}
+  border-top: 2px solid $tertiary-text-color;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 90px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 .article-filter-container {
-	display: inline-flex;
-	padding-top: 30px;
-	width: 100%;
+  display: inline-flex;
+  padding-top: 30px;
+  width: 100%;
 }
 .article-filter-item {
-	display: inline-block;
-	padding: 0 10px;
-	text-transform: uppercase;
-	>a {
-		border: 2px solid $secondary-text-color;
-		border-radius: 50px;
-		padding: 7px 25px 4px 25px;
-	}
-	&:hover {
-		>a {
-			border: 2px solid $brand-color;
-			border-radius: 50px;
-			padding: 7px 25px 4px 25px;
-		}
-	}
-	&:focus {
-		>a {
-			border: 2px solid $brand-color;
-			border-radius: 50px;
-			padding: 7px 25px 4px 25px;
-		}
-	}
+  display: inline-block;
+  padding: 0 10px;
+  text-transform: uppercase;
+  > a {
+    border: 2px solid $secondary-text-color;
+    border-radius: 50px;
+    padding: 7px 25px 4px 25px;
+  }
+  &:hover {
+    > a {
+      border: 2px solid $brand-color;
+      border-radius: 50px;
+      padding: 7px 25px 4px 25px;
+    }
+  }
+  &:focus {
+    > a {
+      border: 2px solid $brand-color;
+      border-radius: 50px;
+      padding: 7px 25px 4px 25px;
+    }
+  }
 }
 .article-filter-item-active {
-	>a {
-		border: 2px solid $brand-color;
-		border-radius: 50px;
-		padding: 7px 25px 4px 25px;
-	}
+  > a {
+    border: 2px solid $brand-color;
+    border-radius: 50px;
+    padding: 7px 25px 4px 25px;
+  }
 }

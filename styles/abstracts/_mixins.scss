@@ -8,10 +8,11 @@
  *
  * Copyright: ©, 2020, Carl Scrivener. All rights reserved.
  */
-/// Event wrapper
-/// @author Harry Roberts
-/// @param {Bool} $self [false] - Whether or not to include current selector
-/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+/** Event wrapper
+ * @author Harry Roberts
+ * @param {Bool} $self [false] - Whether or not to include current selector
+ * @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+ */
 @mixin on-event($self: false) {
   @if $self {
     &,
@@ -29,9 +30,10 @@
   }
 }
 
-/// Make a context based selector a little more friendly
-/// @author Hugo Giraudel
-/// @param {String} $context
+/** Make a context based selector a little more friendly
+ * @author Hugo Giraudel
+ * @param {String} $context
+ */
 @mixin when-inside($context) {
   #{$context} & {
     @content;
@@ -39,49 +41,49 @@
 }
 
 /* Media Queries */
-// Extra small devices */
+/* Extra small devices */
 @mixin xs {
   $xs-breakpoint: map-get($breakpoints, screen-xs-min);
   @media (min-width: #{$xs-breakpoint}) {
-      @content;
+    @content;
   }
 }
 
-// Small devices
+/* Small devices */
 @mixin sm {
   $sm-breakpoint: map-get($breakpoints, screen-sm-min);
   @media (min-width: #{$sm-breakpoint}) {
-      @content;
+    @content;
   }
 }
 
-// Medium devices
+/* Medium devices */
 @mixin md {
   $md-breakpoint: map-get($breakpoints, screen-md-min);
   @media (min-width: #{$md-breakpoint}) {
-      @content;
+    @content;
   }
 }
 
-// Large devices
+/* Large devices */
 @mixin lg {
   $lg-breakpoint: map-get($breakpoints, screen-lg-min);
   @media (min-width: #{$lg-breakpoint}) {
-      @content;
+    @content;
   }
 }
 
-// Extra large devices
+/* Extra large devices */
 @mixin xl {
   $xl-breakpoint: map-get($breakpoints, screen-xl-min);
   @media (min-width: #{$xl-breakpoint}) {
-      @content;
+    @content;
   }
 }
 
-// Custom devices
+/* Custom devices */
 @mixin rwd($screen) {
-  @media (min-width: $screen+'px') {
-      @content;
+  @media (min-width: $screen+"px") {
+    @content;
   }
 }

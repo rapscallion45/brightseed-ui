@@ -1,44 +1,39 @@
-import Head from 'next/head'
-import Container from '../components/container'
-import MoreStories from '../components/more-stories'
-import HeroPost from '../components/hero-post'
-import Intro from '../components/intro'
-import Layout from '../components/layout'
-import { getAllPostsForHome } from '../lib/api'
-import { CMS_NAME } from '../lib/constants'
+import Head from "next/head";
+import FeaturedBlogPosts from "../components/featured-blog-posts";
+import Intro from "../components/intro";
+import Layout from "../components/layout";
+import {
+  getAllPostsForHome,
+  getPageDataByUri,
+  getPrimaryMenu,
+} from "../lib/api";
+import { CMS_NAME } from "../lib/constants";
 
-export default function Index({ allPosts: { edges }, preview }) {
-  const heroPost = edges[0]?.node
-  const morePosts = edges.slice(1)
+const Index = ({
+  menuData,
+  pageData: { content },
+  allPosts: { edges },
+  preview,
+}) => {
+  const posts = edges.slice(0, 3);
 
   return (
-    <>
-      <Layout preview={preview}>
-        <Head>
-          <title>Next.js Blog Example with {CMS_NAME}</title>
-        </Head>
-        <Container>
-          <Intro />
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.featuredImage?.node}
-              date={heroPost.date}
-              author={heroPost.author?.node}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
-            />
-          )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-        </Container>
-      </Layout>
-    </>
-  )
-}
+    <Layout navMenuItems={menuData} preview={preview}>
+      <Head>
+        <title>Next.js Blog Example with {CMS_NAME}</title>
+      </Head>
+      <Intro content={content} />
+      <FeaturedBlogPosts posts={posts} />
+    </Layout>
+  );
+};
+export default Index;
 
 export async function getStaticProps({ preview = false }) {
-  const allPosts = await getAllPostsForHome(preview)
+  const menuData = await getPrimaryMenu();
+  const pageData = await getPageDataByUri("/");
+  const allPosts = await getAllPostsForHome(preview);
   return {
-    props: { allPosts, preview },
-  }
+    props: { pageData, menuData, allPosts, preview },
+  };
 }

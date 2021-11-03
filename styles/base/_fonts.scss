@@ -9,52 +9,36 @@
  * Copyright: ©, 2020, Carl Scrivener. All rights reserved.
  */
 
- @font-face {
-	font-family: "catamaran regular";
-	src: #{font('Catamaran-Regular.eot')} format("embedded-opentype");
-    src: #{font('Catamaran-Regular.eot?#iefix')} format("embedded-opentype");
-    src: #{font('Catamaran-Regular.otf')} format("opentype");
-    src: #{font('Catamaran-Regular.svg')} format("svg");
-    src: #{font('Catamaran-Regular.woff2')} format("woff2");
-    src: #{font('Catamaran-Regular.ttf')} format("truetype");
-    src: #{font('Catamaran-Regular.woff')} format("woff");
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
+@font-face {
+  font-family: "catamaran regular";
+  src: #{font("Catamaran-Regular.eot")} format("embedded-opentype");
+  src: #{font("Catamaran-Regular.eot?#iefix")} format("embedded-opentype");
+  src: #{font("Catamaran-Regular.otf")} format("opentype");
+  src: #{font("Catamaran-Regular.svg")} format("svg");
+  src: #{font("Catamaran-Regular.woff2")} format("woff2");
+  src: #{font("Catamaran-Regular.ttf")} format("truetype");
+  src: #{font("Catamaran-Regular.woff")} format("woff");
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
 }
 
 @font-face {
-	font-family: "questrial regular";
-	src: #{font('Questrial-Regular.eot')} format("embedded-opentype");
-    src: #{font('Questrial-Regular.eot?#iefix')} format("embedded-opentype");
-	src: #{font('Questrial-Regular.otf')} format("opentype");
-    src: #{font('Questrial-Regular.svg')} format("svg");
-    src: #{font('Questrial-Regular.woff2')} format("woff2");
-    src: #{font('Questrial-Regular.ttf')} format("truetype");
-    src: #{font('Questrial-Regular.woff')} format("woff");
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-}
-
-@font-face {
-	font-family: "font awesome";
-	src: #{font('fontawesome-webfont.eot')} format("embedded-opentype");
-    src: #{font('fontawesome-webfont.eot?#iefix')} format("embedded-opentype");
-    src: #{font('FontAwesome.otf')} format("opentype");
-    src: #{font('fontawesome-webfont.svg')} format("svg");
-    src: #{font('fontawesome-webfont.ttf')} format("truetype");
-    src: #{font('fontawesome-webfont.woff')} format("woff");
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
+  font-family: "questrial regular";
+  src: #{font("Questrial-Regular.eot")} format("embedded-opentype");
+  src: #{font("Questrial-Regular.eot?#iefix")} format("embedded-opentype");
+  src: #{font("Questrial-Regular.otf")} format("opentype");
+  src: #{font("Questrial-Regular.svg")} format("svg");
+  src: #{font("Questrial-Regular.woff2")} format("woff2");
+  src: #{font("Questrial-Regular.ttf")} format("truetype");
+  src: #{font("Questrial-Regular.woff")} format("woff");
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
 }
