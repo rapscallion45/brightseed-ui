@@ -1,7 +1,7 @@
-import Avatar from "../components/avatar";
-import Date from "../components/date";
-import CoverImage from "./cover-image";
-import Link from "next/link";
+import Link from 'next/link';
+import Avatar from './avatar';
+import Date from './date';
+import CoverImage from './cover-image';
 
 export default function PostPreview({
   title,
@@ -12,7 +12,7 @@ export default function PostPreview({
   slug,
   smallTitle,
 }) {
-  const titleTextSize = smallTitle ? "text-xl" : "text-3xl";
+  const titleTextSize = smallTitle ? 'text-xl' : 'text-3xl';
   return (
     <div>
       <div className="mb-5">
@@ -20,12 +20,12 @@ export default function PostPreview({
           <CoverImage title={title} coverImage={coverImage} slug={slug} />
         )}
       </div>
-      <h3 className={titleTextSize + " mb-3 leading-snug"}>
+      <h3 className={`${titleTextSize} mb-3 leading-snug`}>
         <Link href={`/posts/${slug}`}>
           <a
             className="hover:underline"
             dangerouslySetInnerHTML={{ __html: title }}
-          ></a>
+          />
         </Link>
       </h3>
       <div className="text-lg mb-4">

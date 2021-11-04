@@ -1,10 +1,10 @@
-import PostPreview from "./post-preview";
+import PostPreview from './post-preview';
 
 export default function BlogMainFeatured({ posts }) {
   return (
     <section id="main-articles">
-      <div class="container mx-auto m-t-30 grid grid-cols-1 md:grid-cols-12">
-        <div class="col-span-1 md:col-span-8 main-article">
+      <div className="container mx-auto m-t-30 grid grid-cols-1 md:grid-cols-12">
+        <div className="col-span-1 md:col-span-8 main-article">
           <PostPreview
             title={posts[0].node.title}
             coverImage={posts[0].node.featuredImage?.node}
@@ -15,20 +15,18 @@ export default function BlogMainFeatured({ posts }) {
           />
         </div>
         <div className="col-span-1 md:col-span-3 md:col-start-10 pt-16 md:pt-0">
-          {posts.slice(1, 3).map((post) => {
-            return (
-              <div class="sub-main-article">
-                <PostPreview
-                  key={post.node.slug}
-                  title={post.node.title}
-                  coverImage={post.node.featuredImage?.node}
-                  date={post.node.date}
-                  slug={post.node.slug}
-                  smallTitle
-                />
-              </div>
-            );
-          })}
+          {posts.slice(1, 3).map((post) => (
+            <div className="sub-main-article">
+              <PostPreview
+                key={post.node.slug}
+                title={post.node.title}
+                coverImage={post.node.featuredImage?.node}
+                date={post.node.date}
+                slug={post.node.slug}
+                smallTitle
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>

@@ -1,7 +1,7 @@
-import Alert from "../components/alert";
-import NavBar from "../components/navbar";
-import Footer from "../components/footer";
-import Meta from "../components/meta";
+import Alert from './alert';
+import NavBar from './navbar';
+import Footer from './footer';
+import Meta from './meta';
 
 export default function Layout({ navMenuItems, preview, children }) {
   return (

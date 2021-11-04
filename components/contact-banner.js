@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { FaAngleRight } from "react-icons/fa";
+import Link from 'next/link';
+import { FaAngleRight } from 'react-icons/fa';
 
 export default function ContactBanner() {
   return (
@@ -10,16 +10,16 @@ export default function ContactBanner() {
             <div className="text-center">
               <div className="leading-tight">
                 <h1>
-                  {`Find out how the `}
+                  {'Find out how the '}
                   <span
                     style={{
                       fontWeight: 700,
-                      fontFamily: "questrial regular, sans-serif",
+                      fontFamily: 'questrial regular, sans-serif',
                     }}
                   >
                     brightseed.
                   </span>
-                  {` way of working can help you`}
+                  {' way of working can help you'}
                 </h1>
               </div>
             </div>

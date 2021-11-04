@@ -1,6 +1,6 @@
-import Link from "next/link";
-import { useState } from "react";
-import { FaEnvelope } from "react-icons/fa";
+import Link from 'next/link';
+import { useState } from 'react';
+import { FaEnvelope } from 'react-icons/fa';
 
 export default function NavBar({ menuItems }) {
   const [collapseOpen, setCollapseOpen] = useState(false);
@@ -13,41 +13,37 @@ export default function NavBar({ menuItems }) {
     setCollapseOpen(false);
   };
 
-  const getMenu = () => {
-    return (
-      <>
-        <div className="text-md lg:flex-grow p-6 leading-6">
-          {menuItems.map((menuItem) => {
-            return (
-              <Link key={menuItem.node.path} href={menuItem.node.path}>
-                <a
-                  onClick={closeMenu}
-                  className="block mt-4 lg:inline-block lg:mt-0 visited:text-white active:text-white hover:text-gray-300 mr-4 text-white"
-                >
-                  {menuItem.node.label}
-                </a>
-              </Link>
-            );
-          })}
+  const getMenu = () => (
+    <>
+      <div className="text-md lg:flex-grow p-6 leading-6">
+        {menuItems.map((menuItem) => (
+          <Link key={menuItem.node.path} href={menuItem.node.path}>
+            <a
+              onClick={closeMenu}
+              className="block mt-4 lg:inline-block lg:mt-0 visited:text-white active:text-white hover:text-gray-300 mr-4 text-white"
+            >
+              {menuItem.node.label}
+            </a>
+          </Link>
+        ))}
+      </div>
+      <div className="pb-5 lg:pb-0 lg:text-center leading-5">
+        <div className="py-2 px-3">
+          <Link href="/contact">
+            <a
+              onClick={closeMenu}
+              className="btn btn-border btn-effect btn-border-icon-container external"
+            >
+              Contact Us
+              <i className="btn-icon btn-icon-border btn-icon-nav-contact">
+                <FaEnvelope size={26} />
+              </i>
+            </a>
+          </Link>
         </div>
-        <div className="pb-5 lg:pb-0 lg:text-center leading-5">
-          <div className="py-2 px-3">
-            <Link href="/contact">
-              <a
-                onClick={closeMenu}
-                className="btn btn-border btn-effect btn-border-icon-container external"
-              >
-                Contact Us
-                <i className="btn-icon btn-icon-border btn-icon-nav-contact">
-                  <FaEnvelope size={26} />
-                </i>
-              </a>
-            </Link>
-          </div>
-        </div>
-      </>
-    );
-  };
+      </div>
+    </>
+  );
 
   return (
     <nav id="navigation" className="fixed w-screen top-0 z-50">
@@ -69,8 +65,8 @@ export default function NavBar({ menuItems }) {
           <div className="py-3">
             <Link href="/contact">
               <a>
-                <div class="navbar-toggle navbar-contact">
-                  <i class="navbar-contact-icon">
+                <div className="navbar-toggle navbar-contact">
+                  <i className="navbar-contact-icon">
                     <FaEnvelope />
                   </i>
                 </div>
@@ -79,20 +75,20 @@ export default function NavBar({ menuItems }) {
           </div>
           <button
             className={`hamburger hamburger--squeeze ${
-              collapseOpen ? "is-active" : ""
+              collapseOpen ? 'is-active' : ''
             }`}
             type="button"
             onClick={handleMenuClick}
           >
             <span className="hamburger-box">
-              <span className="hamburger-inner"></span>
+              <span className="hamburger-inner" />
             </span>
           </button>
         </div>
         <div
           id="mobile-menu"
           className={`lg:hidden w-full overflow-scroll block flex-grow lg:flex lg:items-right lg:w-auto transition-height duration-500 ease-in-out ${
-            collapseOpen ? "h-96" : "h-px"
+            collapseOpen ? 'h-96' : 'h-px'
           }`}
         >
           {getMenu()}

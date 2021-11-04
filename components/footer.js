@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -18,20 +18,20 @@ export default function Footer() {
           </div>
           <div className="flex-row col-span-2 md:col-span-2 md:col-start-2 text-center">
             <p>
-              {`Copyright `}
+              {'Copyright '}
               &copy;
               {` ${new Date().getFullYear()} `}
               <Link href="/">
                 <span
                   style={{
-                    fontWeight: "bold",
-                    fontFamily: "questrial regular,sans-serif",
+                    fontWeight: 'bold',
+                    fontFamily: 'questrial regular,sans-serif',
                   }}
                 >
                   brightseed.
                 </span>
               </Link>
-              {` All rights reserved.`}
+              {' All rights reserved.'}
             </p>
           </div>
         </div>

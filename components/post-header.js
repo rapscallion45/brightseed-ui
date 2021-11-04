@@ -1,10 +1,10 @@
-import parse from "html-react-parser";
-import Avatar from "../components/avatar";
-import Date from "../components/date";
-import CoverImage from "../components/cover-image";
-import PostTitle from "../components/post-title";
-import Categories from "../components/categories";
-import PostExcerpt from "./post-excerpt";
+import parse from 'html-react-parser';
+import Avatar from './avatar';
+import Date from './date';
+import CoverImage from './cover-image';
+import PostTitle from './post-title';
+import Categories from './categories';
+import PostExcerpt from './post-excerpt';
 
 export default function PostHeader({
   title,
@@ -34,7 +34,9 @@ export default function PostHeader({
           <Avatar author={author} />
         </div>
         <div className="mb-6 text-lg">
-          Posted <Date dateString={date} />
+          Posted
+          {' '}
+          <Date dateString={date} />
         </div>
       </div>
       {/* </div> */}

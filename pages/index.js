@@ -1,13 +1,13 @@
-import Head from "next/head";
-import FeaturedBlogPosts from "../components/featured-blog-posts";
-import Intro from "../components/intro";
-import Layout from "../components/layout";
+import Head from 'next/head';
+import FeaturedBlogPosts from '../components/featured-blog-posts';
+import Intro from '../components/intro';
+import Layout from '../components/layout';
 import {
   getAllPostsForHome,
   getPageDataByUri,
   getPrimaryMenu,
-} from "../lib/api";
-import { CMS_NAME } from "../lib/constants";
+} from '../lib/api';
+import { CMS_NAME } from '../lib/constants';
 
 const Index = ({
   menuData,
@@ -20,7 +20,10 @@ const Index = ({
   return (
     <Layout navMenuItems={menuData} preview={preview}>
       <Head>
-        <title>Next.js Blog Example with {CMS_NAME}</title>
+        <title>
+          Next.js Blog Example with
+          {CMS_NAME}
+        </title>
       </Head>
       <Intro content={content} />
       <FeaturedBlogPosts posts={posts} />
@@ -31,9 +34,11 @@ export default Index;
 
 export async function getStaticProps({ preview = false }) {
   const menuData = await getPrimaryMenu();
-  const pageData = await getPageDataByUri("/");
+  const pageData = await getPageDataByUri('/');
   const allPosts = await getAllPostsForHome(preview);
   return {
-    props: { pageData, menuData, allPosts, preview },
+    props: {
+      pageData, menuData, allPosts, preview,
+    },
   };
 }

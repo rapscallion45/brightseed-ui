@@ -1,23 +1,25 @@
-import { useRouter } from "next/router";
-import ErrorPage from "next/error";
-import Container from "../../components/container";
-import PostBody from "../../components/post-body";
-import Header from "../../components/header";
-import PostHeader from "../../components/post-header";
-import PostFooter from "../../components/post-footer";
-import Layout from "../../components/layout";
+import { useRouter } from 'next/router';
+import ErrorPage from 'next/error';
+import Head from 'next/head';
+import Container from '../../components/container';
+import PostBody from '../../components/post-body';
+import Header from '../../components/header';
+import PostHeader from '../../components/post-header';
+import PostFooter from '../../components/post-footer';
+import Layout from '../../components/layout';
 import {
   getAllPostsWithSlug,
   getPostAndMorePosts,
   getPrimaryMenu,
-} from "../../lib/api";
-import PostTitle from "../../components/post-title";
-import Head from "next/head";
-import { CMS_NAME } from "../../lib/constants";
-import Tags from "../../components/tags";
-import PostThanksText from "../../components/post-thanks-text";
+} from '../../lib/api';
+import PostTitle from '../../components/post-title';
+import { CMS_NAME } from '../../lib/constants';
+import Tags from '../../components/tags';
+import PostThanksText from '../../components/post-thanks-text';
 
-export default function Post({ menuData, post, posts, preview }) {
+export default function Post({
+  menuData, post, posts, preview,
+}) {
   const router = useRouter();
   const morePosts = posts?.edges;
 
@@ -41,7 +43,10 @@ export default function Post({ menuData, post, posts, preview }) {
               <article>
                 <Head>
                   <title>
-                    {post.title} | Next.js Blog Example with {CMS_NAME}
+                    {post.title}
+                    {' '}
+                    | Next.js Blog Example with
+                    {CMS_NAME}
                   </title>
                   <meta
                     property="og:image"

@@ -1,5 +1,5 @@
-import ContactBanner from "./contact-banner";
-import MoreArticles from "./more-articles";
+import ContactBanner from './contact-banner';
+import MoreArticles from './more-articles';
 
 export default function PostFooter({ morePosts }) {
   return (

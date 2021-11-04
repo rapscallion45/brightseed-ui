@@ -1,13 +1,13 @@
-import PostPreview from "./post-preview";
-import ContactBanner from "./contact-banner";
+import PostPreview from './post-preview';
+import ContactBanner from './contact-banner';
 
 export default function FeaturedBlogPosts({ posts }) {
   return (
     <>
       <ContactBanner />
-      <section id="blog-posts" class="no-padding">
-        <div class="bg-light-grey p-t-50">
-          <div class="container max-w-6xl mx-auto px-5 grid grid-cols-1 md:grid-cols-3">
+      <section id="blog-posts" className="no-padding">
+        <div className="bg-light-grey p-t-50">
+          <div className="container max-w-6xl mx-auto px-5 grid grid-cols-1 md:grid-cols-3">
             {posts.map(({ node }) => (
               <div className="mt-8 md:px-3 col-span-1">
                 <PostPreview
