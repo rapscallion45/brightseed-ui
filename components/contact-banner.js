@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { FaAngleRight } from "react-icons/fa";
+
 export default function ContactBanner() {
   return (
     <section id="contactBar2-topsvg" className="no-padding">
@@ -22,14 +25,15 @@ export default function ContactBanner() {
             </div>
             <div className="text-center">
               <div className="py-5">
-                <a
-                  data-scroll=""
-                  href="https://brightseed.io/contact"
-                  className="btn                                   btn-secondary                                   btn-effect                                   btn-icon-container-main external"
-                >
-                  Contact Us
-                  <i className="fa fa-angle-right btn-icon"></i>
-                </a>
+                <Link href="/contact">
+                  <a
+                    data-scroll=""
+                    className="btn btn-secondary btn-effect btn-icon-container-main external"
+                  >
+                    <p>Contact Us</p>
+                    <FaAngleRight className="btn-icon" />
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

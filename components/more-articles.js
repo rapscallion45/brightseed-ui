@@ -7,7 +7,7 @@ export default function MoreArticles({ posts }) {
         <div class="row sec-title m-b-30 text-center">
           <h2>More Articles</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 md:col-gap-16 lg:col-gap-32 row-gap-20 md:row-gap-32 mb-32">
+        <div className="grid grid-cols-1 md:grid-cols-3 md:col-gap-16 lg:col-gap-32 row-gap-20 md:row-gap-32 mb-32">
           {posts.map(({ node }) => (
             <div className="mt-8 md:px-3">
               <PostPreview
