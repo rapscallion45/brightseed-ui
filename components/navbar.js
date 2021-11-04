@@ -91,8 +91,8 @@ export default function NavBar({ menuItems }) {
         </div>
         <div
           id="mobile-menu"
-          className={`lg:hidden w-full overflow-hidden block flex-grow lg:flex lg:items-right lg:w-auto transition-height duration-500 ease-in-out ${
-            collapseOpen ? "h-auto" : "h-px"
+          className={`lg:hidden w-full overflow-scroll block flex-grow lg:flex lg:items-right lg:w-auto transition-height duration-500 ease-in-out ${
+            collapseOpen ? "h-96" : "h-px"
           }`}
         >
           {getMenu()}
