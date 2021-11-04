@@ -1,10 +1,28 @@
-import Link from 'next/link';
-import { useState } from 'react';
-import { FaAngleRight, FaEnvelope } from 'react-icons/fa';
-import ButtonLink from './button-link';
+import Link from "next/link";
+import { useState, useRef, useEffect } from "react";
+import { FaAngleRight, FaEnvelope } from "react-icons/fa";
+import ButtonLink from "./button-link";
 
 export default function NavBar({ menuItems }) {
   const [collapseOpen, setCollapseOpen] = useState(false);
+  const navClickRef = useRef();
+
+  const handleClick = (event) => {
+    if (!navClickRef.current.contains(event.target)) {
+      /* user click away from nav, close */
+      setCollapseOpen(false);
+      return;
+    }
+  };
+  useEffect(() => {
+    /* add click handler when mounted */
+    document.addEventListener("mousedown", handleClick);
+
+    /* return function to remove click handler when unmounted */
+    return () => {
+      document.removeEventListener("mousedown", handleClick);
+    };
+  }, []);
 
   const handleMenuClick = () => {
     setCollapseOpen(!collapseOpen);
@@ -39,6 +57,7 @@ export default function NavBar({ menuItems }) {
               variant="border"
               text={menuItem.node.label}
               hasIcon
+              handleClick={closeMenu}
             >
               <FaAngleRight />
             </ButtonLink>
@@ -49,7 +68,11 @@ export default function NavBar({ menuItems }) {
   );
 
   return (
-    <nav id="navigation" className="fixed w-screen top-0 z-50">
+    <nav
+      ref={navClickRef}
+      id="navigation"
+      className="fixed w-screen top-0 z-50"
+    >
       <div className="container max-w-7xl mx-auto px-5 flex items-center justify-between flex-wrap bg-teal-500 px-4">
         <div className="flex items-center flex-shrink-0 text-white">
           <h1 className="navbar-brand text-4xl py-5 px-2 leading-6 my-0 mr-2">
@@ -69,7 +92,7 @@ export default function NavBar({ menuItems }) {
         <div className="block flex flex-row lg:hidden">
           <div className="py-3">
             <Link href="/contact">
-              <button type="button">
+              <button type="button" onKeyDown={closeMenu} onClick={closeMenu}>
                 <div className="navbar-toggle navbar-contact">
                   <i className="navbar-contact-icon">
                     <FaEnvelope />
@@ -80,7 +103,7 @@ export default function NavBar({ menuItems }) {
           </div>
           <button
             className={`hamburger hamburger--squeeze ${
-              collapseOpen ? 'is-active' : ''
+              collapseOpen ? "is-active" : ""
             }`}
             type="button"
             onClick={handleMenuClick}
@@ -93,7 +116,7 @@ export default function NavBar({ menuItems }) {
         <div
           id="mobile-menu"
           className={`lg:hidden w-full overflow-scroll block flex-grow lg:flex lg:items-right lg:w-auto transition-height duration-500 ease-in-out ${
-            collapseOpen ? 'h-96' : 'h-px'
+            collapseOpen ? "h-80" : "h-px"
           }`}
         >
           {getMenu()}
