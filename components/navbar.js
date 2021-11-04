@@ -17,7 +17,7 @@ export default function NavBar({ menuItems }) {
   const getMenu = () => (
     <>
       <div className="text-md lg:flex lg:flex-grow lg:justify-end p-6 leading-6">
-        {menuItems.map((menuItem) => (
+        {menuItems.slice(0, -1).map((menuItem) => (
           <Link key={menuItem.node.path} href={menuItem.node.path}>
             <button
               type="button"
@@ -32,9 +32,17 @@ export default function NavBar({ menuItems }) {
       </div>
       <div className="pb-5 lg:pb-0 lg:text-center leading-5">
         <div className="py-2 px-3">
-          <ButtonLink uri="/contact" variant="border" text="Contact Us" hasIcon>
-            <FaAngleRight />
-          </ButtonLink>
+          {menuItems.slice(-1).map((menuItem) => (
+            <ButtonLink
+              key={menuItem.node.path}
+              uri={menuItem.node.path}
+              variant="border"
+              text={menuItem.node.label}
+              hasIcon
+            >
+              <FaAngleRight />
+            </ButtonLink>
+          ))}
         </div>
       </div>
     </>
