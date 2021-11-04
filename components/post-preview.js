@@ -22,8 +22,11 @@ export default function PostPreview({
       </div>
       <h3 className={`${titleTextSize} mb-3 leading-snug`}>
         <Link href={`/posts/${slug}`}>
-          <a
-            className="hover:underline"
+          <button
+            aria-label="Post title"
+            type="button"
+            href="#"
+            className="hover:underline text-left"
             dangerouslySetInnerHTML={{ __html: title }}
           />
         </Link>

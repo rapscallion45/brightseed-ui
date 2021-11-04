@@ -1,4 +1,3 @@
-import parse from 'html-react-parser';
 import Avatar from './avatar';
 import Date from './date';
 import CoverImage from './cover-image';

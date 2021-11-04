@@ -19,6 +19,8 @@ module.exports = {
     'react/prop-types': 'off',
     /* Allow JSX in files with .jsx OR .js */
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    /* Allow prop spreading */
+    'react/jsx-props-no-spreading': 'off',
   },
   globals: {
     /* Next.js assumes React is global */

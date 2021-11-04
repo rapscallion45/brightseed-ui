@@ -1,5 +1,6 @@
 import { getPreviewPost } from '../../lib/api';
 
+/* eslint-disable consistent-return */
 export default async function preview(req, res) {
   const { secret, id, slug } = req.query;
 

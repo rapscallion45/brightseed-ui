@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import { FaAngleRight } from 'react-icons/fa';
+import ButtonLink from './button-link';
 
 export default function ContactBanner() {
   return (
@@ -25,17 +25,14 @@ export default function ContactBanner() {
             </div>
             <div className="text-center">
               <div className="py-5">
-                <Link href="/contact">
-                  <a
-                    data-scroll=""
-                    className="btn btn-secondary btn-effect btn-icon-container-main external"
-                  >
-                    Contact Us
-                    <i className="btn-icon">
-                      <FaAngleRight />
-                    </i>
-                  </a>
-                </Link>
+                <ButtonLink
+                  uri="/contact"
+                  varaint="secondary"
+                  text="Contact Us"
+                  hasIcon
+                >
+                  <FaAngleRight />
+                </ButtonLink>
               </div>
             </div>
           </div>

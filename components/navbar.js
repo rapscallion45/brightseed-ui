@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
-import { FaEnvelope } from 'react-icons/fa';
+import { FaAngleRight, FaEnvelope } from 'react-icons/fa';
+import ButtonLink from './button-link';
 
 export default function NavBar({ menuItems }) {
   const [collapseOpen, setCollapseOpen] = useState(false);
@@ -18,28 +19,22 @@ export default function NavBar({ menuItems }) {
       <div className="text-md lg:flex lg:flex-grow lg:justify-end p-6 leading-6">
         {menuItems.map((menuItem) => (
           <Link key={menuItem.node.path} href={menuItem.node.path}>
-            <a
+            <button
+              type="button"
+              onKeyDown={closeMenu}
               onClick={closeMenu}
               className="block mt-4 lg:inline-block lg:mt-0 visited:text-white active:text-white hover:text-gray-300 mr-4 text-white"
             >
               {menuItem.node.label}
-            </a>
+            </button>
           </Link>
         ))}
       </div>
       <div className="pb-5 lg:pb-0 lg:text-center leading-5">
         <div className="py-2 px-3">
-          <Link href="/contact">
-            <a
-              onClick={closeMenu}
-              className="btn btn-border btn-effect btn-border-icon-container external"
-            >
-              Contact Us
-              <i className="btn-icon btn-icon-border btn-icon-nav-contact">
-                <FaEnvelope size={26} />
-              </i>
-            </a>
-          </Link>
+          <ButtonLink uri="/contact" variant="border" text="Contact Us" hasIcon>
+            <FaAngleRight />
+          </ButtonLink>
         </div>
       </div>
     </>
@@ -49,9 +44,11 @@ export default function NavBar({ menuItems }) {
     <nav id="navigation" className="fixed w-screen top-0 z-50">
       <div className="container max-w-7xl mx-auto px-5 flex items-center justify-between flex-wrap bg-teal-500 px-4">
         <div className="flex items-center flex-shrink-0 text-white">
-          <h1 className="navbar-brand text-4xl py-5 px-2 leading-6">
+          <h1 className="navbar-brand text-4xl py-5 px-2 leading-6 my-0 mr-2">
             <Link href="/">
-              <a onClick={closeMenu}>brightseed.</a>
+              <button type="button" onKeyDown={closeMenu} onClick={closeMenu}>
+                brightseed.
+              </button>
             </Link>
           </h1>
           <a
@@ -64,13 +61,13 @@ export default function NavBar({ menuItems }) {
         <div className="block flex flex-row lg:hidden">
           <div className="py-3">
             <Link href="/contact">
-              <a>
+              <button type="button">
                 <div className="navbar-toggle navbar-contact">
                   <i className="navbar-contact-icon">
                     <FaEnvelope />
                   </i>
                 </div>
-              </a>
+              </button>
             </Link>
           </div>
           <button

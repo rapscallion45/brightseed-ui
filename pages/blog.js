@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Container from '../components/container';
 import ArticlesList from '../components/articles-list';
 import BlogMainFeatured from '../components/blog-main-featured';
 import Layout from '../components/layout';

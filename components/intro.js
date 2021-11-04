@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import parse from 'html-react-parser';
 import { FaAngleRight } from 'react-icons/fa';
+import ButtonLink from './button-link';
 
 const Intro = ({ content }) => (
   <>
@@ -12,14 +12,22 @@ const Intro = ({ content }) => (
               {parse(content)}
               <div className="text-center">
                 <div className="py-5">
-                  <Link href="/#how-we-work">
+                  {/* <Link href="/#how-we-work">
                     <a className="btn btn-border btn-effect btn-border-icon-container external">
                       How We Work
                       <i className="btn-icon btn-icon-border">
                         <FaAngleRight />
                       </i>
                     </a>
-                  </Link>
+                  </Link> */}
+                  <ButtonLink
+                    uri="/#how-we-work"
+                    variant="border"
+                    text="How We Work"
+                    hasIcon
+                  >
+                    <FaAngleRight />
+                  </ButtonLink>
                 </div>
               </div>
             </div>

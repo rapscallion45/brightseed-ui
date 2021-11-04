@@ -22,7 +22,9 @@ export default function HeroPost({
         <div>
           <h3 className="mb-4 text-4xl lg:text-6xl leading-tight">
             <Link href={`/posts/${slug}`}>
-              <a
+              <button
+                type="button"
+                aria-label="Title"
                 className="hover:underline"
                 dangerouslySetInnerHTML={{ __html: title }}
               />

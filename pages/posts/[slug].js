@@ -1,9 +1,7 @@
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
 import Head from 'next/head';
-import Container from '../../components/container';
 import PostBody from '../../components/post-body';
-import Header from '../../components/header';
 import PostHeader from '../../components/post-header';
 import PostFooter from '../../components/post-footer';
 import Layout from '../../components/layout';
@@ -29,17 +27,14 @@ export default function Post({
 
   return (
     <Layout preview={preview} navMenuItems={menuData}>
-      <Container>
-        <Header />
-      </Container>
       {router.isFallback ? (
-        <Container>
+        <div className="container mx-auto px-5 pt-20">
           <PostTitle>Loading…</PostTitle>
-        </Container>
+        </div>
       ) : (
         <>
           <section className="article-content">
-            <Container>
+            <div className="container mx-auto px-5 pt-20">
               <article>
                 <Head>
                   <title>
@@ -66,7 +61,7 @@ export default function Post({
                   {post.tags.edges.length > 0 && <Tags tags={post.tags} />}
                 </footer>
               </article>
-            </Container>
+            </div>
           </section>
           <PostThanksText />
           <PostFooter morePosts={morePosts} />

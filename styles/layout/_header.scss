@@ -32,11 +32,13 @@
   }
 }
 .navbar-brand {
-  a {
+  a,
+  button {
     color: $secondary-brand-color;
   }
   &:hover {
-    a {
+    a,
+    button {
       color: $secondary-brand-color;
     }
   }
@@ -82,7 +84,7 @@
     }
   }
 }
-h1.navbar-brand {
+.navbar-brand button {
   font-family: "questrial regular", sans-serif !important;
   font-size: 30px;
   font-weight: 700;
