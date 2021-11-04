@@ -30,8 +30,10 @@ export default function ContactBanner() {
                     data-scroll=""
                     className="btn btn-secondary btn-effect btn-icon-container-main external"
                   >
-                    <p>Contact Us</p>
-                    <FaAngleRight className="btn-icon" />
+                    Contact Us
+                    <i className="btn-icon">
+                      <FaAngleRight />
+                    </i>
                   </a>
                 </Link>
               </div>

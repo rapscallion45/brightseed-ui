@@ -63,17 +63,16 @@
   }
 }
 
-.btn-icon-container {
-  padding: 19px 77px 15px 25px !important;
-}
-
 .btn-icon-container-main {
   padding: 15px 70px 10px 25px !important;
 }
+.btn-border-icon-container {
+  padding: 16px 73px 12px 25px !important;
+}
 
 .btn-icon {
-  margin-left: 120px;
-  margin-top: -32px;
+  margin-left: 23px;
+  margin-top: -10px;
   padding: 0 0 0 3px;
   border: 2px solid $secondary-text-color;
   border-radius: 50px;
@@ -81,4 +80,11 @@
   color: $brand-color;
   position: absolute;
   font-size: 36px;
+}
+.btn-icon-border {
+  margin-left: 25px;
+  margin-top: -12px;
+}
+.btn-icon-nav-contact {
+  padding: 5px 6px 5px 7px;
 }

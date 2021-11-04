@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FaEnvelope } from "react-icons/fa";
 
 export default function NavBar({ menuItems }) {
   return (
@@ -39,12 +40,20 @@ export default function NavBar({ menuItems }) {
               );
             })}
           </div>
-          <div className="p-4">
-            <Link href="/contact">
-              <a className="inline-block text-md px-4 py-2 leading-5 border-2 rounded-3xl text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">
-                Contact Us
-              </a>
-            </Link>
+          <div className="pb-5 lg:pb-0 lg:text-center leading-5">
+            <div className="py-2">
+              <Link href="/contact">
+                <a
+                  data-scroll=""
+                  className="btn btn-border btn-effect btn-border-icon-container external"
+                >
+                  Contact Us
+                  <i className="btn-icon btn-icon-border btn-icon-nav-contact">
+                    <FaEnvelope size={26} />
+                  </i>
+                </a>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
