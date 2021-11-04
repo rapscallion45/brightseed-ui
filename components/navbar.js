@@ -15,7 +15,7 @@ export default function NavBar({ menuItems }) {
 
   const getMenu = () => (
     <>
-      <div className="text-md lg:flex-grow p-6 leading-6">
+      <div className="text-md lg:flex lg:flex-grow lg:justify-end p-6 leading-6">
         {menuItems.map((menuItem) => (
           <Link key={menuItem.node.path} href={menuItem.node.path}>
             <a
