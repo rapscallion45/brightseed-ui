@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function NavBar({ menuItems }) {
   return (
     <nav id="navigation" className="fixed w-screen top-0 z-50">
-      <div className="container max-w-6xl mx-auto px-5 flex items-center justify-between flex-wrap bg-teal-500 px-6">
+      <div className="container max-w-7xl mx-auto px-5 flex items-center justify-between flex-wrap bg-teal-500 px-6">
         <div className="flex items-center flex-shrink-0 text-white mr-6">
           <h1 className="navbar-brand text-4xl p-5 leading-6">
             <Link href="/">brightseed.</Link>
