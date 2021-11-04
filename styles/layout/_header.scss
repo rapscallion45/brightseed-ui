@@ -173,7 +173,7 @@ h1.navbar-brand {
 .navbar-contact {
   color: $secondary-text-color;
   border: 2px solid $secondary-text-color !important;
-  border-radius: 40px;
+  border-radius: 50px;
   margin-top: 1px !important;
 }
 .navbar-contact-text {
@@ -187,12 +187,9 @@ h1.navbar-brand {
 .navbar-contact-icon {
   margin-top: 0px;
   font-size: 20px;
-  padding-bottom: 0px;
-  padding-top: 3px;
-  padding-right: 3px;
-  padding-left: 3px;
+  padding: 14px 14px 5px 14px;
   display: inline-block;
-  @include rwd(380) {
+  @include rwd(1024) {
     display: none;
   }
 }

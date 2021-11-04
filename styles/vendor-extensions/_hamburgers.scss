@@ -1,0 +1,49 @@
+/**
+ * File Name: _hamburgers.scss
+ * Description: Brightseed website theme hamburgers styling overrides
+ * Version: 1.0.0
+ * Author: Carl Scrivener
+ * Author URI: http://brightseed.io
+ * Theme URI: http://brightseed.io
+ *
+ * Copyright: ©, 2021, Carl Scrivener. All rights reserved.
+ */
+.hamburger {
+  padding: 25px 15px 15px;
+  &:hover {
+    opacity: 1;
+  }
+}
+.hamburger.is-active {
+  &:hover {
+    opacity: 1;
+  }
+}
+.hamburger-box {
+  width: 22px;
+  height: 21px;
+}
+.hamburger-inner {
+  background-color: white !important;
+  opacity: 1;
+  width: 22px;
+  height: 3px;
+  &:before,
+  &:after {
+    background-color: white !important;
+    opacity: 1;
+    width: 22px;
+    height: 3px;
+  }
+  &:before {
+    top: -7px;
+  }
+  &:after {
+    top: 7px;
+  }
+}
+.hamburger--squeeze.is-active .hamburger-inner {
+  &:after {
+    top: 0;
+  }
+}
