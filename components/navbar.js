@@ -1,7 +1,7 @@
-import Link from "next/link";
-import { useState, useRef, useEffect } from "react";
-import { FaAngleRight, FaEnvelope } from "react-icons/fa";
-import ButtonLink from "./button-link";
+import Link from 'next/link';
+import { useState, useRef, useEffect } from 'react';
+import { FaAngleRight, FaEnvelope } from 'react-icons/fa';
+import ButtonLink from './button-link';
 
 export default function NavBar({ menuItems }) {
   const [collapseOpen, setCollapseOpen] = useState(false);
@@ -11,16 +11,15 @@ export default function NavBar({ menuItems }) {
     if (!navClickRef.current.contains(event.target)) {
       /* user click away from nav, close */
       setCollapseOpen(false);
-      return;
     }
   };
   useEffect(() => {
     /* add click handler when mounted */
-    document.addEventListener("mousedown", handleClick);
+    document.addEventListener('mousedown', handleClick);
 
     /* return function to remove click handler when unmounted */
     return () => {
-      document.removeEventListener("mousedown", handleClick);
+      document.removeEventListener('mousedown', handleClick);
     };
   }, []);
 
@@ -103,7 +102,7 @@ export default function NavBar({ menuItems }) {
           </div>
           <button
             className={`hamburger hamburger--squeeze ${
-              collapseOpen ? "is-active" : ""
+              collapseOpen ? 'is-active' : ''
             }`}
             type="button"
             onClick={handleMenuClick}
@@ -116,7 +115,7 @@ export default function NavBar({ menuItems }) {
         <div
           id="mobile-menu"
           className={`lg:hidden w-full overflow-scroll block flex-grow lg:flex lg:items-right lg:w-auto transition-height duration-500 ease-in-out ${
-            collapseOpen ? "h-80" : "h-px"
+            collapseOpen ? 'h-80' : 'h-px'
           }`}
         >
           {getMenu()}

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 export default function ButtonLink({
   variant,
@@ -9,7 +9,7 @@ export default function ButtonLink({
   handleClick,
 }) {
   switch (variant) {
-    case "border":
+    case 'border':
       return (
         <Link href={uri}>
           <button
@@ -17,7 +17,7 @@ export default function ButtonLink({
             onClick={handleClick}
             onKeyDown={handleClick}
             className={`btn btn-border btn-effect external ${
-              hasIcon ? "btn-border-icon-container" : ""
+              hasIcon ? 'btn-border-icon-container' : ''
             }`}
           >
             {text}
@@ -25,7 +25,7 @@ export default function ButtonLink({
           </button>
         </Link>
       );
-    case "secondary":
+    case 'secondary':
     default:
       return (
         <Link href={uri}>
@@ -34,7 +34,7 @@ export default function ButtonLink({
             onClick={handleClick}
             onKeyDown={handleClick}
             className={`btn btn-secondary btn-effect external ${
-              hasIcon ? "btn-icon-container-main" : ""
+              hasIcon ? 'btn-icon-container-main' : ''
             }`}
           >
             {text}
