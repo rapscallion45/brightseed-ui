@@ -1,7 +1,14 @@
+import { motion } from 'framer-motion';
 import Alert from './alert';
 import NavBar from './navbar';
 import Footer from './footer';
 import Meta from './meta';
+
+const variants = {
+  hidden: { opacity: 0, x: +200, y: 0 },
+  enter: { opacity: 1, x: 0, y: 0 },
+  exit: { opacity: 0, x: 0, y: -100 },
+};
 
 export default function Layout({ navMenuItems, preview, children }) {
   return (
@@ -10,9 +17,17 @@ export default function Layout({ navMenuItems, preview, children }) {
       <div className="min-h-screen">
         <Alert preview={preview} />
         <NavBar menuItems={navMenuItems} />
-        <main className="site-content" role="main">
+        <motion.main
+          role="main"
+          initial="hidden"
+          animate="enter"
+          exit="exit"
+          variants={variants}
+          transition={{ type: 'linear' }}
+          className="site-content"
+        >
           {children}
-        </main>
+        </motion.main>
       </div>
       <Footer />
     </>
