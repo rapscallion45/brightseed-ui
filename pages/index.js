@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import parse from 'html-react-parser';
 import FeaturedBlogPosts from '../components/featured-blog-posts';
 import Intro from '../components/intro';
 import Layout from '../components/layout';
@@ -7,11 +8,10 @@ import {
   getPageDataByUri,
   getPrimaryMenu,
 } from '../lib/api';
-import { CMS_NAME } from '../lib/constants';
 
 const Index = ({
   menuData,
-  pageData: { content },
+  pageData: { content, seo },
   allPosts: { edges },
   preview,
 }) => {
@@ -19,12 +19,7 @@ const Index = ({
 
   return (
     <Layout navMenuItems={menuData} preview={preview}>
-      <Head>
-        <title>
-          Next.js Blog Example with
-          {CMS_NAME}
-        </title>
-      </Head>
+      <Head>{parse(seo.fullHead)}</Head>
       <Intro content={content} />
       <FeaturedBlogPosts posts={posts} />
     </Layout>
@@ -38,7 +33,10 @@ export async function getStaticProps({ preview = false }) {
   const allPosts = await getAllPostsForHome(preview);
   return {
     props: {
-      pageData, menuData, allPosts, preview,
+      pageData,
+      menuData,
+      allPosts,
+      preview,
     },
   };
 }

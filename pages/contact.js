@@ -1,19 +1,11 @@
-import parse from 'html-react-parser';
 import Head from 'next/head';
+import parse from 'html-react-parser';
 import Layout from '../components/layout';
 import { getPageDataByUri, getPrimaryMenu } from '../lib/api';
-import { CMS_NAME } from '../lib/constants';
 
-const Contact = ({ menuData, pageData: { title, content }, preview }) => (
+const Contact = ({ menuData, pageData: { title, content, seo }, preview }) => (
   <Layout preview={preview} navMenuItems={menuData}>
-    <Head>
-      <title>
-        This is the
-        {CMS_NAME}
-        {' '}
-        contact page
-      </title>
-    </Head>
+    <Head>{parse(seo.fullHead)}</Head>
     <section id="contact-header">
       <div className="container max-w-6xl mx-auto pt-20 pb-5 px-5">
         <div className="sec-title text-center wow animated fadeInDown">
