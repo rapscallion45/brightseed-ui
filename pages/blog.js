@@ -24,7 +24,7 @@ const Blog = ({
     <>
       <Layout preview={preview} navMenuItems={menuData}>
         <Head>{parse(seo.fullHead)}</Head>
-        <div className="container max-w-6xl mx-auto pt-20 pb-5 px-5">
+        <div className="container max-w-6xl mx-auto pt-32 pb-5 px-5">
           <BlogMainFeatured posts={featuredPosts} />
           {morePosts.length > 0 && (
             <ArticleList posts={morePosts} categories={categoryData} />

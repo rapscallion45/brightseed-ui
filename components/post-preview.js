@@ -12,12 +12,13 @@ export default function PostPreview({
   author,
   slug,
   smallTitle,
+  mainFeatured,
 }) {
   const titleTextSize = smallTitle ? 'text-xl' : 'text-3xl';
   return (
     <div>
       <div className="mb-5">
-        {coverImage && (
+        {coverImage && !mainFeatured && (
           <CoverImage title={title} coverImage={coverImage} slug={slug} />
         )}
       </div>
@@ -27,7 +28,9 @@ export default function PostPreview({
             aria-label="Post title"
             type="button"
             href="#"
-            className="hover:underline text-left"
+            className={`hover:underline text-left font-extrabold ${
+              mainFeatured ? 'text-6xl' : 'text-2xl'
+            }`}
           >
             {parse(title)}
           </button>
@@ -39,6 +42,11 @@ export default function PostPreview({
       {excerpt && (
         <div className="text-lg leading-relaxed mb-4">{parse(excerpt)}</div>
       )}
+      <div className="mb-5">
+        {coverImage && mainFeatured && (
+          <CoverImage title={title} coverImage={coverImage} slug={slug} />
+        )}
+      </div>
       {author && <Avatar author={author} />}
     </div>
   );
