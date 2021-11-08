@@ -31,31 +31,26 @@
 .article-filter-item {
   display: inline-block;
   padding: 0 10px;
-  text-transform: uppercase;
-  > a {
+  > button {
     border: 2px solid $secondary-text-color;
     border-radius: 50px;
-    padding: 7px 25px 4px 25px;
+    padding: 17px 25px 11px 25px;
+    color: $brand-color;
+    text-transform: uppercase;
   }
   &:hover {
-    > a {
+    > button {
       border: 2px solid $brand-color;
-      border-radius: 50px;
-      padding: 7px 25px 4px 25px;
     }
   }
   &:focus {
-    > a {
+    > button {
       border: 2px solid $brand-color;
-      border-radius: 50px;
-      padding: 7px 25px 4px 25px;
     }
   }
 }
 .article-filter-item-active {
-  > a {
+  > button {
     border: 2px solid $brand-color;
-    border-radius: 50px;
-    padding: 7px 25px 4px 25px;
   }
 }
