@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import parse from 'html-react-parser';
 import Avatar from './avatar';
 import Date from './date';
 import CoverImage from './cover-image';
@@ -27,18 +28,16 @@ export default function PostPreview({
             type="button"
             href="#"
             className="hover:underline text-left"
-            dangerouslySetInnerHTML={{ __html: title }}
-          />
+          >
+            {parse(title)}
+          </button>
         </Link>
       </h3>
       <div className="text-lg mb-4">
         <Date dateString={date} />
       </div>
       {excerpt && (
-        <div
-          className="text-lg leading-relaxed mb-4"
-          dangerouslySetInnerHTML={{ __html: excerpt }}
-        />
+        <div className="text-lg leading-relaxed mb-4">{parse(excerpt)}</div>
       )}
       {author && <Avatar author={author} />}
     </div>

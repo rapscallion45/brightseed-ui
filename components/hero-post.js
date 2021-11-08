@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import parse from 'html-react-parser';
 import Avatar from './avatar';
 import Date from './date';
 import CoverImage from './cover-image';
@@ -26,8 +27,9 @@ export default function HeroPost({
                 type="button"
                 aria-label="Title"
                 className="hover:underline"
-                dangerouslySetInnerHTML={{ __html: title }}
-              />
+              >
+                {parse(title)}
+              </button>
             </Link>
           </h3>
           <div className="mb-4 md:mb-0 text-lg">
@@ -35,10 +37,7 @@ export default function HeroPost({
           </div>
         </div>
         <div>
-          <div
-            className="text-lg leading-relaxed mb-4"
-            dangerouslySetInnerHTML={{ __html: excerpt }}
-          />
+          <div className="text-lg leading-relaxed mb-4">{parse(excerpt)}</div>
           <Avatar author={author} />
         </div>
       </div>
