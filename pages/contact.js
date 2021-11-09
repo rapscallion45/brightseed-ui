@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import parse from 'html-react-parser';
 import Layout from '../components/layout';
+import ContactForm from '../components/contact-form';
 import { getPageDataByUri, getPrimaryMenu } from '../lib/api';
 
 const Contact = ({ menuData, pageData: { title, content, seo }, preview }) => (
@@ -12,6 +13,7 @@ const Contact = ({ menuData, pageData: { title, content, seo }, preview }) => (
           <h2>{title}</h2>
           {parse(content)}
         </div>
+        <ContactForm />
       </div>
     </section>
   </Layout>

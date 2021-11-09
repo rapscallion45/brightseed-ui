@@ -3,6 +3,7 @@ import parse from 'html-react-parser';
 import FeaturedBlogPosts from '../components/featured-blog-posts';
 import Intro from '../components/intro';
 import Layout from '../components/layout';
+import ContactForm from '../components/contact-form';
 import {
   getAllPostsForHome,
   getPageDataByUri,
@@ -22,6 +23,9 @@ const Index = ({
       <Head>{parse(seo.fullHead)}</Head>
       <Intro content={content} />
       <FeaturedBlogPosts posts={posts} />
+      <div className="container mx-auto max-w-6xl px-5 my-32">
+        <ContactForm title="Ready To Start Your Project? Contact us!" />
+      </div>
     </Layout>
   );
 };

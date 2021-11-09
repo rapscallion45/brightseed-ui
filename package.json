@@ -10,6 +10,7 @@
   "dependencies": {
     "classnames": "2.3.1",
     "date-fns": "2.22.1",
+    "formik": "^2.2.9",
     "framer-motion": "^5.2.1",
     "html-react-parser": "^1.4.0",
     "next": "latest",
@@ -17,7 +18,8 @@
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
     "react-share": "^4.4.0",
-    "sass": "^1.43.4"
+    "sass": "^1.43.4",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "autoprefixer": "10.2.6",

@@ -3,6 +3,7 @@ import parse from 'html-react-parser';
 import ArticleList from '../components/article-list';
 import BlogMainFeatured from '../components/blog-main-featured';
 import Layout from '../components/layout';
+import ContactForm from '../components/contact-form';
 import {
   getAllPostsForHome,
   getPageDataByUri,
@@ -29,6 +30,9 @@ const Blog = ({
           {morePosts.length > 0 && (
             <ArticleList posts={morePosts} categories={categoryData} />
           )}
+        </div>
+        <div className="container mx-auto max-w-6xl px-5 mb-32">
+          <ContactForm title="Got An Idea For A Project? Get In Touch!" />
         </div>
       </Layout>
     </>

@@ -6,6 +6,7 @@ import PostBody from '../../components/post-body';
 import PostHeader from '../../components/post-header';
 import PostFooter from '../../components/post-footer';
 import Layout from '../../components/layout';
+import ContactForm from '../../components/contact-form';
 import {
   getAllPostsWithSlug,
   getPostAndMorePosts,
@@ -54,6 +55,9 @@ export default function Post({
           </section>
           <PostThanksText />
           <PostFooter morePosts={morePosts} />
+          <div className="container mx-auto max-w-6xl px-5 my-32">
+            <ContactForm title="This Article Spark Your Imagination? Get In Touch!" />
+          </div>
         </>
       )}
     </Layout>

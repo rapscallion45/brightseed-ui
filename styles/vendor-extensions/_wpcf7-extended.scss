@@ -23,12 +23,12 @@ div.wpcf7 {
   }
   @include lg {
     box-shadow: 0 0 15px 0 rgba($shadow-color, 0.15);
-    padding: 50px 50px 145px 50px;
+    padding: 50px 50px 50px 50px;
   }
 }
 .wpcf7 {
   input[type="checkbox"] {
-    margin: 8px 10px 4px 0;
+    margin: 8px 10px 4px 10px;
   }
   input[type="text"] {
     border: 2px solid $tertiary-text-color;
