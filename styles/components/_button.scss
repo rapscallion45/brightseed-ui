@@ -25,6 +25,11 @@
   -ms-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  &:disabled {
+    color: $mid-grey;
+    background-color: $light-grey !important;
+    cursor: not-allowed;
+  }
 }
 
 .btn-secondary {
