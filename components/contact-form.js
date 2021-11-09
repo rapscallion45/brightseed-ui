@@ -32,26 +32,33 @@ export default function ContactForm({ title }) {
           acceptTerms: false,
         }}
         validationSchema={validationSchema}
-        onSubmit={async (values) => {
-          const emailContent = `
-                Message received from <strong>${values.name}</strong>.
-                Their email address is <strong>${values.email}</strong>. <br />
-                Their message:
-                ${values.message}
-              `;
-          const data = await sendMail(
-            'New message from website contact form',
-            emailContent,
-          );
-
-          if (data.sent) {
-            // email was sent successfully!
-            //   router.push('/contact/thanks');
-          }
+        // onSubmit={async (values) => {
+        //   alert(JSON.stringify("Submit!"));
+        //   const emailContent = `
+        //         Message received from <strong>${values.name}</strong>.
+        //         Their email address is <strong>${values.email}</strong>. <br />
+        //         Their message:
+        //         ${values.subject}
+        //         ${values.message}
+        //       `;
+        //   const data = await sendMail(
+        //     "New message from website contact form",
+        //     emailContent
+        //   );
+        //   if (data) {
+        //     // email was sent successfully!
+        //     // alert("Submitted!");
+        //     alert(JSON.stringify(values, null, 2));
+        //   } else {
+        //     alert(JSON.stringify(values, null, 2));
+        //   }
+        // }}
+        onSubmit={(values) => {
+          alert(JSON.stringify(values, null, 2));
         }}
       >
         {({
-          errors, touched, isSubmitting, dirty,
+          values, errors, touched, isSubmitting, dirty,
         }) => (
           <Form className="wpcf7-form init">
             <div className="grid grid-cols-2">
@@ -60,6 +67,7 @@ export default function ContactForm({ title }) {
                   type="text"
                   name="name"
                   placeholder="Your Name..."
+                  value={values.name}
                   className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
                 />
                 {errors.name && touched.name ? (
@@ -73,6 +81,7 @@ export default function ContactForm({ title }) {
                   type="email"
                   name="email"
                   placeholder="Your Email..."
+                  value={values.email}
                   className="wpcf7-form-control wpcf7-email wpcf7-validates-as-required"
                 />
                 {errors.email && touched.email ? (
@@ -86,6 +95,7 @@ export default function ContactForm({ title }) {
                   type="text"
                   name="subject"
                   placeholder="Enter a subject..."
+                  value={values.subject}
                   className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
                 />
                 {errors.subject && touched.subject ? (
@@ -99,6 +109,7 @@ export default function ContactForm({ title }) {
                   as="textarea"
                   name="message"
                   placeholder="Enter a message..."
+                  value={values.message}
                   className="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required"
                 />
                 {errors.message && touched.message ? (
@@ -125,10 +136,10 @@ export default function ContactForm({ title }) {
                   </div>
                 ) : null}
               </div>
-              <div className="col-span-2 mx-auto mt-8 google-privacy">
+              <div className="col-span-2 mx-auto mt-8 google-privacy text-center">
                 <p>This site is protected by Google reCAPTCHA v3.</p>
               </div>
-              <div className="col-span-2 mx-auto google-privacy">
+              <div className="col-span-2 mx-auto google-privacy text-center">
                 <p>
                   <a
                     href="https://policies.google.com/privacy"
@@ -157,7 +168,10 @@ export default function ContactForm({ title }) {
               >
                 {!isSubmitting && 'Send'}
                 {isSubmitting && (
-                <ImSpinner2 size={17} className="icon-spin px-5" />
+                <ImSpinner2
+                  size={17}
+                  className="text-white hover:text-blue active:text-blue icon-spin"
+                />
                 )}
               </button>
             </div>

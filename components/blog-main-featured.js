@@ -17,9 +17,8 @@ export default function BlogMainFeatured({ posts }) {
         </div>
         <div className="col-span-1 md:col-span-4 md:col-start-9 px-4 pt-16 md:pt-0">
           {posts.slice(1, 3).map((post) => (
-            <div className="sub-main-article">
+            <div key={post.node.slug} className="sub-main-article">
               <PostPreview
-                key={post.node.slug}
                 title={post.node.title}
                 coverImage={post.node.featuredImage?.node}
                 date={post.node.date}

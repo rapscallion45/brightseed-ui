@@ -36,9 +36,8 @@ export default function ArticleList({ posts, categories }) {
               return post;
             })
             .map(({ node }) => (
-              <div className="mt-8 md:px-3">
+              <div key={node.slug} className="mt-8 md:px-3">
                 <PostPreview
-                  key={node.slug}
                   title={node.title}
                   coverImage={node.featuredImage?.node}
                   date={node.date}
