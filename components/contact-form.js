@@ -1,9 +1,12 @@
+import { useCallback } from 'react';
 import Link from 'next/link';
 import { ImSpinner2 } from 'react-icons/im';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 
 export default function ContactForm({ title }) {
+  const { executeRecaptcha } = useGoogleReCaptcha();
   const validationSchema = Yup.object().shape({
     name: Yup.string().required('*A contact name is required'),
     email: Yup.string()
@@ -16,6 +19,14 @@ export default function ContactForm({ title }) {
       '*Please accept the Terms & Conditions',
     ),
   });
+
+  const handleReCaptchaVerify = useCallback(async () => {
+    if (!executeRecaptcha) {
+      /* recpatcha script not ready, bail out */
+      return {};
+    }
+    return executeRecaptcha();
+  }, []);
 
   return (
     <div role="form" className="wpcf7">
@@ -40,6 +51,7 @@ export default function ContactForm({ title }) {
               email: values.email,
               subject: values.subject,
               message: values.message,
+              recaptcha: await handleReCaptchaVerify(),
             }),
           };
 
