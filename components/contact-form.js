@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { ImSpinner2 } from 'react-icons/im';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
-import { sendMail } from '../lib/api';
 
 export default function ContactForm({ title }) {
   const validationSchema = Yup.object().shape({
@@ -32,29 +31,22 @@ export default function ContactForm({ title }) {
           acceptTerms: false,
         }}
         validationSchema={validationSchema}
-        // onSubmit={async (values) => {
-        //   alert(JSON.stringify("Submit!"));
-        //   const emailContent = `
-        //         Message received from <strong>${values.name}</strong>.
-        //         Their email address is <strong>${values.email}</strong>. <br />
-        //         Their message:
-        //         ${values.subject}
-        //         ${values.message}
-        //       `;
-        //   const data = await sendMail(
-        //     "New message from website contact form",
-        //     emailContent
-        //   );
-        //   if (data) {
-        //     // email was sent successfully!
-        //     // alert("Submitted!");
-        //     alert(JSON.stringify(values, null, 2));
-        //   } else {
-        //     alert(JSON.stringify(values, null, 2));
-        //   }
-        // }}
-        onSubmit={(values) => {
-          alert(JSON.stringify(values, null, 2));
+        onSubmit={async (values) => {
+          const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              name: values.name,
+              email: values.email,
+              subject: values.subject,
+              message: values.message,
+            }),
+          };
+
+          const data = await fetch('/api/contact', requestOptions);
+          if (data) {
+            // email was sent successfully!
+          }
         }}
       >
         {({

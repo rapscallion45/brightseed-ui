@@ -24,7 +24,7 @@ const Index = ({
       <Intro content={content} />
       <FeaturedBlogPosts posts={posts} />
       <div className="container mx-auto max-w-6xl px-5 my-32">
-        <ContactForm title="Ready To Start Your Project? Contact us!" />
+        <ContactForm title="Ready To Start Your Project? Contact Us!" />
       </div>
     </Layout>
   );
