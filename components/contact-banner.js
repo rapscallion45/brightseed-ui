@@ -6,9 +6,9 @@ export default function ContactBanner() {
     <section id="contactBar2-topsvg" className="no-padding">
       <div className="arrow-section-divider">
         <div className="wave-layer-bkgnd">
-          <div className="container mx-auto px-10 sm:px-32 md:px-52 lg:px-72 xl:px-96">
+          <div className="container mx-auto px-10 sm:px-32 md:px-52 lg:px-72 xl:px-96 wow animated fadeInRight">
             <div className="text-center">
-              <div className="leading-tight">
+              <div className="leading-tight ">
                 <h1>
                   {'Find out how the '}
                   <span

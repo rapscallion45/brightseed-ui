@@ -31,7 +31,7 @@ const Blog = ({
             <ArticleList posts={morePosts} categories={categoryData} />
           )}
         </div>
-        <div className="container mx-auto max-w-6xl px-5 mb-32">
+        <div className="container mx-auto max-w-6xl px-5 mb-32 wow animated fadeInUp">
           <ContactForm title="Got An Idea For A Project? Get In Touch!" />
         </div>
       </Layout>

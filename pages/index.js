@@ -23,7 +23,7 @@ const Index = ({
       <Head>{parse(seo.fullHead)}</Head>
       <Intro content={content} />
       <FeaturedBlogPosts posts={posts} />
-      <div className="container mx-auto max-w-6xl px-5 my-32">
+      <div className="container mx-auto max-w-6xl px-5 my-32 wow animate fadeInUp">
         <ContactForm title="Ready To Start Your Project? Contact Us!" />
       </div>
     </Layout>

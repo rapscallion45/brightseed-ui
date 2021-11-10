@@ -11,7 +11,7 @@ export default function FooterWidgets({ navItems }) {
                             footer-content-cols
                             md:col-span-5"
       >
-        <div className="wow animated fadeInDown">
+        <div className="wow animated fadeInUp">
           <div className="flex flex-row py-5 px-5">
             <h1 className="navbar-brand footer-content-logo m-0 mr-3">
               <Link href="/">
@@ -45,7 +45,7 @@ export default function FooterWidgets({ navItems }) {
                                 footer-content-cols
                                 md:col-span-2 md:col-start-7"
       >
-        <div className="wow animated fadeInDown">
+        <div className="wow animated fadeInUp">
           <div
             id="footer-2-widget-area"
             className="footer-widget-area widget-area"
@@ -69,7 +69,7 @@ export default function FooterWidgets({ navItems }) {
         </div>
       </div>
       <div className="footer-content-col-3 footer-content-cols col-span-12 md:col-start-3 md:col-span-8 lg:col-start-9 lg:col-span-4">
-        <div className="wow animated fadeInDown">
+        <div className="wow animated fadeInUp">
           <div
             id="footer-3-widget-area"
             className="footer-widget-area widget-area"

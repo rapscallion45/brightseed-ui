@@ -36,7 +36,10 @@ export default function ArticleList({ posts, categories }) {
               return post;
             })
             .map(({ node }) => (
-              <div key={node.slug} className="mt-8 md:px-3">
+              <div
+                key={node.slug}
+                className="mt-8 md:px-3 wow animated fadeInUp"
+              >
                 <PostPreview
                   title={node.title}
                   coverImage={node.featuredImage?.node}
@@ -49,7 +52,7 @@ export default function ArticleList({ posts, categories }) {
             ))}
         </div>
         {posts.length >= displayNum && (
-          <div className="flex justify-center fullWidth mb-32">
+          <div className="flex justify-center fullWidth mb-32 wow animated fadeInUp">
             <button
               type="button"
               className="btn btn-secondary btn-effect"

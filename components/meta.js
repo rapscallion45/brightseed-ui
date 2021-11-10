@@ -32,6 +32,10 @@ export default function Meta() {
       <meta name="theme-color" content="#009EE3" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <link href="/css/hamburgers.css" rel="stylesheet" />
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css"
+      />
     </Head>
   );
 }

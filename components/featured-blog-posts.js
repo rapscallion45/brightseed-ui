@@ -7,7 +7,7 @@ export default function FeaturedBlogPosts({ posts }) {
       <ContactBanner />
       <section id="blog-posts" className="no-padding">
         <div className="bg-light-grey py-24">
-          <div className="container max-w-6xl mx-auto px-5 grid grid-cols-1 md:grid-cols-3">
+          <div className="container max-w-6xl mx-auto px-5 grid grid-cols-1 md:grid-cols-3 wow animated fadeInUp">
             {posts.map(({ node }) => (
               <div className="mt-8 md:px-3 col-span-1">
                 <PostPreview
