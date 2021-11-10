@@ -22,14 +22,16 @@ export default function Footer() {
               &copy;
               {` ${new Date().getFullYear()} `}
               <Link href="/">
-                <span
-                  style={{
-                    fontWeight: 'bold',
-                    fontFamily: 'questrial regular,sans-serif',
-                  }}
-                >
-                  brightseed.
-                </span>
+                <button type="button">
+                  <span
+                    style={{
+                      fontWeight: 'bold',
+                      fontFamily: 'questrial regular,sans-serif',
+                    }}
+                  >
+                    brightseed.
+                  </span>
+                </button>
               </Link>
               {' All rights reserved.'}
             </p>
