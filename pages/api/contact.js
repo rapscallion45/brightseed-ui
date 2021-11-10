@@ -64,16 +64,14 @@ export default async function contact(req, res) {
       }
 
       /* Invalid recaptcha, return error */
-      return res.status(404).json({
+      return res.status(422).json({
         message: 'Unproccesable request - invalid captcha code.',
       });
     } catch (error) {
-      return res
-        .status(422)
-        .json({
-          message: 'Oops, something went wrong with the request.',
-          error,
-        });
+      return res.status(422).json({
+        message: 'Oops, something went wrong with the request.',
+        error,
+      });
     }
   }
   /* Return 404 if someone pings the API with a method other than POST */
