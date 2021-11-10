@@ -49,21 +49,14 @@
 .footer-content-cols {
   text-align: center;
   padding: 0;
-  @include md {
-    padding: 0 100px;
-  }
-  @include rwd(992) {
-    padding: 0 200px;
-  }
-  @include xl {
+  @include rwd(1024) {
     text-align: left;
-    padding: 0;
   }
 }
 .footer-content-col-1,
 .footer-content-col-2 {
   display: none;
-  @include xl {
+  @include rwd(1024) {
     display: inline-block;
   }
 }
@@ -233,7 +226,8 @@
         padding: 0 10px 0 0;
         li {
           margin-top: 20px;
-          a {
+          a,
+          button {
             padding-left: 0;
             color: $footer-text-color;
             &:hover {
@@ -287,6 +281,9 @@
         -ms-transition: all 0.2s ease 0s;
         -o-transition: all 0.2s ease 0s;
         transition: all 0.2s ease 0s;
+        &:hover {
+          color: $brand-color;
+        }
       }
       @include sm {
         margin: 0 10px;

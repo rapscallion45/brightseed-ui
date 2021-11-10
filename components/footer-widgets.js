@@ -5,7 +5,7 @@ import {
 
 export default function FooterWidgets({ navItems }) {
   return (
-    <div className="container grid md:grid-cols-12 mx-auto px-5 max-w-6xl pb-12">
+    <div className="container grid grid-cols-12 mx-auto px-5 max-w-6xl pb-12">
       <div
         className="footer-content-col-1
                             footer-content-cols
@@ -68,11 +68,7 @@ export default function FooterWidgets({ navItems }) {
           </div>
         </div>
       </div>
-      <div
-        className="footer-content-col-3
-                                footer-content-cols
-                                md:col-span-4"
-      >
+      <div className="footer-content-col-3 footer-content-cols col-span-12 md:col-start-3 md:col-span-8 lg:col-start-9 lg:col-span-4">
         <div className="wow animated fadeInDown">
           <div
             id="footer-3-widget-area"
