@@ -1,8 +1,10 @@
 import Link from 'next/link';
+import FooterWidgets from './footer-widgets';
 
-export default function Footer() {
+export default function Footer({ navItems }) {
   return (
     <footer id="footer">
+      <FooterWidgets navItems={navItems} />
       <div className="post-footer-bar">
         <div className="container mx-auto px-5 grid grid-cols-1 md:grid-cols-3">
           <div

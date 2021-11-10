@@ -26,7 +26,8 @@
     color: $brand-color;
     font-weight: 800;
   }
-  a {
+  a,
+  button {
     color: $brand-color !important;
     font-weight: 800;
   }
@@ -34,7 +35,7 @@
 .footer-content-slogan {
   color: $brand-color;
   font-weight: 800;
-  margin: 40px 0 20px 0;
+  margin: 20px 0 20px 0;
   font-size: 22px;
   > p {
     font-size: 20px;

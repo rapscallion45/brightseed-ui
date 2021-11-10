@@ -29,7 +29,7 @@ export default function Layout({ navMenuItems, preview, children }) {
           {children}
         </motion.main>
       </div>
-      <Footer />
+      <Footer navItems={navMenuItems} />
     </>
   );
 }
