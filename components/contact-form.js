@@ -1,5 +1,4 @@
 import { useCallback } from 'react';
-import Link from 'next/link';
 import { ImSpinner2 } from 'react-icons/im';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
@@ -125,9 +124,9 @@ export default function ContactForm({ title }) {
               <div className="col-span-2 mx-auto mt-10">
                 <label htmlFor="acceptTerms">
                   {'I accept the '}
-                  <Link href="/terms" target="_blank" rel="noopener noreferrer">
+                  <a href="/terms" target="_blank" rel="noopener noreferrer">
                     <b className="color-brand">Terms & Conditions</b>
-                  </Link>
+                  </a>
                 </label>
                 <Field
                   type="checkbox"
