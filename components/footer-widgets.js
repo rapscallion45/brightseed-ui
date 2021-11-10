@@ -77,9 +77,12 @@ export default function FooterWidgets({ navItems }) {
           >
             <p className="footer-content-title">Connect With Us</p>
             <p>
-              We believe that technology can make a difference, here
-              at&nbsp;brightseed.&nbsp;Keep updated with us below to get all of
-              our latest news.
+              We believe that technology can make a difference, here at
+              {' '}
+              <span className="brand-text">brightseed.</span>
+              {' '}
+              Keep updated with
+              us below to get all of our latest news.
             </p>
             <div className="footer-social py-10">
               <ul>
