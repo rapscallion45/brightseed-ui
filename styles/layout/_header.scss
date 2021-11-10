@@ -202,6 +202,10 @@
   &:hover {
     color: $secondary-text-color;
   }
+  &:active,
+  &:focus {
+    color: inherit;
+  }
   @include rwd(1024) {
     display: inline-block;
   }
