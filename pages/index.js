@@ -8,21 +8,23 @@ import {
   getAllPostsForHome,
   getPageDataByUri,
   getPrimaryMenu,
+  getFeaturedBlogPost,
 } from '../lib/api';
 
 const Index = ({
-  menuData,
-  pageData: { content, seo },
-  allPosts: { edges },
-  preview,
+  menuData, featuredBlogPost, pageData, allPosts, preview,
 }) => {
-  const posts = edges.slice(0, 3);
+  const posts = allPosts.edges.slice(0, 3);
 
   return (
     <Layout navMenuItems={menuData} preview={preview}>
-      <Head>{parse(seo.fullHead)}</Head>
-      <Intro content={content} />
-      <FeaturedBlogPosts posts={posts} />
+      <Head>{parse(pageData.seo.fullHead)}</Head>
+      <Intro content={pageData.content} />
+      <FeaturedBlogPosts
+        title={featuredBlogPost.title}
+        content={featuredBlogPost.content}
+        posts={posts}
+      />
       <div className="container mx-auto max-w-6xl px-5 my-32 wow animate fadeInUp">
         <ContactForm title="Ready To Start Your Project? Contact Us!" />
       </div>
@@ -35,9 +37,11 @@ export async function getStaticProps({ preview = false }) {
   const menuData = await getPrimaryMenu();
   const pageData = await getPageDataByUri('/');
   const allPosts = await getAllPostsForHome(preview);
+  const featuredBlogPost = await getFeaturedBlogPost();
   return {
     props: {
       pageData,
+      featuredBlogPost,
       menuData,
       allPosts,
       preview,
