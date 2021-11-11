@@ -25,7 +25,7 @@ export default function FeaturedBlogPosts({ title, content, posts }) {
           </div>
           <div className="container max-w-6xl mx-auto px-5 grid grid-cols-1 md:grid-cols-3 wow animated fadeInUp">
             {posts.map(({ node }) => (
-              <div className="mt-8 md:px-3 col-span-1">
+              <div key={node.slug} className="mt-8 md:px-3 col-span-1">
                 <PostPreview
                   key={node.slug}
                   title={node.title}

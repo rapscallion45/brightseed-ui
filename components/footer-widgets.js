@@ -56,7 +56,10 @@ export default function FooterWidgets({ navItems }) {
               <div className="menu-top-menu-container">
                 <ul id="menu-top-menu-1" className="menu">
                   {navItems.map((navItem) => (
-                    <li className="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-5">
+                    <li
+                      key={navItem.node.id}
+                      className="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-5"
+                    >
                       <Link href={navItem.node.path}>
                         <button type="button">{navItem.node.label}</button>
                       </Link>
