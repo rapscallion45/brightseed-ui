@@ -14,7 +14,7 @@ export default function MoreArticles({ posts }) {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 md:col-gap-16 lg:col-gap-32 row-gap-20 md:row-gap-32">
           {posts.map(({ node }) => (
-            <div className="mt-8 md:px-3 wow animated fadeInUp">
+            <div key={node.slug} className="mt-8 md:px-3 wow animated fadeInUp">
               <PostPreview
                 key={node.slug}
                 title={node.title}

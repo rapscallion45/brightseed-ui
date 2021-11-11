@@ -423,7 +423,7 @@ ul.external {
   }
   .overlay {
     background-color: rgba($brand-color, 0.78);
-    padding: 70px 0 40px;
+    padding: 70px 0 70px;
   }
   .owl-controls.clickable {
     margin-top: 20px;
@@ -453,10 +453,10 @@ ul.external {
     border: 3px solid $secondary-text-color;
     border-radius: 50%;
     display: inline-block;
-    height: 124px;
-    width: 130px;
+    height: 150px !important;
+    width: 150px !important;
   }
-  > div {
+  .clearfix {
     line-height: 30px;
     position: relative;
     &:before {
@@ -467,6 +467,7 @@ ul.external {
       left: -35px;
       position: absolute;
       width: 45px;
+      content: "";
       @include md {
         background-image: #{image("icons/quotes.png")};
       }
@@ -480,6 +481,7 @@ ul.external {
       position: absolute;
       right: -35px;
       width: 45px;
+      content: "";
       @include md {
         background-image: #{image("icons/quotes.png")};
         bottom: -35px;
@@ -501,7 +503,7 @@ ul.external {
 }
 #testimonial {
   .sub-title {
-    margin-bottom: 20px;
+    padding-bottom: 50px;
     font-style: italic;
   }
 }
