@@ -1,3 +1,5 @@
+import { FaAngleRight } from 'react-icons/fa';
+import ButtonLink from './button-link';
 import PostPreview from './post-preview';
 
 export default function MoreArticles({ posts }) {
@@ -10,7 +12,7 @@ export default function MoreArticles({ posts }) {
         <div className="row sec-title m-b-30 text-center wow animated fadeInUp">
           <h2>More Articles</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 md:col-gap-16 lg:col-gap-32 row-gap-20 md:row-gap-32 mb-32">
+        <div className="grid grid-cols-1 md:grid-cols-3 md:col-gap-16 lg:col-gap-32 row-gap-20 md:row-gap-32">
           {posts.map(({ node }) => (
             <div className="mt-8 md:px-3 wow animated fadeInUp">
               <PostPreview
@@ -23,6 +25,16 @@ export default function MoreArticles({ posts }) {
               />
             </div>
           ))}
+        </div>
+        <div className="flex justify-center fullWidth wow animated fadeInUp py-20">
+          <ButtonLink
+            uri="/blog"
+            variant="secondary"
+            text="Back To Blog"
+            hasIcon
+          >
+            <FaAngleRight />
+          </ButtonLink>
         </div>
       </div>
     </section>

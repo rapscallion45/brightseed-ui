@@ -1,5 +1,6 @@
-import Link from 'next/link';
+import { FaAngleRight } from 'react-icons/fa';
 import parse from 'html-react-parser';
+import ButtonLink from './button-link';
 import PostPreview from './post-preview';
 import ContactBanner from './contact-banner';
 
@@ -38,11 +39,14 @@ export default function FeaturedBlogPosts({ title, content, posts }) {
               </div>
             ))}
             <div className="md:col-start-2 flex justify-center fullWidth wow animated fadeInUp pt-20">
-              <Link href="/blog">
-                <button type="button" className="btn btn-secondary btn-effect">
-                  View Blog
-                </button>
-              </Link>
+              <ButtonLink
+                uri="/blog"
+                variant="secondary"
+                text="Go To Blog"
+                hasIcon
+              >
+                <FaAngleRight />
+              </ButtonLink>
             </div>
           </div>
         </div>
