@@ -55,7 +55,7 @@ export default function Post({
           </section>
           <PostThanksText />
           <PostFooter morePosts={morePosts} />
-          <div className="container mx-auto max-w-6xl px-5 my-32">
+          <div className="container mx-auto max-w-6xl px-5 my-32 wow animated fadeInUp">
             <ContactForm title="This Article Spark Your Imagination? Get In Touch!" />
           </div>
         </>

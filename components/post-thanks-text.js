@@ -25,7 +25,7 @@ export default function PostThanksText() {
   return (
     <section id="thanks-text" className="no-padding-top">
       <Container className="mx-auto">
-        <div className="text-center">
+        <div className="text-center wow animated fadeInUp">
           <div className="leading-tight">
             <h1 className="blog-thanks-text">Thanks for reading!</h1>
             <div className="flex flex-row justify-center">
