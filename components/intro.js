@@ -11,7 +11,7 @@ const Intro = ({ content }) => (
             <div className="message-body">
               {parse(content)}
               <div className="text-center pt-20">
-                <div className="py-5">
+                <div className="py-5 wow animated fadeInUp">
                   <ButtonLink
                     uri="/#how-we-work"
                     variant="border"
