@@ -10,7 +10,7 @@ const Intro = ({ content }) => (
           <div className="welcome-block">
             <div className="message-body">
               {parse(content)}
-              <div className="text-center">
+              <div className="text-center pt-20">
                 <div className="py-5">
                   <ButtonLink
                     uri="/#how-we-work"

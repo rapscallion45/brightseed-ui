@@ -9,7 +9,7 @@ const Contact = ({ menuData, pageData: { title, content, seo }, preview }) => (
     <Head>{parse(seo.fullHead)}</Head>
     <section id="contact-header">
       <div className="container max-w-6xl mx-auto pt-20 pb-5 px-5">
-        <div className="sec-title text-center wow animated fadeInDown">
+        <div className="sec-title text-center">
           <h2>{title}</h2>
           {parse(content)}
         </div>
