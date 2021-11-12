@@ -34,12 +34,12 @@ export default function HomeSlider({ slides }) {
             {slides.slice(activeSlideIdx, activeSlideIdx + 1).map((slide) => (
               <div id="active-slide" key={slide.slug}>
                 <div
-                  className="absolute filter brightness-50 z-1 bg-cover bg-center bg-no-repeat bg-img bg-vid-dark height-auto w-screen"
+                  className="absolute filter brightness-50 z-1 bg-cover bg-center bg-no-repeat bg-img bg-vid-dark height-auto w-full"
                   style={{
                     backgroundImage: `url(${slide.featuredImage?.node.sourceUrl}`,
                   }}
                 >
-                  <div className="relative h-screen overflow-hidden">
+                  <div className="relative h-screen overflow-hidden w-full">
                     <video
                       autoPlay
                       muted
