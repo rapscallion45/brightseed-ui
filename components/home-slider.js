@@ -32,7 +32,7 @@ export default function HomeSlider({ slides }) {
         <section id="home-slider">
           <div className="overflow-hidden">
             {slides.slice(activeSlideIdx, activeSlideIdx + 1).map((slide) => (
-              <div key={slide.slug}>
+              <div id="active-slide" key={slide.slug}>
                 <div
                   className="absolute filter brightness-50 z-1 bg-cover bg-center bg-no-repeat bg-img bg-vid-dark height-auto w-screen"
                   style={{
@@ -62,10 +62,10 @@ export default function HomeSlider({ slides }) {
                   >
                     {slide.slug !== 'main-slide' && (
                       <>
-                        <h2 className="text-4xl text-white leading-tight wow animated bounceInLeft">
+                        <h2 className="text-2xl md:text-4xl text-white leading-tight wow animated bounceInLeft">
                           {slide.title}
                         </h2>
-                        <div className="text-2xl text-white py-10 wow animated bounceInRight">
+                        <div className="text-xl md:text-2xl text-white py-10 wow animated bounceInRight">
                           {parse(slide.excerpt)}
                         </div>
                       </>

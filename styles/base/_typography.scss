@@ -111,7 +111,7 @@ p {
 }
 
 .home-title {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 900 !important;
   color: $secondary-text-color !important;
   a {
@@ -120,11 +120,15 @@ p {
       color: $brand-color !important;
     }
   }
+  @include md {
+    font-size: 4rem;
+  }
 }
 
 .home-sub-title {
   color: $secondary-text-color !important;
   text-transform: none;
+  font-size: 1.2rem;
   a {
     color: $secondary-text-color !important;
     &:hover {
