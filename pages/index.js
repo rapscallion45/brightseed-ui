@@ -10,17 +10,20 @@ import {
   getAllPostsForHome,
   getPageDataByUri,
   getPrimaryMenu,
+  getHomeSlidersPosts,
   getFeaturedBlogPost,
   getHowWeWorkPosts,
   getTestimonialPosts,
   getClientLogosPosts,
 } from '../lib/api';
+import HomeSlider from '../components/home-slider';
 
 const Index = ({
   menuData,
   pageData,
+  homeSlidersPosts,
   howWeWorkPosts,
-  featuredBlogPost,
+  featuredBlogPosts,
   testimonialPosts,
   clientLogosPosts,
   allPosts,
@@ -31,11 +34,12 @@ const Index = ({
   return (
     <Layout navMenuItems={menuData} preview={preview}>
       <Head>{parse(pageData.seo.fullHead)}</Head>
+      <HomeSlider slides={homeSlidersPosts} />
       <Intro content={pageData.content} />
       <HowWeWork items={howWeWorkPosts} />
       <FeaturedBlogPosts
-        title={featuredBlogPost.title}
-        content={featuredBlogPost.content}
+        title={featuredBlogPosts.title}
+        content={featuredBlogPosts.content}
         posts={posts}
       />
       <Testimonials items={testimonialPosts} clientLogos={clientLogosPosts} />
@@ -51,15 +55,17 @@ export async function getStaticProps({ preview = false }) {
   const menuData = await getPrimaryMenu();
   const pageData = await getPageDataByUri('/');
   const allPosts = await getAllPostsForHome(preview);
-  const featuredBlogPost = await getFeaturedBlogPost();
+  const homeSlidersPosts = await getHomeSlidersPosts();
+  const featuredBlogPosts = await getFeaturedBlogPost();
   const howWeWorkPosts = await getHowWeWorkPosts();
   const testimonialPosts = await getTestimonialPosts();
   const clientLogosPosts = await getClientLogosPosts();
   return {
     props: {
       pageData,
+      homeSlidersPosts,
       howWeWorkPosts,
-      featuredBlogPost,
+      featuredBlogPosts,
       testimonialPosts,
       clientLogosPosts,
       menuData,

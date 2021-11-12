@@ -1,5 +1,4 @@
 import parse from 'html-react-parser';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import ClientLogos from './client-logos';
 

@@ -1,5 +1,6 @@
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import { AnimatePresence } from 'framer-motion';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '../styles/index.scss';
 import { useEffect } from 'react';
 
