@@ -62,17 +62,24 @@ export default function HomeSlider({ slides }) {
                   >
                     {slide.slug !== 'main-slide' && (
                       <>
-                        <h2 className="text-2xl md:text-4xl text-white leading-tight wow animated bounceInLeft">
+                        <h2 className="text-2xl md:text-4xl lg:text-6xl text-white leading-tight wow animated bounceInLeft">
                           {slide.title}
                         </h2>
-                        <div className="text-xl md:text-2xl text-white py-10 wow animated bounceInRight">
+                        <div className="text-xl md:text-2xl lg:text-3xl text-white py-10 wow animated bounceInRight">
                           {parse(slide.excerpt)}
                         </div>
                       </>
                     )}
                     {slide.slug === 'main-slide' && (
                       <>
-                        <div className="py-10">{parse(slide.content)}</div>
+                        <h1 className="text-2xl md:text-4xl lg:text-7xl xl:text-8xl wow animated brand-text fadeInDown home-title">
+                          <a data-scroll="" href="#introduction">
+                            {slide.title}
+                          </a>
+                        </h1>
+                        <div className="text-xl md:text-2xl lg:text-3xl text-white py-10 wow animated bounceInRight">
+                          {parse(slide.content)}
+                        </div>
                       </>
                     )}
                   </div>
