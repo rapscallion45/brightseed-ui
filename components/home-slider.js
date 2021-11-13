@@ -72,7 +72,7 @@ export default function HomeSlider({ slides }) {
                     )}
                     {slide.slug === 'main-slide' && (
                       <>
-                        <h1 className="text-2xl md:text-4xl lg:text-7xl xl:text-8xl wow animated brand-text fadeInDown home-title">
+                        <h1 className="lg:text-7xl xl:text-8xl wow animated brand-text fadeInDown home-title">
                           <a data-scroll="" href="#introduction">
                             {slide.title}
                           </a>
