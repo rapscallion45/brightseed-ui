@@ -4,6 +4,7 @@ import Layout from '../components/layout';
 import Intro from '../components/intro';
 import FeaturedBlogPosts from '../components/featured-blog-posts';
 import HowWeWork from '../components/how-we-work';
+import RecentWorks from '../components/recent-works';
 import Testimonials from '../components/testimonials';
 import ContactForm from '../components/contact-form';
 import {
@@ -15,6 +16,7 @@ import {
   getHowWeWorkPosts,
   getTestimonialPosts,
   getClientLogosPosts,
+  getRecentWorksPosts,
 } from '../lib/api';
 import HomeSlider from '../components/home-slider';
 
@@ -24,6 +26,7 @@ const Index = ({
   homeSlidersPosts,
   howWeWorkPosts,
   featuredBlogPosts,
+  recentWorksPosts,
   testimonialPosts,
   clientLogosPosts,
   allPosts,
@@ -37,6 +40,7 @@ const Index = ({
       <HomeSlider slides={homeSlidersPosts} />
       <Intro content={pageData.content} />
       <HowWeWork items={howWeWorkPosts} />
+      <RecentWorks items={recentWorksPosts} />
       <FeaturedBlogPosts
         title={featuredBlogPosts.title}
         content={featuredBlogPosts.content}
@@ -58,6 +62,7 @@ export async function getStaticProps({ preview = false }) {
   const homeSlidersPosts = await getHomeSlidersPosts();
   const featuredBlogPosts = await getFeaturedBlogPost();
   const howWeWorkPosts = await getHowWeWorkPosts();
+  const recentWorksPosts = await getRecentWorksPosts();
   const testimonialPosts = await getTestimonialPosts();
   const clientLogosPosts = await getClientLogosPosts();
   return {
@@ -65,6 +70,7 @@ export async function getStaticProps({ preview = false }) {
       pageData,
       homeSlidersPosts,
       howWeWorkPosts,
+      recentWorksPosts,
       featuredBlogPosts,
       testimonialPosts,
       clientLogosPosts,

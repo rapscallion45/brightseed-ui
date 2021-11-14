@@ -23,7 +23,9 @@ export default function HomeSlider({ slides }) {
   };
 
   const getSlide = (idx) => {
-    if (idx >= 0 && idx <= slides.length && idx !== activeSlideIdx) setActiveSlideIdx(idx);
+    if (idx >= 0 && idx <= slides.length && idx !== activeSlideIdx) {
+      setActiveSlideIdx(idx);
+    }
   };
 
   return (
@@ -96,7 +98,10 @@ export default function HomeSlider({ slides }) {
                 </div>
               </div>
             ))}
-            <div id="home-slider-nav" className="nav-dots">
+            <div
+              id="home-slider-nav"
+              className="nav-dots bottom-4 wow animated fadeInUp"
+            >
               {slides.map((slide, idx) => (
                 <span
                   role="button"
@@ -113,7 +118,7 @@ export default function HomeSlider({ slides }) {
             </div>
             <div className="nav-arrows">
               <div
-                className="next"
+                className="next right-12 top-2/4 wow animated fadeInRight"
                 role="button"
                 tabIndex="0"
                 aria-label="Slider nav next slide"
@@ -123,7 +128,7 @@ export default function HomeSlider({ slides }) {
                 <FaAngleRight size={56} />
               </div>
               <div
-                className="prev"
+                className="prev left-12 top-2/4 wow animated fadeInLeft"
                 role="button"
                 tabIndex="0"
                 aria-label="Slider nav prev slide"

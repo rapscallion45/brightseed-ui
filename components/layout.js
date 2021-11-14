@@ -14,7 +14,7 @@ export default function Layout({ navMenuItems, preview, children }) {
   return (
     <>
       <Meta />
-      <div className="min-h-screen">
+      <div className="min-h-screen overflow-hidden">
         <Alert preview={preview} />
         <NavBar menuItems={navMenuItems} />
         <motion.main
