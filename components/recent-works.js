@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import parse from 'html-react-parser';
 import { FaAngleRight, FaAngleLeft } from 'react-icons/fa';
+import { Carousel } from 'react-responsive-carousel';
 import RecentWorksIntro from './recent-works-intro';
 import RecentWorksOutro from './recent-works-outro';
 
@@ -34,7 +35,7 @@ export default function RecentWorks({ items }) {
           <RecentWorksIntro />
           <section id="recent-works">
             <div className="container mx-auto max-w-6xl grid grid-cols-12">
-              <div className="col-span-12 md:col-span-5 lg:col-span-4 recent-works-phone-container">
+              <div className="col-span-12 md:col-span-5 lg:col-span-4 recent-works-phone-container px-5">
                 <div className="phone-swipe-area wow animated fadeInLeft" />
                 {items.slice(activeSlideIdx, activeSlideIdx + 1).map((item) => (
                   <div
@@ -55,12 +56,12 @@ export default function RecentWorks({ items }) {
                   </div>
                 ))}
               </div>
-              <div className="col-span-12 md:col-start-6 md:col-span-6">
+              <div className="col-span-12 lg:col-start-6 lg:col-span-6">
                 <div className="recent-works relative">
-                  <div className="sec-title wow animated fadeInRight">
+                  <div className="text-center lg:text-left sec-title wow animated fadeInRight">
                     <h2>Our Recent Works</h2>
                   </div>
-                  <div id="works" className="md:h-72">
+                  <div id="works" className="hidden lg:block h-80">
                     {items
                       .slice(activeSlideIdx, activeSlideIdx + 1)
                       .map((item) => (
@@ -88,7 +89,48 @@ export default function RecentWorks({ items }) {
                         </div>
                       ))}
                   </div>
-                  <div id="works-slider-nav" className="nav-dots">
+                  <div
+                    id="mobile-works"
+                    className="block lg:hidden h-80 mx-auto max-w-xl"
+                  >
+                    <Carousel
+                      showArrows={false}
+                      showStatus={false}
+                      showThumbs={false}
+                      autoPlay
+                      interval={6000}
+                      infiniteLoop
+                    >
+                      {items.map((item) => (
+                        <div
+                          key={item.id}
+                          className="work-item wow animated fadeInRight"
+                        >
+                          <a
+                            href={item.projectDetails.projectLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <h3>{item.title}</h3>
+                          </a>
+                          <a
+                            href={item.projectDetails.projectLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {item.projectDetails.projectLink}
+                          </a>
+                          <p />
+                          {parse(item.content)}
+                          <p />
+                        </div>
+                      ))}
+                    </Carousel>
+                  </div>
+                  <div
+                    id="works-slider-nav"
+                    className="nav-dots hidden lg:block"
+                  >
                     {items.map((item, idx) => (
                       <span
                         role="button"
@@ -105,7 +147,7 @@ export default function RecentWorks({ items }) {
                   </div>
                   <div className="nav-arrows hidden lg:block">
                     <div
-                      className="next -right-0 -bottom-7 wow animated fadeInRight"
+                      className="next z-10 -right-0 -bottom-7 wow animated fadeInRight"
                       role="button"
                       tabIndex="0"
                       aria-label="Slider nav next slide"
@@ -115,7 +157,7 @@ export default function RecentWorks({ items }) {
                       <FaAngleRight size={56} />
                     </div>
                     <div
-                      className="prev -left-0 -bottom-7 wow animated fadeInLeft"
+                      className="prev z-10 -left-0 -bottom-7 wow animated fadeInLeft"
                       role="button"
                       tabIndex="0"
                       aria-label="Slider nav prev slide"

@@ -14,7 +14,6 @@
   height: 30px;
   width: 100%;
   left: 0;
-  z-index: 1000;
   span {
     display: inline-block;
     position: relative;
@@ -32,6 +31,7 @@
     box-shadow: 0 1px 1px rgba(255, 255, 255, 0.4),
       inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 0 2px rgba(255, 255, 255, 0.5);
   }
+  span:hover,
   span.nav-dot-current {
     box-shadow: 0 1px 1px rgba(255, 255, 255, 0.4),
       inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 0 5px rgba(255, 255, 255, 0.5);
@@ -58,7 +58,6 @@
     position: absolute;
     text-align: center;
     width: 60px;
-    z-index: 20;
     margin-top: -30px;
     -webkit-transition: all 0.5s ease 0s;
     -moz-transition: all 0.5s ease 0s;
@@ -71,12 +70,15 @@
   }
   .next {
     &:hover {
-      background-color: $brand-color;
+      background-color: $secondary-text-color;
+      color: $brand-color;
       cursor: pointer;
     }
   }
   .prev {
     &:hover {
+      background-color: $secondary-text-color;
+      color: $brand-color;
       cursor: pointer;
     }
   }

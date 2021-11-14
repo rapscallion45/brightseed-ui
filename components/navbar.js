@@ -57,6 +57,7 @@ export default function NavBar({ menuItems }) {
               text={menuItem.node.label}
               hasIcon
               handleClick={closeMenu}
+              noPulse
             >
               <FaAngleRight />
             </ButtonLink>

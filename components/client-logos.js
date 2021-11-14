@@ -13,7 +13,7 @@ export default function ClientLogos({ logos }) {
             id="clients"
             className="container mx-auto pb-10 max-w-6xl px-5 grid grid-cols-10"
           >
-            <div className="col-span-10 py-10 text-4xl font-bold text-center white wow animated fadeInDown">
+            <div className="col-span-10 py-10 text-5xl font-bold text-center white wow animated fadeInDown">
               <h2>Among Our Clients</h2>
             </div>
 

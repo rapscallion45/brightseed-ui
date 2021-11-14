@@ -7,6 +7,7 @@ export default function ButtonLink({
   hasIcon,
   uri,
   handleClick,
+  noPulse,
 }) {
   switch (variant) {
     case 'border':
@@ -21,7 +22,12 @@ export default function ButtonLink({
             }`}
           >
             {text}
-            <i className="btn-icon btn-icon-border">{children}</i>
+            <i className="btn-icon btn-icon-border">
+              {!noPulse && (
+                <span className="animate-ping absolute left-0 inline-flex h-full w-full rounded-full bg-white" />
+              )}
+              {children}
+            </i>
           </button>
         </Link>
       );
@@ -38,7 +44,12 @@ export default function ButtonLink({
             }`}
           >
             {text}
-            <i className="btn-icon">{children}</i>
+            <i className="btn-icon">
+              {!noPulse && (
+                <span className="animate-ping absolute left-0 inline-flex h-full w-full rounded-full bg-white" />
+              )}
+              {children}
+            </i>
           </button>
         </Link>
       );

@@ -10,7 +10,7 @@ export default function Testimonials({ items, clientLogos }) {
           <div className="overlay">
             <ClientLogos logos={clientLogos} />
             <div className="testimonial-container container mx-auto max-w-6xl px-5 grid grid-cols-12">
-              <div className="sec-title text-center white wow animated fadeInDown col-span-12">
+              <div className="text-5xl sec-title text-center white wow animated fadeInDown col-span-12">
                 <h2>Testimonial</h2>
               </div>
               <div className="col-span-12 lg:col-start-3 lg:col-span-8">
