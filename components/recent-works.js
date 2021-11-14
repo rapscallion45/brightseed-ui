@@ -41,7 +41,7 @@ export default function RecentWorks({ items }) {
                     key={`${item.id}-image`}
                     className="wow animated fadeInLeft"
                   >
-                    <image
+                    <img
                       width="374"
                       height="808"
                       src={item.featuredImage.node.sourceUrl}
