@@ -105,7 +105,7 @@ export default function RecentWorks({ items }) {
                   </div>
                   <div className="nav-arrows hidden lg:block">
                     <div
-                      className="next -right-16 xl:-right:32 -bottom-7 wow animated fadeInRight"
+                      className="next -right-0 -bottom-7 wow animated fadeInRight"
                       role="button"
                       tabIndex="0"
                       aria-label="Slider nav next slide"
@@ -115,7 +115,7 @@ export default function RecentWorks({ items }) {
                       <FaAngleRight size={56} />
                     </div>
                     <div
-                      className="prev -left-16 xl:-left:32 -bottom-7 wow animated fadeInLeft"
+                      className="prev -left-0 -bottom-7 wow animated fadeInLeft"
                       role="button"
                       tabIndex="0"
                       aria-label="Slider nav prev slide"
