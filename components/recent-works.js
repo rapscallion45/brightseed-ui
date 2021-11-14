@@ -91,7 +91,7 @@ export default function RecentWorks({ items }) {
                   </div>
                   <div
                     id="mobile-works"
-                    className="block lg:hidden h-80 mx-auto max-w-xl"
+                    className="block lg:hidden mx-auto max-w-xl"
                   >
                     <Carousel
                       showArrows={false}
@@ -104,7 +104,7 @@ export default function RecentWorks({ items }) {
                       {items.map((item) => (
                         <div
                           key={item.id}
-                          className="work-item wow animated fadeInRight"
+                          className="work-item wow animated fadeInRight pb-20"
                         >
                           <a
                             href={item.projectDetails.projectLink}
