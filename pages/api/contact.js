@@ -65,10 +65,10 @@ export default async function contact(req, res) {
 
       /* Invalid recaptcha, return error */
       return res.status(422).json({
-        message: 'Unproccesable request - invalid captcha code.',
+        message: 'Unproccesable request - invalid or expired captcha code.',
       });
     } catch (error) {
-      return res.status(422).json({
+      return res.status(501).json({
         message: 'Oops, something went wrong with the request.',
         error,
       });

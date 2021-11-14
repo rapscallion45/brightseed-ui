@@ -3,6 +3,7 @@ import { ImSpinner2 } from 'react-icons/im';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
+import toastHandler from '../utils/toastHandler';
 
 export default function ContactForm({ title }) {
   const { executeRecaptcha } = useGoogleReCaptcha();
@@ -54,10 +55,15 @@ export default function ContactForm({ title }) {
             }),
           };
 
-          const data = await fetch('/api/contact', requestOptions);
-          if (data) {
-            // email was sent successfully!
-          }
+          await fetch('/api/contact', requestOptions).then((response) => response.json().then((data) => {
+            if (response.ok) {
+              /* contact email was sent successfully */
+              toastHandler('success', data.message);
+            } else {
+              /* contact email failure */
+              toastHandler('failure', data.message);
+            }
+          }));
         }}
       >
         {({

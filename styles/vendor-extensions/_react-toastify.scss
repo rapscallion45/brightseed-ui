@@ -1,0 +1,29 @@
+/**
+ * File Name: _hamburgers.scss
+ * Description: Brightseed website theme react-toastify styling overrides
+ * Version: 1.0.0
+ * Author: Carl Scrivener
+ * Author URI: http://brightseed.io
+ * Theme URI: http://brightseed.io
+ *
+ * Copyright: ©, 2021, Carl Scrivener. All rights reserved.
+ */
+.Toastify__toast-container {
+  padding: 15px !important;
+}
+.Toastify__toast {
+  padding: 20px 30px !important;
+  border-radius: 50px !important;
+}
+.Toastify__toast-body > div {
+  font-size: 0.75rem;
+  @include sm {
+    font-size: 0.9rem;
+  }
+  @include md {
+    font-size: 1rem;
+  }
+}
+.Toastify__toast-icon {
+  margin-inline-end: 20px !important;
+}

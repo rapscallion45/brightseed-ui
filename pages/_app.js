@@ -1,8 +1,10 @@
+import { useEffect } from 'react';
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import { AnimatePresence } from 'framer-motion';
+import { ToastContainer } from 'react-toastify';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '../styles/index.scss';
-import { useEffect } from 'react';
+import 'react-toastify/dist/ReactToastify.min.css';
 
 export default function MyApp({ Component, pageProps }) {
   const isServer = typeof window === 'undefined';
@@ -24,6 +26,17 @@ export default function MyApp({ Component, pageProps }) {
         onExitComplete={() => window.scrollTo(0, 0)}
       >
         <Component {...pageProps} />
+        <ToastContainer
+          position="bottom-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
       </AnimatePresence>
     </GoogleReCaptchaProvider>
   );
