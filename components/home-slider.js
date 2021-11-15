@@ -1,6 +1,7 @@
 import parse from 'html-react-parser';
 import { useState } from 'react';
 import { FaAngleRight, FaAngleLeft } from 'react-icons/fa';
+import ButtonScroll from './button-scroll';
 import ButtonLink from './button-link';
 
 export default function HomeSlider({ slides }) {
@@ -86,14 +87,26 @@ export default function HomeSlider({ slides }) {
                     )}
                   </div>
                   <div className="mx-auto py-5 wow animated fadeInUp">
-                    <ButtonLink
-                      uri={slide.buttonLink?.buttonLink}
-                      varaint="secondary"
-                      text={slide.buttonLink?.buttonText}
-                      hasIcon
-                    >
-                      <FaAngleRight />
-                    </ButtonLink>
+                    {slide.buttonLink?.isAnchor && (
+                      <ButtonScroll
+                        to={slide.buttonLink?.buttonLink}
+                        varaint="secondary"
+                        text={slide.buttonLink?.buttonText}
+                        hasIcon
+                      >
+                        <FaAngleRight />
+                      </ButtonScroll>
+                    )}
+                    {!slide.buttonLink?.isAnchor && (
+                      <ButtonLink
+                        uri={slide.buttonLink?.buttonLink}
+                        varaint="secondary"
+                        text={slide.buttonLink?.buttonText}
+                        hasIcon
+                      >
+                        <FaAngleRight />
+                      </ButtonLink>
+                    )}
                   </div>
                 </div>
               </div>

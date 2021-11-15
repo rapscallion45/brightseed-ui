@@ -45,7 +45,7 @@ export default function FeaturedBlogPosts({ title, content, posts }) {
               <ButtonLink
                 uri="/blog"
                 variant="secondary"
-                text="Go To Blog"
+                text="View Blog"
                 hasIcon
               >
                 <FaAngleRight />

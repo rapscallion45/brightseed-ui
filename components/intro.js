@@ -1,6 +1,6 @@
 import parse from 'html-react-parser';
 import { FaAngleRight } from 'react-icons/fa';
-import ButtonLink from './button-link';
+import ButtonScroll from './button-scroll';
 
 const Intro = ({ content }) => (
   <>
@@ -12,14 +12,14 @@ const Intro = ({ content }) => (
               {parse(content)}
               <div className="text-center pt-20">
                 <div className="py-5 wow animated fadeInUp">
-                  <ButtonLink
-                    uri="/#how-we-work"
+                  <ButtonScroll
+                    to="how-we-work"
                     variant="border"
                     text="How We Work"
                     hasIcon
                   >
                     <FaAngleRight />
-                  </ButtonLink>
+                  </ButtonScroll>
                 </div>
               </div>
             </div>

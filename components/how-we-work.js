@@ -1,6 +1,6 @@
 import parse from 'html-react-parser';
 import { FaAngleRight } from 'react-icons/fa';
-import ButtonLink from './button-link';
+import ButtonScroll from './button-scroll';
 
 export default function HowWeWork({ items }) {
   return (
@@ -44,14 +44,14 @@ export default function HowWeWork({ items }) {
               );
             })}
             <div className="md:col-start-2 flex justify-center fullWidth wow animated fadeInUp pt-20">
-              <ButtonLink
-                uri="/#recent-works"
+              <ButtonScroll
+                to="recent-works"
                 variant="secondary"
                 text="See Our Work"
                 hasIcon
               >
                 <FaAngleRight />
-              </ButtonLink>
+              </ButtonScroll>
             </div>
           </div>
         </section>
