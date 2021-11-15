@@ -6,7 +6,10 @@ export default function PriceModels({ items }) {
           <h2>Our Pricing Models</h2>
         </div>
         {items.map((item) => (
-          <div className="col-md-4 wow animated fadeInUp col-span-12 md:col-span-4 px-3">
+          <div
+            key={item.id}
+            className="col-md-4 wow animated fadeInUp col-span-12 md:col-span-4 px-3"
+          >
             <div className="price-table text-center">
               <span>{item.title}</span>
               <div className="value flex justify-center">
