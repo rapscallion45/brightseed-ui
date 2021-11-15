@@ -1,6 +1,6 @@
-import parse from "html-react-parser";
-import { FaAngleRight } from "react-icons/fa";
-import ButtonLink from "./button-link";
+import parse from 'html-react-parser';
+import { FaAngleRight } from 'react-icons/fa';
+import ButtonLink from './button-link';
 
 export default function HowWeWork({ items }) {
   return (
