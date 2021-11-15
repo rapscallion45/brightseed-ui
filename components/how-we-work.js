@@ -1,4 +1,6 @@
-import parse from 'html-react-parser';
+import parse from "html-react-parser";
+import { FaAngleRight } from "react-icons/fa";
+import ButtonLink from "./button-link";
 
 export default function HowWeWork({ items }) {
   return (
@@ -41,6 +43,16 @@ export default function HowWeWork({ items }) {
                 </div>
               );
             })}
+            <div className="md:col-start-2 flex justify-center fullWidth wow animated fadeInUp pt-20">
+              <ButtonLink
+                uri="/#recent-works"
+                variant="secondary"
+                text="See Our Work"
+                hasIcon
+              >
+                <FaAngleRight />
+              </ButtonLink>
+            </div>
           </div>
         </section>
       )}
