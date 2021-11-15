@@ -1,16 +1,16 @@
-import { useEffect } from "react";
-import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
-import { AnimatePresence } from "framer-motion";
-import { ToastContainer } from "react-toastify";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import "../styles/index.scss";
-import "react-toastify/dist/ReactToastify.min.css";
+import { useEffect } from 'react';
+import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
+import { AnimatePresence } from 'framer-motion';
+import { ToastContainer } from 'react-toastify';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import '../styles/index.scss';
+import 'react-toastify/dist/ReactToastify.min.css';
 
 export default function MyApp({ Component, pageProps }) {
-  const isServer = typeof window === "undefined";
+  const isServer = typeof window === 'undefined';
 
   /* eslint-disable global-require */
-  const WOW = !isServer ? require("wow.js") : null;
+  const WOW = !isServer ? require('wow.js') : null;
 
   useEffect(() => {
     new WOW().init();
