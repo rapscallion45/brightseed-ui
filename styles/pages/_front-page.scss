@@ -563,6 +563,7 @@ ul.external {
     img {
       height: auto;
       width: 40%;
+      padding: 10px;
       -webkit-transform: scale(1.2);
       -moz-transform: scale(1.2);
       -ms-transform: scale(1.2);
@@ -573,7 +574,12 @@ ul.external {
       -ms-transition: all 0.7s ease 0s;
       -o-transition: all 0.7s ease 0s;
       transition: all 0.7s ease 0s;
+      @include sm {
+        width: 30%;
+      }
       @include md {
+        width: 40%;
+        padding: 0;
         -webkit-transform: scale(1);
         -moz-transform: scale(1);
         -ms-transform: scale(1);
@@ -631,7 +637,6 @@ ul.external {
     text-align: center;
     li {
       border-top: 1px solid $tertiary-text-color;
-      display: block;
       padding: 25px 10px;
       border-bottom-left-radius: 50px;
       border-bottom-right-radius: 50px;

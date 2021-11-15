@@ -1,12 +1,14 @@
-import Head from 'next/head';
-import parse from 'html-react-parser';
-import Layout from '../components/layout';
-import Intro from '../components/intro';
-import FeaturedBlogPosts from '../components/featured-blog-posts';
-import HowWeWork from '../components/how-we-work';
-import RecentWorks from '../components/recent-works';
-import Testimonials from '../components/testimonials';
-import ContactForm from '../components/contact-form';
+import Head from "next/head";
+import parse from "html-react-parser";
+import Layout from "../components/layout";
+import Intro from "../components/intro";
+import FeaturedBlogPosts from "../components/featured-blog-posts";
+import HowWeWork from "../components/how-we-work";
+import RecentWorks from "../components/recent-works";
+import Testimonials from "../components/testimonials";
+import ContactForm from "../components/contact-form";
+import HomeSlider from "../components/home-slider";
+import PriceModels from "../components/price-models";
 import {
   getAllPostsForHome,
   getPageDataByUri,
@@ -17,8 +19,8 @@ import {
   getTestimonialPosts,
   getClientLogosPosts,
   getRecentWorksPosts,
-} from '../lib/api';
-import HomeSlider from '../components/home-slider';
+  getPriceModelsPosts,
+} from "../lib/api";
 
 const Index = ({
   menuData,
@@ -29,6 +31,7 @@ const Index = ({
   recentWorksPosts,
   testimonialPosts,
   clientLogosPosts,
+  priceModelsPosts,
   allPosts,
   preview,
 }) => {
@@ -41,6 +44,7 @@ const Index = ({
       <Intro content={pageData.content} />
       <HowWeWork items={howWeWorkPosts} />
       <RecentWorks items={recentWorksPosts} />
+      <PriceModels items={priceModelsPosts} />
       <FeaturedBlogPosts
         title={featuredBlogPosts.title}
         content={featuredBlogPosts.content}
@@ -57,7 +61,7 @@ export default Index;
 
 export async function getStaticProps({ preview = false }) {
   const menuData = await getPrimaryMenu();
-  const pageData = await getPageDataByUri('/');
+  const pageData = await getPageDataByUri("/");
   const allPosts = await getAllPostsForHome(preview);
   const homeSlidersPosts = await getHomeSlidersPosts();
   const featuredBlogPosts = await getFeaturedBlogPost();
@@ -65,6 +69,7 @@ export async function getStaticProps({ preview = false }) {
   const recentWorksPosts = await getRecentWorksPosts();
   const testimonialPosts = await getTestimonialPosts();
   const clientLogosPosts = await getClientLogosPosts();
+  const priceModelsPosts = await getPriceModelsPosts();
   return {
     props: {
       pageData,
@@ -74,6 +79,7 @@ export async function getStaticProps({ preview = false }) {
       featuredBlogPosts,
       testimonialPosts,
       clientLogosPosts,
+      priceModelsPosts,
       menuData,
       allPosts,
       preview,
