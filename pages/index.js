@@ -1,14 +1,14 @@
-import Head from "next/head";
-import parse from "html-react-parser";
-import Layout from "../components/layout";
-import Intro from "../components/intro";
-import FeaturedBlogPosts from "../components/featured-blog-posts";
-import HowWeWork from "../components/how-we-work";
-import RecentWorks from "../components/recent-works";
-import Testimonials from "../components/testimonials";
-import ContactForm from "../components/contact-form";
-import HomeSlider from "../components/home-slider";
-import PriceModels from "../components/price-models";
+import Head from 'next/head';
+import parse from 'html-react-parser';
+import Layout from '../components/layout';
+import Intro from '../components/intro';
+import FeaturedBlogPosts from '../components/featured-blog-posts';
+import HowWeWork from '../components/how-we-work';
+import RecentWorks from '../components/recent-works';
+import Testimonials from '../components/testimonials';
+import ContactForm from '../components/contact-form';
+import HomeSlider from '../components/home-slider';
+import PriceModels from '../components/price-models';
 import {
   getAllPostsForHome,
   getPageDataByUri,
@@ -20,7 +20,7 @@ import {
   getClientLogosPosts,
   getRecentWorksPosts,
   getPriceModelsPosts,
-} from "../lib/api";
+} from '../lib/api';
 
 const Index = ({
   menuData,
@@ -61,7 +61,7 @@ export default Index;
 
 export async function getStaticProps({ preview = false }) {
   const menuData = await getPrimaryMenu();
-  const pageData = await getPageDataByUri("/");
+  const pageData = await getPageDataByUri('/');
   const allPosts = await getAllPostsForHome(preview);
   const homeSlidersPosts = await getHomeSlidersPosts();
   const featuredBlogPosts = await getFeaturedBlogPost();
