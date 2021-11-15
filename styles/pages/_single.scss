@@ -1,0 +1,120 @@
+/**
+ * File Name: _single.scss
+ * Description: Brightseed website theme single post page styling
+ * Version: 1.0.0
+ * Author: Carl Scrivener
+ * Author URI: http://brightseed.io
+ * Theme URI: http://brightseed.io
+ *
+ * Copyright: ©, 2020, Carl Scrivener. All rights reserved.
+ */
+#blog-posts {
+  > .bg-grey {
+    padding-top: 50px;
+  }
+}
+#blog-posts-heading {
+  text-align: center;
+  @include md {
+    text-align: left;
+  }
+}
+#post-navigation {
+  display: none;
+  @include md {
+    display: block;
+  }
+}
+.entry-title {
+  > a {
+    color: $text-color;
+  }
+}
+.entry-header-container {
+  padding: 0 25px;
+}
+.blog-post-title {
+  margin-bottom: 0;
+  > h2 {
+    margin-bottom: 15px;
+  }
+  > p {
+    font-weight: bold;
+  }
+}
+.blog-post-content {
+  max-width: 800px;
+  padding: 0 25px;
+}
+.blog-post-title-img {
+  margin-top: 30px;
+  > img {
+    width: 100%;
+    height: auto;
+  }
+}
+.blog-post-container {
+  overflow: hidden;
+  > img {
+    width: 100% !important;
+    height: auto;
+  }
+  > h3 {
+    font-weight: bold;
+    color: $text-color;
+  }
+  > a {
+    color: $text-color;
+  }
+  > p {
+    color: $text-color;
+  }
+}
+.blog-thanks-text {
+  font-size: 46px;
+  font-weight: bold;
+}
+.pagination-single-inner {
+  margin-left: 5%;
+}
+.pagination-single-title {
+  margin-bottom: 0;
+  h2 {
+    margin-bottom: 0;
+  }
+}
+.post-nav-arrow {
+  border: 2px solid $brand-color;
+  border-radius: 50px;
+  color: $brand-color;
+  display: inline-block;
+  height: 60px;
+  line-height: 76px;
+  text-align: center;
+  width: 60px;
+  -webkit-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -ms-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+.post-nav-arrow-prev {
+  padding: 1px 4px 0 0;
+}
+.post-nav-arrow-next {
+  padding: 1px 0 0 5px;
+}
+.previous-post {
+  display: inline-block;
+  position: static;
+  .title {
+    margin-top: 10px;
+  }
+}
+.next-post {
+  display: inline-block;
+  position: static;
+  .title {
+    margin-top: 10px;
+  }
+}

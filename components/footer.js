@@ -1,30 +1,45 @@
-import Container from './container'
-import { EXAMPLE_PATH } from '../lib/constants'
+import Link from 'next/link';
+import FooterWidgets from './footer-widgets';
 
-export default function Footer() {
+export default function Footer({ navItems }) {
   return (
-    <footer className="bg-accent-1 border-t border-accent-2">
-      <Container>
-        <div className="py-28 flex flex-col lg:flex-row items-center">
-          <h3 className="text-4xl lg:text-5xl font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2">
-            Statically Generated with Next.js.
-          </h3>
-          <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
-            <a
-              href="https://nextjs.org/docs/basic-features/pages"
-              className="mx-3 bg-black hover:bg-white hover:text-black border border-black text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mb-6 lg:mb-0"
-            >
-              Read Documentation
-            </a>
-            <a
-              href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
-              className="mx-3 font-bold hover:underline"
-            >
-              View on GitHub
-            </a>
+    <footer id="footer">
+      <FooterWidgets navItems={navItems} />
+      <div className="post-footer-bar">
+        <div className="container mx-auto px-5 grid grid-cols-12">
+          <div
+            className="flex-row
+                       col-span-12
+                       md:col-start-2
+                       md:col-span-4
+                       post-footer-bar-left
+                       text-center"
+          >
+            <Link href="/privacy">Privacy Policy</Link>
+            <Link href="/terms">Terms of Use</Link>
+          </div>
+          <div className="flex-row col-span-12 md:col-span-6 md:col-start-7 text-center">
+            <p>
+              {'Copyright '}
+              &copy;
+              {` ${new Date().getFullYear()} `}
+              <Link href="/">
+                <button type="button">
+                  <span
+                    style={{
+                      fontWeight: 'bold',
+                      fontFamily: 'questrial regular,sans-serif',
+                    }}
+                  >
+                    brightseed.
+                  </span>
+                </button>
+              </Link>
+              {' All rights reserved.'}
+            </p>
           </div>
         </div>
-      </Container>
+      </div>
     </footer>
-  )
+  );
 }

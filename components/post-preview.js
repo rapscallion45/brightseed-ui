@@ -1,7 +1,8 @@
-import Avatar from '../components/avatar'
-import Date from '../components/date'
-import CoverImage from './cover-image'
-import Link from 'next/link'
+import Link from 'next/link';
+import parse from 'html-react-parser';
+import Avatar from './avatar';
+import Date from './date';
+import CoverImage from './cover-image';
 
 export default function PostPreview({
   title,
@@ -10,30 +11,43 @@ export default function PostPreview({
   excerpt,
   author,
   slug,
+  smallTitle,
+  mainFeatured,
 }) {
+  const titleTextSize = smallTitle ? 'text-xl' : 'text-3xl';
   return (
     <div>
       <div className="mb-5">
-        {coverImage && (
+        {coverImage && !mainFeatured && (
           <CoverImage title={title} coverImage={coverImage} slug={slug} />
         )}
       </div>
-      <h3 className="text-3xl mb-3 leading-snug">
+      <h3 className={`${titleTextSize} mb-3 leading-snug`}>
         <Link href={`/posts/${slug}`}>
-          <a
-            className="hover:underline"
-            dangerouslySetInnerHTML={{ __html: title }}
-          ></a>
+          <button
+            aria-label="Post title"
+            type="button"
+            href="#"
+            className={`hover:underline text-left font-extrabold ${
+              mainFeatured ? 'text-6xl' : 'text-2xl'
+            }`}
+          >
+            {parse(title)}
+          </button>
         </Link>
       </h3>
       <div className="text-lg mb-4">
         <Date dateString={date} />
       </div>
-      <div
-        className="text-lg leading-relaxed mb-4"
-        dangerouslySetInnerHTML={{ __html: excerpt }}
-      />
-      <Avatar author={author} />
+      {excerpt && (
+        <div className="text-lg leading-relaxed mb-4">{parse(excerpt)}</div>
+      )}
+      <div className="mb-5">
+        {coverImage && mainFeatured && (
+          <CoverImage title={title} coverImage={coverImage} slug={slug} />
+        )}
+      </div>
+      {author && <Avatar author={author} />}
     </div>
-  )
+  );
 }

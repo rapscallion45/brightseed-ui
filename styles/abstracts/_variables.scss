@@ -1,0 +1,120 @@
+/**
+ * File Name: _base.scss
+ * Description: Brightseed website application-wide Sass variables
+ * Version: 1.0.0
+ * Author: Carl Scrivener
+ * Author URI: http://brightseed.io
+ * Theme URI: http://brightseed.io
+ *
+ * Copyright: ©, 2020, Carl Scrivener. All rights reserved.
+ */
+
+/// Regular font family
+/// @type List
+$text-font-stack: "catamaran regular", "Arial", sans-serif !default;
+
+/// Brand font family
+/// @type List
+$brand-font-stack: "questrial regular", "Arial", sans-serif !default;
+
+/// Primary background color
+/// @type Color
+$primary-background-color: white !default;
+
+/// Secondary background color
+/// @type Color
+$secondary-background-color: #efefef !default;
+
+/// Tertiary background color
+/// @type Color
+$tertiary-background-color: #ffb700 !default;
+
+/// Header background color
+/// @type Color
+$header-background-color: #009ee3 !default;
+
+/// Footer background color
+/// @type Color
+$footer-background-color: #efefef !default;
+
+/// Post footer bar background color
+/// @type Color
+$post-footer-background-color: #3a4856 !default;
+
+/// Primary text color
+/// @type Color
+$text-color: #3a4856 !default;
+
+/// Secondary text color
+/// @type Color
+$secondary-text-color: white !default;
+
+/// Tertiary text color
+/// @type Color
+$tertiary-text-color: #efefef !default;
+
+/// Footer text color
+/// @type Color
+$footer-text-color: #3a4856 !default;
+
+/// Post footer text color
+/// @type Color
+$post-footer-text-color: white !default;
+
+/// Brand color
+/// @type Color
+$brand-color: #009ee3 !default;
+
+/// Secondary brand color
+/// @type Color
+$secondary-brand-color: white !default;
+
+/// Light grey
+/// @type Color
+$light-grey: #efefef !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: rgb(153, 153, 153) !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: rgb(68, 68, 68) !default;
+
+/// Warning color
+/// @type Color
+$warning-color: #ffb700 !default;
+
+/// Error color
+/// @type Color
+$error-color: #ff0000 !default;
+
+/// Primary shadow color
+/// @type Color
+$shadow-color: black !default;
+
+/// Brand shadow color
+/// @type Color
+$brand-shadow-color: $brand-color !default;
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given size
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  "screen-xs-min": 320px,
+  "screen-xs-max": 575px,
+  "screen-sm-min": 576px,
+  "screen-sm-max": 767px,
+  "screen-md-min": 768px,
+  "screen-md-max": 979px,
+  "screen-lg-min": 980px,
+  "screen-lg-max": 1199px,
+  "screen-xl-min": 1200px,
+) !default;
+
+/// Relative URL to where all assets are served from
+/// This path string assumes that ALL .scss files are at
+/// the same directory level,
+/// i.e. .../stylesheets/scss/*type*/*.scss
+/// @type String
+$base-url: "/" !default;

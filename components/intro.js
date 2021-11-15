@@ -1,28 +1,52 @@
-import { CMS_NAME, CMS_URL } from '../lib/constants'
+import parse from 'html-react-parser';
+import { FaAngleRight } from 'react-icons/fa';
+import ButtonScroll from './button-scroll';
 
-export default function Intro() {
-  return (
-    <section className="flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12">
-      <h1 className="text-6xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
-        Blog.
-      </h1>
-      <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
-        A statically generated blog example using{' '}
-        <a
-          href="https://nextjs.org/"
-          className="underline hover:text-success duration-200 transition-colors"
-        >
-          Next.js
-        </a>{' '}
-        and{' '}
-        <a
-          href={CMS_URL}
-          className="underline hover:text-success duration-200 transition-colors"
-        >
-          {CMS_NAME}
-        </a>
-        .
-      </h4>
+const Intro = ({ content }) => (
+  <>
+    <section id="introduction" className="no-padding-bottom">
+      <div className="container mx-auto px-5 sm:px-15 md:px-30 lg:px-50 xl:px-80">
+        <div className="col-md-offset-2 col-md-8 text-center">
+          <div className="welcome-block">
+            <div className="message-body">
+              {parse(content)}
+              <div className="text-center pt-20">
+                <div className="py-5 wow animated fadeInUp">
+                  <ButtonScroll
+                    to="how-we-work"
+                    variant="border"
+                    text="How We Work"
+                    hasIcon
+                  >
+                    <FaAngleRight />
+                  </ButtonScroll>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-  )
-}
+    <section className="no-padding">
+      <div
+        id="layout-collage-fullwidth-bottom"
+        className="container-fluid arrow-section-divider"
+      >
+        <svg
+          className="arrow-section-divider"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 320"
+          width="100%"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,160L120,186.7C240,213,480,267,720,261.3C960,256,1200,
+                192,1320,160L1440,128L1440,320L1320,320C1200,320,960,320,
+                720,320C480,320,240,320,120,320L0,320Z"
+          />
+        </svg>
+      </div>
+    </section>
+  </>
+);
+export default Intro;

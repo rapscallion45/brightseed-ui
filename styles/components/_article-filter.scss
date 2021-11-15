@@ -1,0 +1,56 @@
+/**
+ * File Name: _article.scss
+ * Description: Brightseed website theme article filter component styling
+ * Version: 1.0.0
+ * Author: Carl Scrivener
+ * Author URI: http://brightseed.io
+ * Theme URI: http://brightseed.io
+ *
+ * Copyright: ©, 2020, Carl Scrivener. All rights reserved.
+ */
+#article-filter {
+  padding: 0;
+}
+.article-filter-outer {
+  border-top: 2px solid $tertiary-text-color;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 90px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.article-filter-container {
+  display: inline-flex;
+  padding-top: 30px;
+  width: 100%;
+}
+.article-filter-item {
+  display: inline-block;
+  padding: 0 10px;
+  > button {
+    border: 2px solid $secondary-text-color;
+    border-radius: 50px;
+    padding: 14px 25px 11px 25px;
+    color: $brand-color;
+    text-transform: uppercase;
+  }
+  &:hover {
+    > button {
+      border: 2px solid $brand-color;
+    }
+  }
+  &:focus {
+    > button {
+      border: 2px solid $brand-color;
+    }
+  }
+}
+.article-filter-item-active {
+  > button {
+    border: 2px solid $brand-color;
+  }
+}

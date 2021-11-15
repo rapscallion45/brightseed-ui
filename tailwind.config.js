@@ -10,6 +10,7 @@ module.exports = {
         'accent-7': '#333',
         success: '#0070f3',
         cyan: '#79FFE1',
+        brand: '#009EE3',
       },
       spacing: {
         28: '7rem',
@@ -30,10 +31,13 @@ module.exports = {
         small: '0 5px 10px rgba(0, 0, 0, 0.12)',
         medium: '0 8px 30px rgba(0, 0, 0, 0.12)',
       },
+      transitionProperty: {
+        height: 'height',
+      },
     },
   },
   variants: {
     extend: {},
   },
   plugins: [],
-}
+};

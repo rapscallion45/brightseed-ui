@@ -1,6 +1,6 @@
 module.exports = {
   images: {
-    domains: ["brightseed.io", "secure.gravatar.com"],
-    formats: ["image/avif", "image/webp"],
+    domains: ['localhost', 'cms.brightseed.io', 'secure.gravatar.com'],
+    formats: ['image/avif', 'image/webp'],
   },
 };

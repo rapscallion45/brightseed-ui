@@ -1,0 +1,41 @@
+/**
+ * File Name: _article.scss
+ * Description: Brightseed website theme article component styling
+ * Version: 1.0.0
+ * Author: Carl Scrivener
+ * Author URI: http://brightseed.io
+ * Theme URI: http://brightseed.io
+ *
+ * Copyright: ©, 2020, Carl Scrivener. All rights reserved.
+ */
+.article-col {
+  > article {
+    margin-top: 70px;
+  }
+}
+.article-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+article.post {
+  .blog-post-content {
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+    img {
+      margin-bottom: 20px;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+    ul {
+      li {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

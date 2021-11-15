@@ -1,0 +1,193 @@
+/**
+ * File Name: _base.scss
+ * Description: Brightseed website theme base styling
+ * Version: 1.0.0
+ * Author: Carl Scrivener
+ * Author URI: http://brightseed.io
+ * Theme URI: http://brightseed.io
+ *
+ * Copyright: ©, 2020, Carl Scrivener. All rights reserved.
+ */
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+/**
+ * Set minimum body width of 320px
+ */
+body {
+  min-width: 320px;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  color: $brand-color;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  text-decoration: none;
+  outline: none;
+
+  &:hover {
+    text-decoration: none;
+    outline: none;
+    color: $brand-color;
+  }
+  &:focus {
+    text-decoration: none;
+    outline: none;
+    color: $brand-color;
+  }
+  &:active {
+    text-decoration: none;
+    outline: none;
+    color: $brand-color;
+  }
+}
+
+/**
+ * Basic styling for tags
+ */
+figure {
+  margin: 0;
+}
+
+address {
+  margin: 0;
+}
+
+iframe {
+  border: 0;
+}
+
+svg {
+  display: block;
+}
+
+input,
+textarea {
+  line-height: 1.5;
+}
+
+/**
+ * Fullwidth image
+ */
+.fullwidth-img {
+  width: 100%;
+  max-width: none;
+}
+
+/**
+ * Margin definitions
+ */
+.m-t-10 {
+  margin-top: 10px !important;
+}
+.m-b-10 {
+  margin-bottom: 10px !important;
+}
+.m-t-20 {
+  margin-top: 20px !important;
+}
+.m-b-20 {
+  margin-bottom: 20px !important;
+}
+.m-t-30 {
+  margin-top: 30px !important;
+}
+.m-b-30 {
+  margin-bottom: 30px !important;
+}
+.m-t-70 {
+  margin-top: 70px !important;
+}
+.m-b-70 {
+  margin-bottom: 70px !important;
+}
+
+/**
+ * Padding definitions
+ */
+.p-t-50 {
+  padding-top: 50px !important;
+}
+.p-b-50 {
+  padding-bottom: 50px !important;
+}
+
+/**
+ * Main styling
+ */
+main {
+  > section {
+    padding: 70px 0;
+  }
+  > article {
+    &:last-child {
+      padding: 0px 0 100px 0;
+    }
+  }
+  > section.no-padding {
+    padding: 0 !important;
+  }
+  > section.no-padding-top {
+    padding-top: 0 !important;
+  }
+  > section.no-padding-bottom {
+    padding-bottom: 0 !important;
+  }
+}
+
+/**
+ * Background color styling
+ */
+.bg-brand-color {
+  background-color: $brand-color;
+}
+.bg-light-grey {
+  background-color: $light-grey;
+}
+
+/**
+ * Parallax section styling
+ */
+.parallax {
+  background-attachment: fixed;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/**
+ * Hide Google's reCAPTCHA badge
+ */
+.grecaptcha-badge {
+  visibility: hidden !important;
+}
+
+/**
+ * 404 background image
+ */
+.error404-slider {
+  background-image: #{image("slider/Containerterminal-1.jpg")};
+}

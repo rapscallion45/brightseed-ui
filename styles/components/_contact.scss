@@ -1,0 +1,87 @@
+/**
+ * File Name: _contact.scss
+ * Description: Brightseed website theme contact form component styling
+ * Version: 1.0.0
+ * Author: Carl Scrivener
+ * Author URI: http://brightseed.io
+ * Theme URI: http://brightseed.io
+ *
+ * Copyright: ©, 2020, Carl Scrivener. All rights reserved.
+ */
+.contact-details {
+  text-align: center;
+  h3 {
+    border-bottom: 1px solid $brand-color;
+    font-weight: 700;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+  }
+  p {
+    line-height: 30px;
+    i {
+      margin-right: 10px;
+    }
+  }
+  span {
+    display: block;
+    margin-left: 24px;
+  }
+  a {
+    color: $text-color;
+  }
+  @include lg {
+    text-align: left;
+  }
+}
+.form-control {
+  border: 2px solid $tertiary-text-color;
+  border-radius: 50px;
+  box-shadow: none;
+  color: $text-color;
+  font-size: 16px;
+  height: 50px;
+  margin-bottom: 10px;
+  padding: 5px 25px 1px 25px;
+  width: 100%;
+  display: inline-block;
+}
+textarea.form-control {
+  width: 100%;
+  height: 165px;
+  padding: 25px;
+}
+.main-contact {
+  border-radius: 50px;
+  @include lg {
+    box-shadow: 0 0 15px 0 rgba($shadow-color, 0.15);
+    padding: 50px;
+  }
+}
+.contact-response {
+  opacity: 0;
+  max-height: 0;
+  padding: 15px;
+  -webkit-transition: max-height 0.5s ease, opacity 1s ease;
+  -moz-transition: max-height 0.5s ease, opacity 1s ease;
+  -ms-transition: max-height 0.5s ease, opacity 1s ease;
+  -o-transition: max-height 0.5s ease, opacity 1s ease;
+  transition: max-height 0.5s ease, opacity 1s ease;
+}
+.contact-response-success {
+  opacity: 1;
+  max-height: 200px;
+}
+.contact-response-error {
+  opacity: 1;
+  max-height: 200px;
+  color: $error-color !important;
+}
+.contact-form {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-bottom: 50px;
+  @include lg {
+    margin-bottom: 0;
+  }
+}
