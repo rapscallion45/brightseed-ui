@@ -21,6 +21,8 @@ module.exports = {
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     /* Allow prop spreading */
     'react/jsx-props-no-spreading': 'off',
+    /* Ignore linebreak type */
+    'linebreak-style': 0,
   },
   globals: {
     /* Next.js assumes React is global */
