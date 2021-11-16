@@ -119,13 +119,13 @@ export default function NavBar({ menuItems }) {
             collapseOpen ? 'h-80' : 'h-px'
           }`}
         >
-          {getMenu()}
+          {menuItems && getMenu()}
         </div>
         <div
           id="desktop-menu"
           className="hidden lg:visible w-full overflow-hidden block flex-grow lg:flex lg:items-right lg:w-auto"
         >
-          {getMenu()}
+          {menuItems && getMenu()}
         </div>
       </div>
     </nav>

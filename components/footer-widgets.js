@@ -40,11 +40,7 @@ export default function FooterWidgets({ navItems }) {
           </div>
         </div>
       </div>
-      <div
-        className="footer-content-col-2
-                                footer-content-cols
-                                md:col-span-2 md:col-start-7"
-      >
+      <div className="footer-content-col-2 footer-content-cols md:col-span-2 md:col-start-7">
         <div className="wow animated fadeInUp">
           <div
             id="footer-2-widget-area"
@@ -55,16 +51,17 @@ export default function FooterWidgets({ navItems }) {
               <p className="footer-content-title">Links</p>
               <div className="menu-top-menu-container">
                 <ul id="menu-top-menu-1" className="menu">
-                  {navItems.map((navItem) => (
-                    <li
-                      key={navItem.node.id}
-                      className="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-5"
-                    >
-                      <Link href={navItem.node.path}>
-                        <button type="button">{navItem.node.label}</button>
-                      </Link>
-                    </li>
-                  ))}
+                  {navItems
+                    && navItems.map((navItem) => (
+                      <li
+                        key={navItem.node.id}
+                        className="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-5"
+                      >
+                        <Link href={navItem.node.path}>
+                          <button type="button">{navItem.node.label}</button>
+                        </Link>
+                      </li>
+                    ))}
                 </ul>
               </div>
             </div>
