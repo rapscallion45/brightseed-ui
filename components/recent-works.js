@@ -61,7 +61,7 @@ export default function RecentWorks({ items }) {
                   <div className="text-center lg:text-left sec-title wow animated fadeInRight">
                     <h2>Our Recent Works</h2>
                   </div>
-                  <div id="works" className="hidden lg:block h-80">
+                  <div id="works" className="hidden lg:block h-96">
                     {items
                       .slice(activeSlideIdx, activeSlideIdx + 1)
                       .map((item) => (
@@ -83,9 +83,8 @@ export default function RecentWorks({ items }) {
                           >
                             {item.projectDetails.projectLink}
                           </a>
-                          <p />
                           {parse(item.content)}
-                          <p />
+                          <p>{`Technologies: ${item.projectDetails.technologiesUsed}`}</p>
                         </div>
                       ))}
                   </div>
