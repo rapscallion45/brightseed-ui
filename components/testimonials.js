@@ -27,12 +27,7 @@ export default function Testimonials({ items, clientLogos }) {
                       const {
                         content, title, clientDetails, featuredImage,
                       } = item;
-                      const {
-                        clientName,
-                        clientPosition,
-                        clientCompany,
-                        clientUrl,
-                      } = clientDetails;
+                      const { clientName, clientPosition, clientCompany } = clientDetails;
                       const {
                         sourceUrl, sizes, srcSet, altText,
                       } = featuredImage.node;
@@ -62,14 +57,7 @@ export default function Testimonials({ items, clientLogos }) {
                               {clientPosition}
                               {' '}
                               -
-                              {' '}
-                              <a
-                                href={clientUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
-                                {clientCompany}
-                              </a>
+                              {clientCompany}
                             </p>
                             <h2 className="text-3xl font-bold pb-4">{title}</h2>
                             <p />
