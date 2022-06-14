@@ -1,6 +1,6 @@
-import parse from 'html-react-parser';
-import { Carousel } from 'react-responsive-carousel';
-import ClientLogos from './client-logos';
+import parse from "html-react-parser";
+import { Carousel } from "react-responsive-carousel";
+import ClientLogos from "./client-logos";
 
 export default function Testimonials({ items, clientLogos }) {
   return (
@@ -24,18 +24,12 @@ export default function Testimonials({ items, clientLogos }) {
                     infiniteLoop
                   >
                     {items.map((item) => {
-                      const {
-                        content, title, clientDetails, featuredImage,
-                      } = item;
-                      const {
-                        clientName,
-                        clientPosition,
-                        clientCompany,
-                        clientUrl,
-                      } = clientDetails;
-                      const {
-                        sourceUrl, sizes, srcSet, altText,
-                      } = featuredImage.node;
+                      const { content, title, clientDetails, featuredImage } =
+                        item;
+                      const { clientName, clientPosition, clientCompany } =
+                        clientDetails;
+                      const { sourceUrl, sizes, srcSet, altText } =
+                        featuredImage.node;
 
                       return (
                         <div
@@ -59,17 +53,7 @@ export default function Testimonials({ items, clientLogos }) {
                           <div className="clearfix">
                             <span>{clientName}</span>
                             <p className="sub-title">
-                              {clientPosition}
-                              {' '}
-                              -
-                              {' '}
-                              <a
-                                href={clientUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
-                                {clientCompany}
-                              </a>
+                              {clientPosition} -{clientCompany}
                             </p>
                             <h2 className="text-3xl font-bold pb-4">{title}</h2>
                             <p />
