@@ -132,7 +132,7 @@ export default function ContactForm() {
         <button type="submit" className="agency-button" disabled={captchaStatus === 'loading' || captchaStatus === 'error'}>{status === 'sending' ? 'Sending…' : 'Send Message'}</button>
       </fieldset>
       <div className={`agency-form-status is-${status}`} role="status" aria-live="polite" aria-atomic="true">
-        {status === 'success' && 'Thanks — your message has been sent. We’ll get back to you by email.'}
+        {status === 'success' && 'Thanks — your message has been sent. We’ll aim to get back to you by email within 48 hours.'}
         {status === 'error' && (
           <>
             We couldn’t confirm your message was sent. Your text is still here; try again or email

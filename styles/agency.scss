@@ -103,7 +103,7 @@ section[id], article[id] { scroll-margin-top: 105px; }
 .agency-about-orb { position: absolute; right: -48px; top: 40%; height: 150px; width: 150px; border-radius: 50%; background: linear-gradient(135deg, #fff 10%, #dce5f2); z-index: -1; }
 .agency-socials { display: flex; align-items: center; gap: 22px; font-size: 14px; }
 .agency-socials a { display: inline-flex; padding: 4px; }
-.agency-section { padding: 120px 0; }
+.agency-section { padding-top: 120px; padding-bottom: 120px; }
 .agency-section-heading { text-align: center; max-width: 630px; margin: 0 auto 72px; }
 .agency-section-heading h2 { color: var(--navy); font-size: 42px; line-height: 1.25; letter-spacing: -.7px; margin-bottom: 20px; }
 .agency-section-heading p { max-width: 540px; margin: 0 auto; }
@@ -361,7 +361,7 @@ section[id], article[id] { scroll-margin-top: 105px; }
   .agency-about { padding: 90px 0; }
   .agency-about-grid { gap: 55px; }
   .agency-about h2, .agency-section-heading h2 { font-size: 36px; }
-  .agency-section { padding: 90px 0; }
+  .agency-section { padding-top: 90px; padding-bottom: 90px; }
   .agency-three-grid { gap: 24px; }
   .agency-card-body { padding: 24px 20px; }
   .agency-card-body h3 { font-size: 18px; }
@@ -407,7 +407,7 @@ section[id], article[id] { scroll-margin-top: 105px; }
   .agency-about h2 { font-size: 36px; }
   .agency-about h3 { font-size: 26px; }
   .agency-about p { max-width: none; }
-  .agency-section { padding: 80px 0; }
+  .agency-section { padding-top: 80px; padding-bottom: 80px; }
   .agency-section-heading { margin-bottom: 45px; }
   .agency-section-heading h2 { font-size: 32px; letter-spacing: -.5px; }
   .agency-eyebrow { font-size: 16px; }
