@@ -36,6 +36,8 @@ We use this correspondence to respond to your enquiry, discuss your project, and
 
 When the contact form is available, we use Web3Forms to receive enquiries. When you submit it, your name, email address and message are sent to Web3Forms so it can deliver the enquiry to our inbox. We use these details to respond to you and discuss your project. Contact enquiries do not subscribe you to marketing emails. You can also contact us directly by email.
 
+We use [hCaptcha](https://www.hcaptcha.com/privacy) on the contact form to help prevent automated spam. hCaptcha may process technical information such as your IP address, browser and device details, and interactions with the verification widget. A verification token is included with your submission so Web3Forms can check it. You can email us directly if you prefer not to use the form.
+
 ## Newsletter Signups
 
 When you subscribe through our newsletter form, your email address is sent to MailerLite to manage your subscription and send Brightseed updates about websites, web applications and AI. Follow the confirmation instructions shown by MailerLite to complete your signup. You can unsubscribe using the link in a newsletter or contact us at [contact@brightseed.io](mailto:contact@brightseed.io).

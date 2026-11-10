@@ -227,6 +227,7 @@ section[id], article[id] { scroll-margin-top: 105px; }
 .agency-form textarea { resize: vertical; min-height: 150px; }
 .agency-form-row { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; margin-bottom: 24px; }
 .agency-form-trap { display: none; }
+.agency-captcha { margin: 20px 0; }
 .agency-form .agency-form-note { font-size: 13px; font-weight: 400; margin: 18px 0; }
 .agency-form-note a, .agency-form-status a { text-decoration: underline; text-underline-offset: 3px; }
 .agency-form button:disabled, .agency-form fieldset:disabled button { opacity: .65; cursor: wait; }
