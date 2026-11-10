@@ -2,11 +2,11 @@
  * File Name: main.scss
  * Description: Brightseed website theme main scss control file
  * Version: 1.0.0
- * Author: Carl Scrivener
+ * Author: Brightseed
  * Author URI: http://brightseed.io
  * Theme URI: http://brightseed.io
  *
- * Copyright: ©, 2020, Carl Scrivener. All rights reserved.
+ * Copyright: ©, 2020, Brightseed. All rights reserved.
  */
 @charset "UTF-8";
 
@@ -24,7 +24,7 @@
 
 /* 5. Components */
 @import "components/button", "components/preloader", "components/article",
-  "components/article-filter", "components/contact", "components/google-map",
+  "components/article-filter", "components/google-map",
   "components/search-form", "components/sl-slider", "components/slideout",
   "components/slider-nav", "components/social";
 
@@ -35,6 +35,4 @@
 @import "themes/default";
 
 /* 8. Vendor Extensions */
-@import "vendor-extensions/wpcf7-extended",
-  "vendor-extensions/owl-carousel-extended", "vendor-extensions/react-toastify",
-  "vendor-extensions/hamburgers";
+@import "vendor-extensions/owl-carousel-extended", "vendor-extensions/hamburgers";

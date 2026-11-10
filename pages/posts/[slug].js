@@ -1,88 +1,71 @@
-import { useRouter } from 'next/router';
-import ErrorPage from 'next/error';
-import Head from 'next/head';
-import parse from 'html-react-parser';
-import PostBody from '../../components/post-body';
-import PostHeader from '../../components/post-header';
-import PostFooter from '../../components/post-footer';
+import Link from 'next/link';
 import Layout from '../../components/layout';
-import ContactForm from '../../components/contact-form';
-import {
-  getAllPostsWithSlug,
-  getPostAndMorePosts,
-  getPrimaryMenu,
-} from '../../lib/api';
-import PostTitle from '../../components/post-title';
-import Tags from '../../components/tags';
-import PostThanksText from '../../components/post-thanks-text';
+import PageSeo from '../../components/page-seo';
+import PostBody from '../../components/post-body';
+import ContactDetails from '../../components/contact-details';
+import { BlogCard, PageHeading, SectionHeading } from '../../components/agency-shared';
+import { getAllPosts, getPostBySlug, getRelatedPosts } from '../../lib/content.mjs';
+import { articleSchema, breadcrumbSchema } from '../../lib/seo.mjs';
+import Breadcrumbs from '../../components/breadcrumbs';
+import BrandText from '../../components/brand-text';
 
-export default function Post({
-  menuData, post, posts, preview,
-}) {
-  const router = useRouter();
-  const morePosts = posts?.edges;
-
-  if (!router.isFallback && !post?.slug) {
-    return <ErrorPage statusCode={404} />;
-  }
-
+export default function Post({ post, morePosts }) {
+  const crumbs = [{ label: 'Home', path: '/' }, { label: 'Insights', path: '/blog' }, { label: post.title, path: `/posts/${post.slug}` }];
   return (
-    <Layout preview={preview} navMenuItems={menuData}>
-      {router.isFallback ? (
-        <div className="container mx-auto px-5 pt-20">
-          <PostTitle>Loading…</PostTitle>
+    <Layout>
+      <PageSeo title={post.title} description={post.excerpt} path={`/posts/${post.slug}`} type="article" image={post.coverImage} imageAlt={post.coverImageAlt || post.title} structuredData={[articleSchema(post), breadcrumbSchema(crumbs)]} />
+      <article>
+        <PageHeading eyebrow={post.categories[0] || 'brightseed insights'} title={post.title}>
+          <span className="agency-article-meta">
+            <Link href="/about"><BrandText>{post.author}</BrandText></Link>
+            {' '}
+            ·
+            {' '}
+            <time dateTime={post.date}>
+              {new Date(`${post.date}T12:00:00Z`).toLocaleDateString('en-GB', {
+                day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC',
+              })}
+            </time>
+            {post.updated && (
+            <span>
+              {' '}
+              · Updated
+              {' '}
+              <time dateTime={post.updated}>
+                {new Date(`${post.updated}T12:00:00Z`).toLocaleDateString('en-GB', {
+                  day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC',
+                })}
+              </time>
+            </span>
+            )}
+          </span>
+        </PageHeading>
+        <Breadcrumbs items={crumbs} />
+        {post.coverImage && <img className="agency-article-cover" src={post.coverImage} alt={post.coverImageAlt} width="1000" height="520" />}
+        <div className="agency-prose">
+          <PostBody content={post.content} />
+          {post.tags.length > 0 && <div className="agency-tags" aria-label="Article topics">{post.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>}
         </div>
-      ) : (
-        <>
-          <section className="article-content">
-            <div className="container mx-auto px-5 pt-20">
-              <article>
-                <Head>{parse(post.seo.fullHead)}</Head>
-                <PostHeader
-                  title={post.title}
-                  excerpt={post.excerpt}
-                  coverImage={post.featuredImage?.node}
-                  date={post.date}
-                  author={post.author?.node}
-                  categories={post.categories}
-                />
-                <PostBody content={post.content} />
-                <footer>
-                  {post.tags.edges.length > 0 && <Tags tags={post.tags} />}
-                </footer>
-              </article>
-            </div>
-          </section>
-          <PostThanksText />
-          <PostFooter morePosts={morePosts} />
-          <div className="container mx-auto max-w-6xl px-5 my-32 wow animated fadeInUp">
-            <ContactForm title="This Article Spark Your Imagination? Get In Touch!" />
-          </div>
-        </>
-      )}
+      </article>
+      <section className="agency-section agency-news">
+        <div className="agency-container">
+          <SectionHeading eyebrow="Keep Reading" title="Related articles" />
+          <div className="agency-three-grid">{morePosts.map((item) => <BlogCard key={item.slug} post={item} />)}</div>
+        </div>
+      </section>
+      <ContactDetails title="Planning a digital product?" />
     </Layout>
   );
 }
 
-export async function getStaticProps({ params, preview = false, previewData }) {
-  const menuData = await getPrimaryMenu();
-  const data = await getPostAndMorePosts(params.slug, preview, previewData);
-
+export function getStaticProps({ params }) {
+  const post = getPostBySlug(params.slug);
+  if (!post) return { notFound: true };
   return {
-    props: {
-      menuData,
-      preview,
-      post: data.post,
-      posts: data.posts,
-    },
+    props: { post, morePosts: getRelatedPosts(post) },
   };
 }
 
-export async function getStaticPaths() {
-  const allPosts = await getAllPostsWithSlug();
-
-  return {
-    paths: allPosts.edges.map(({ node }) => `/posts/${node.slug}`) || [],
-    fallback: true,
-  };
+export function getStaticPaths() {
+  return { paths: getAllPosts().map(({ slug }) => ({ params: { slug } })), fallback: false };
 }

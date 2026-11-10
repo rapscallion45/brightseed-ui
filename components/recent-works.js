@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import parse from 'html-react-parser';
 import { FaAngleRight, FaAngleLeft } from 'react-icons/fa';
 import { Carousel } from 'react-responsive-carousel';
+import renderRichText from './rich-text';
 import RecentWorksIntro from './recent-works-intro';
 import RecentWorksOutro from './recent-works-outro';
 
@@ -45,13 +45,13 @@ export default function RecentWorks({ items }) {
                     <img
                       width="374"
                       height="808"
-                      src={item.featuredImage.node.sourceUrl}
-                      data-src={item.featuredImage.node.sourceUrl}
+                      src={item.image.sourceUrl}
+                      data-src={item.image.sourceUrl}
                       className="attachment-post-thumbnail size-post-thumbnail wp-post-image lazy"
-                      alt={item.featuredImage.node.altText}
+                      alt={item.image.altText}
                       loading="lazy"
-                      data-srcset={item.featuredImage.node.srcSet}
-                      data-sizes={item.featuredImage.node.sizes}
+                      data-srcset={item.image.srcSet}
+                      data-sizes={item.image.sizes}
                     />
                   </div>
                 ))}
@@ -83,7 +83,7 @@ export default function RecentWorks({ items }) {
                           >
                             {item.projectDetails.projectLink}
                           </a>
-                          {parse(item.content)}
+                          {renderRichText(item.content)}
                           <p>{`Technologies: ${item.projectDetails.technologiesUsed}`}</p>
                         </div>
                       ))}
@@ -120,7 +120,7 @@ export default function RecentWorks({ items }) {
                             {item.projectDetails.projectLink}
                           </a>
                           <p />
-                          {parse(item.content)}
+                          {renderRichText(item.content)}
                           <p />
                         </div>
                       ))}

@@ -54,11 +54,11 @@ export default function FooterWidgets({ navItems }) {
                   {navItems
                     && navItems.map((navItem) => (
                       <li
-                        key={navItem.node.id}
+                        key={navItem.path}
                         className="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-5"
                       >
-                        <Link href={navItem.node.path}>
-                          <button type="button">{navItem.node.label}</button>
+                        <Link href={navItem.path}>
+                          <button type="button">{navItem.label}</button>
                         </Link>
                       </li>
                     ))}

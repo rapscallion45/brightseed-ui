@@ -1,0 +1,9 @@
+Generated with the built-in image_gen tool on 9 November 2026.
+Output: brightseed-logo-concept-v1.png
+Format: raster PNG logo concept, transparent background.
+
+Use case: logo-brand
+Create a polished original logo for "brightseed", a digital agency building websites, web applications and AI solutions.
+One horizontal logo lockup, a distinctive compact geometric seed-and-spark emblem beside the exact lowercase wordmark "brightseed". Combine growth and a bright idea in one simple confident abstract symbol, clever negative space, few bold shapes, legible at favicon sizes. Contemporary geometric sans-serif wordmark, excellent kerning, medium weight, approachable and technically capable.
+Use existing brand colours: vivid blue #009EE3 as the dominant symbol colour, a small amber #FFB700 accent for the spark, deep slate #3A4856 wordmark.
+Flat vector-style graphic with crisp edges, no gradients, no shadows, no 3D, no mockup, no decorative surroundings, no slogan, no extra text, no presentation board. Generous clear space around the single logo, landscape composition. Truly transparent background.

@@ -2,11 +2,11 @@
  * File Name: _base.scss
  * Description: Brightseed website theme base styling
  * Version: 1.0.0
- * Author: Carl Scrivener
+ * Author: Brightseed
  * Author URI: http://brightseed.io
  * Theme URI: http://brightseed.io
  *
- * Copyright: ©, 2020, Carl Scrivener. All rights reserved.
+ * Copyright: ©, 2020, Brightseed. All rights reserved.
  */
 
 /**
@@ -176,13 +176,6 @@ main {
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-/**
- * Hide Google's reCAPTCHA badge
- */
-.grecaptcha-badge {
-  visibility: hidden !important;
 }
 
 /**

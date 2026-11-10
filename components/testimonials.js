@@ -1,5 +1,5 @@
-import parse from 'html-react-parser';
 import { Carousel } from 'react-responsive-carousel';
+import renderRichText from './rich-text';
 import ClientLogos from './client-logos';
 
 export default function Testimonials({ items, clientLogos }) {
@@ -25,12 +25,12 @@ export default function Testimonials({ items, clientLogos }) {
                   >
                     {items.map((item) => {
                       const {
-                        content, title, clientDetails, featuredImage,
+                        content, title, clientDetails, image,
                       } = item;
                       const { clientName, clientPosition, clientCompany } = clientDetails;
                       const {
                         sourceUrl, sizes, srcSet, altText,
-                      } = featuredImage.node;
+                      } = image;
 
                       return (
                         <div
@@ -61,7 +61,7 @@ export default function Testimonials({ items, clientLogos }) {
                             </p>
                             <h2 className="text-3xl font-bold pb-4">{title}</h2>
                             <p />
-                            {parse(content)}
+                            {renderRichText(content)}
                             <p />
                           </div>
                         </div>

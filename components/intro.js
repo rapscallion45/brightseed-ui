@@ -1,5 +1,5 @@
-import parse from 'html-react-parser';
 import { FaAngleRight } from 'react-icons/fa';
+import renderRichText from './rich-text';
 import ButtonScroll from './button-scroll';
 
 const Intro = ({ content }) => (
@@ -9,7 +9,7 @@ const Intro = ({ content }) => (
         <div className="col-md-offset-2 col-md-8 text-center">
           <div className="welcome-block">
             <div className="message-body">
-              {parse(content)}
+              {renderRichText(content)}
               <div className="text-center pt-20">
                 <div className="py-5 wow animated fadeInUp">
                   <ButtonScroll

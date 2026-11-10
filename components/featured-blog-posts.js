@@ -1,8 +1,8 @@
 import { FaAngleRight } from 'react-icons/fa';
-import parse from 'html-react-parser';
 import ButtonLink from './button-link';
 import PostPreview from './post-preview';
 import ContactBanner from './contact-banner';
+import renderRichText from './rich-text';
 
 export default function FeaturedBlogPosts({ title, content, posts }) {
   return (
@@ -21,22 +21,23 @@ export default function FeaturedBlogPosts({ title, content, posts }) {
               id="blog-posts-heading"
               className="col-span-12 md:col-span-8 lg:col-span-9"
             >
-              {parse(content)}
+              {renderRichText(content)}
             </div>
           </div>
           <div className="container max-w-6xl mx-auto px-5 grid grid-cols-1 md:grid-cols-3">
-            {posts.map(({ node }) => (
+            {posts.map((post) => (
               <div
-                key={node.slug}
+                key={post.slug}
                 className="mt-8 md:px-3 col-span-1 wow animated fadeInUp"
               >
                 <PostPreview
-                  key={node.slug}
-                  title={node.title}
-                  coverImage={node.featuredImage?.node}
-                  date={node.date}
-                  slug={node.slug}
-                  excerpt={node.excerpt}
+                  key={post.slug}
+                  title={post.title}
+                  coverImage={post.coverImage}
+                  date={post.date}
+                  slug={post.slug}
+                  excerpt={post.excerpt}
+                  author={post.author}
                   smallTitle
                 />
               </div>

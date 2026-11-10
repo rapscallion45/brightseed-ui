@@ -13,15 +13,16 @@ export default function MoreArticles({ posts }) {
           <h2>More Articles</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 md:col-gap-16 lg:col-gap-32 row-gap-20 md:row-gap-32">
-          {posts.map(({ node }) => (
-            <div key={node.slug} className="mt-8 md:px-3 wow animated fadeInUp">
+          {posts.map((post) => (
+            <div key={post.slug} className="mt-8 md:px-3 wow animated fadeInUp">
               <PostPreview
-                key={node.slug}
-                title={node.title}
-                coverImage={node.featuredImage?.node}
-                date={node.date}
-                slug={node.slug}
-                excerpt={node.excerpt}
+                key={post.slug}
+                title={post.title}
+                coverImage={post.coverImage}
+                date={post.date}
+                slug={post.slug}
+                excerpt={post.excerpt}
+                author={post.author}
               />
             </div>
           ))}

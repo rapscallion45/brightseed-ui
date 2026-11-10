@@ -1,133 +1,76 @@
 import Link from 'next/link';
-import { useState, useRef, useEffect } from 'react';
-import { FaAngleRight, FaEnvelope } from 'react-icons/fa';
-import ButtonLink from './button-link';
+import { useEffect, useRef, useState } from 'react';
+import { useRouter } from 'next/router';
+import {
+  FiArrowRight, FiMenu, FiSearch, FiX,
+} from 'react-icons/fi';
+import { Brand } from './agency-shared';
+import { BrandName } from './brand-text';
 
-export default function NavBar({ menuItems }) {
-  const [collapseOpen, setCollapseOpen] = useState(false);
-  const navClickRef = useRef();
+const links = [
+  ['About', '/about'], ['Services', '/services'],
+  ['Work', '/portfolio'], ['Insights', '/blog'],
+];
 
-  const handleClick = (event) => {
-    if (!navClickRef.current.contains(event.target)) {
-      /* user click away from nav, close */
-      setCollapseOpen(false);
-    }
-  };
+export default function NavBar() {
+  const [open, setOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const header = useRef(null);
+  const search = useRef(null);
+  const router = useRouter();
+  const close = () => { setOpen(false); setSearchOpen(false); };
+
   useEffect(() => {
-    /* add click handler when mounted */
-    document.addEventListener('mousedown', handleClick);
-
-    /* return function to remove click handler when unmounted */
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onClick = (event) => { if (!header.current?.contains(event.target)) close(); };
+    const onKey = (event) => { if (event.key === 'Escape') close(); };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    document.addEventListener('pointerdown', onClick);
+    document.addEventListener('keydown', onKey);
     return () => {
-      document.removeEventListener('mousedown', handleClick);
+      window.removeEventListener('scroll', onScroll);
+      document.removeEventListener('pointerdown', onClick);
+      document.removeEventListener('keydown', onKey);
     };
   }, []);
-
-  const handleMenuClick = () => {
-    setCollapseOpen(!collapseOpen);
-  };
-
-  const closeMenu = () => {
-    setCollapseOpen(false);
-  };
-
-  const getMenu = () => (
-    <>
-      <div className="text-md lg:flex lg:flex-grow lg:justify-end p-6 leading-6">
-        {menuItems.slice(0, -1).map((menuItem) => (
-          <Link key={menuItem.node.path} href={menuItem.node.path}>
-            <button
-              type="button"
-              onKeyDown={closeMenu}
-              onClick={closeMenu}
-              className="block mt-4 lg:inline-block lg:mt-0 visited:text-white active:text-white hover:text-gray-300 mr-4 text-white"
-            >
-              {menuItem.node.label}
-            </button>
-          </Link>
-        ))}
-      </div>
-      <div className="pb-5 lg:pb-0 lg:text-center leading-5">
-        <div className="py-2 px-3">
-          {menuItems.slice(-1).map((menuItem) => (
-            <ButtonLink
-              key={menuItem.node.path}
-              uri={menuItem.node.path}
-              variant="border"
-              text={menuItem.node.label}
-              hasIcon
-              handleClick={closeMenu}
-              noPulse
-            >
-              <FaAngleRight />
-            </ButtonLink>
-          ))}
-        </div>
-      </div>
-    </>
-  );
+  useEffect(() => { if (searchOpen) search.current?.focus(); }, [searchOpen]);
+  useEffect(() => { close(); }, [router.asPath]);
 
   return (
-    <nav
-      ref={navClickRef}
-      id="navigation"
-      className="fixed w-screen top-0 z-50"
-    >
-      <div className="container max-w-7xl mx-auto px-5 flex items-center justify-between flex-wrap bg-teal-500 px-4">
-        <div className="flex items-center flex-shrink-0 text-white">
-          <h1 className="navbar-brand text-4xl py-5 px-2 leading-6 my-0 mr-2">
-            <Link href="/">
-              <button type="button" onKeyDown={closeMenu} onClick={closeMenu}>
-                brightseed.
-              </button>
-            </Link>
-          </h1>
-          <a
-            className="navbar-contact-link"
-            href="mailto:contact@brightseed.io"
-          >
-            <p className="navbar-contact-link-text">contact@brightseed.io</p>
-          </a>
+    <header id="navigation" ref={header} className={`agency-header ${scrolled ? 'is-scrolled' : ''}`}>
+      <div className="agency-container agency-header-inner">
+        <Brand />
+        <button className="agency-menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded={open} aria-controls="primary-navigation" onClick={() => setOpen(!open)}>
+          {open ? <FiX /> : <FiMenu />}
+        </button>
+        <nav id="primary-navigation" aria-label="Main navigation" className={`agency-navigation ${open ? 'is-open' : ''}`}>
+          {links.map(([label, href]) => (
+            <Link href={href} key={label} onClick={close}>{label}</Link>
+          ))}
+          <Link href="/contact" className="agency-mobile-quote agency-button" onClick={close}>Get A Quote</Link>
+        </nav>
+        <div className="agency-header-actions">
+          <button className="agency-search-toggle" type="button" aria-label="Search articles" aria-expanded={searchOpen} aria-controls="header-search" onClick={() => setSearchOpen(!searchOpen)}><FiSearch /></button>
+          <Link href="/contact" className="agency-button agency-button-pill">Get A Quote</Link>
         </div>
-        <div className="block flex flex-row lg:hidden">
-          <div className="py-3">
-            <Link href="/contact">
-              <button type="button" onKeyDown={closeMenu} onClick={closeMenu}>
-                <div className="navbar-toggle navbar-contact">
-                  <i className="navbar-contact-icon">
-                    <FaEnvelope />
-                  </i>
-                </div>
-              </button>
-            </Link>
-          </div>
-          <button
-            className={`hamburger hamburger--squeeze ${
-              collapseOpen ? 'is-active' : ''
-            }`}
-            type="button"
-            onClick={handleMenuClick}
-          >
-            <span className="hamburger-box">
-              <span className="hamburger-inner" />
-            </span>
-          </button>
-        </div>
-        <div
-          id="mobile-menu"
-          className={`lg:hidden w-full overflow-scroll block flex-grow lg:flex lg:items-right lg:w-auto transition-height duration-500 ease-in-out ${
-            collapseOpen ? 'h-80' : 'h-px'
-          }`}
-        >
-          {menuItems && getMenu()}
-        </div>
-        <div
-          id="desktop-menu"
-          className="hidden lg:visible w-full overflow-hidden block flex-grow lg:flex lg:items-right lg:w-auto"
-        >
-          {menuItems && getMenu()}
-        </div>
+        {searchOpen && (
+          <form id="header-search" className="agency-search-popover" action="/blog" method="get">
+            <label htmlFor="site-search">
+              Search the
+              {' '}
+              <BrandName />
+              {' '}
+              blog
+              <input id="site-search" name="q" type="search" placeholder="What are you looking for?" ref={search} required />
+            </label>
+            <div>
+              <button type="submit" aria-label="Submit search"><FiArrowRight /></button>
+            </div>
+          </form>
+        )}
       </div>
-    </nav>
+    </header>
   );
 }

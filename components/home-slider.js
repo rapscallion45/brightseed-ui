@@ -1,8 +1,29 @@
-import parse from 'html-react-parser';
 import { useState } from 'react';
 import { FaAngleRight, FaAngleLeft } from 'react-icons/fa';
+import renderRichText from './rich-text';
 import ButtonScroll from './button-scroll';
 import ButtonLink from './button-link';
+
+function SlideVideo({ slide }) {
+  const [playing, setPlaying] = useState(false);
+  return (
+    <video
+      autoPlay
+      muted
+      loop
+      playsInline
+      preload="metadata"
+      poster={slide.image.sourceUrl}
+      className="slide-video"
+      style={{ opacity: playing ? 1 : 0 }}
+      onPlaying={() => setPlaying(true)}
+      onError={() => setPlaying(false)}
+      aria-hidden="true"
+    >
+      <source src={slide.videoLink?.sourceUrl} type="video/mp4" />
+    </video>
+  );
+}
 
 export default function HomeSlider({ slides }) {
   const [activeSlideIdx, setActiveSlideIdx] = useState(0);
@@ -24,7 +45,7 @@ export default function HomeSlider({ slides }) {
   };
 
   const getSlide = (idx) => {
-    if (idx >= 0 && idx <= slides.length && idx !== activeSlideIdx) {
+    if (idx >= 0 && idx < slides.length && idx !== activeSlideIdx) {
       setActiveSlideIdx(idx);
     }
   };
@@ -34,30 +55,21 @@ export default function HomeSlider({ slides }) {
       {slides && (
         <section id="home-slider">
           <div className="overflow-hidden">
+            <div className="slide-background" aria-hidden="true">
+              {slides.map((slide, idx) => (
+                <img
+                  key={slide.slug}
+                  src={slide.image.sourceUrl}
+                  alt=""
+                  loading="eager"
+                  className="slide-poster"
+                  style={{ opacity: idx === activeSlideIdx ? 1 : 0 }}
+                />
+              ))}
+              <SlideVideo key={slides[activeSlideIdx].slug} slide={slides[activeSlideIdx]} />
+            </div>
             {slides.slice(activeSlideIdx, activeSlideIdx + 1).map((slide) => (
               <div id="active-slide" key={slide.slug}>
-                <div
-                  className="absolute filter brightness-50 z-1 bg-cover bg-center bg-no-repeat bg-img bg-vid-dark height-auto w-full"
-                  style={{
-                    backgroundImage: `url(${slide.featuredImage?.node.sourceUrl}`,
-                  }}
-                >
-                  <div className="relative h-screen overflow-hidden w-full">
-                    <video
-                      autoPlay
-                      muted
-                      loop
-                      preload="none"
-                      poster={slide.featuredImage?.node.sourceUrl}
-                      className="w-auto min-h-full max-w-none min-w-full bg-vid bg-vid-dark overflow-hidden"
-                    >
-                      <source
-                        src={slide.videoLink?.sourceUrl}
-                        type="video/mp4"
-                      />
-                    </video>
-                  </div>
-                </div>
                 <div className="relative -top-full mx-auto max-w-4xl flex justify-center flex-col content-center min-h-screen">
                   <div
                     key={slide.id}
@@ -69,7 +81,7 @@ export default function HomeSlider({ slides }) {
                           {slide.title}
                         </h2>
                         <div className="text-xl md:text-2xl lg:text-3xl text-white py-10 wow animated bounceInRight">
-                          {parse(slide.excerpt)}
+                          {renderRichText(slide.excerpt)}
                         </div>
                       </>
                     )}
@@ -81,7 +93,7 @@ export default function HomeSlider({ slides }) {
                           </a>
                         </h1>
                         <div className="text-xl md:text-2xl lg:text-3xl text-white py-10 wow animated bounceInRight">
-                          {parse(slide.content)}
+                          {renderRichText(slide.content)}
                         </div>
                       </>
                     )}
@@ -90,7 +102,7 @@ export default function HomeSlider({ slides }) {
                     {slide.buttonLink?.isAnchor && (
                       <ButtonScroll
                         to={slide.buttonLink?.buttonLink}
-                        varaint="secondary"
+                        variant="secondary"
                         text={slide.buttonLink?.buttonText}
                         hasIcon
                       >
@@ -100,7 +112,7 @@ export default function HomeSlider({ slides }) {
                     {!slide.buttonLink?.isAnchor && (
                       <ButtonLink
                         uri={slide.buttonLink?.buttonLink}
-                        varaint="secondary"
+                        variant="secondary"
                         text={slide.buttonLink?.buttonText}
                         hasIcon
                       >
