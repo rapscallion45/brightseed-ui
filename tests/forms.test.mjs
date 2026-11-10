@@ -21,6 +21,7 @@ test('public form configuration rejects placeholders and unexpected destinations
 test('contact request preserves the message and sends the reply-to email to Web3Forms', async () => {
   const data = new FormData();
   data.set('access_key', 'test-key');
+  data.set('h-captcha-response', 'verified-test-token');
   data.set('name', 'A visitor');
   data.set('email', 'visitor@example.com');
   data.set('message', 'A project with a new website.\nBudget: £2,000.');
@@ -39,6 +40,8 @@ test('contact request preserves the message and sends the reply-to email to Web3
 });
 
 test('contact submission only succeeds on an explicit provider success', async () => {
+  const verifiedData = new FormData();
+  verifiedData.set('h-captcha-response', 'verified-test-token');
   const cases = [
     { ok: false, json: async () => ({ success: true }) },
     { ok: false, json: async () => ({ success: false }) },
@@ -46,13 +49,24 @@ test('contact submission only succeeds on an explicit provider success', async (
     { ok: true, json: async () => ({}) },
     { ok: true, json: async () => { throw new SyntaxError('Invalid JSON'); } },
   ];
-  await Promise.all(cases.map((response) => assert.rejects(sendContact(new FormData(), {
+  await Promise.all(cases.map((response) => assert.rejects(sendContact(verifiedData, {
     fetchImpl: async () => response,
   }))));
-  await assert.rejects(sendContact(new FormData(), {
+  await assert.rejects(sendContact(verifiedData, {
     fetchImpl: async () => { throw new TypeError('Network unavailable'); },
   }));
-  await assert.rejects(sendContact(new FormData(), {
+  await assert.rejects(sendContact(verifiedData, {
     fetchImpl: async () => { throw new DOMException('Timed out', 'AbortError'); },
   }));
+});
+
+test('missing or empty captcha tokens never send a contact request', async () => {
+  let requests = 0;
+  const fetchImpl = async () => { requests += 1; throw new Error('Unexpected request'); };
+  await Promise.all([undefined, '', '   '].map(async (token) => {
+    const data = new FormData();
+    if (token !== undefined) data.set('h-captcha-response', token);
+    await assert.rejects(sendContact(data, { fetchImpl }), /Complete the spam verification/);
+  }));
+  assert.equal(requests, 0);
 });
