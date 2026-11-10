@@ -16,11 +16,11 @@ import {
   WhatsappIcon,
 } from 'react-share';
 import Container from './container';
-import { CMS_URL } from '../lib/constants';
+import { SITE_URL } from '../lib/site';
 
 export default function PostThanksText() {
   const router = useRouter();
-  const url = `${CMS_URL}${router.asPath}`;
+  const url = `${SITE_URL}${router.asPath}`;
 
   return (
     <section id="thanks-text" className="no-padding-top">

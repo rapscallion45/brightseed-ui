@@ -18,15 +18,15 @@ export default function PriceModels({ items }) {
                 <img
                   width="512"
                   height="512"
-                  src={item.featuredImage.node.sourceUrl}
-                  data-src={item.featuredImage.node.sourceUrl}
+                  src={item.image.sourceUrl}
+                  data-src={item.image.sourceUrl}
                   className="attachment-post-thumbnail size-post-thumbnail wp-post-image lazy loaded"
-                  alt={item.featuredImage.node.altText}
+                  alt={item.image.altText}
                   loading="lazy"
-                  data-srcset={item.featuredImage.node.srcSet}
-                  data-sizes={item.featuredImage.node.sizes}
-                  sizes={item.featuredImage.node.sizes}
-                  srcSet={item.featuredImage.node.srcSet}
+                  data-srcset={item.image.srcSet}
+                  data-sizes={item.image.sizes}
+                  sizes={item.image.sizes}
+                  srcSet={item.image.srcSet}
                   data-was-processed="true"
                 />
                 <br />

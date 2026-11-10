@@ -12,7 +12,7 @@ export default function ButtonScroll({
   switch (variant) {
     case 'border':
       return (
-        <Link to={to} smooth>
+        <Link to={to} smooth offset={-100}>
           <button
             type="button"
             onClick={handleClick}
@@ -34,7 +34,7 @@ export default function ButtonScroll({
     case 'secondary':
     default:
       return (
-        <Link to={to} smooth>
+        <Link to={to} smooth offset={-100}>
           <button
             type="button"
             onClick={handleClick}

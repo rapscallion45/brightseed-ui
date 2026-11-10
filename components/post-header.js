@@ -18,16 +18,17 @@ export default function PostHeader({
       id="entry-header"
       className="max-w-6xl mx-auto entry-header no-padding-bottom"
     >
-      {/* <div className="entry-header-container"> */}
       <PostTitle>{title}</PostTitle>
       <Categories categories={categories} />
       <PostExcerpt>{excerpt}</PostExcerpt>
       <div className="hidden md:block md:mb-12 mt-5">
         <Avatar author={author} />
       </div>
-      <div className="mb-8 md:mb-16 sm:mx-0 mt-3">
-        <CoverImage title={title} coverImage={coverImage} />
-      </div>
+      {coverImage && (
+        <div className="mb-8 md:mb-16 sm:mx-0 mt-3">
+          <CoverImage title={title} coverImage={coverImage} />
+        </div>
+      )}
       <div className="max-w-2xl mx-auto">
         <div className="block md:hidden mb-6">
           <Avatar author={author} />
@@ -38,7 +39,6 @@ export default function PostHeader({
           <Date dateString={date} />
         </div>
       </div>
-      {/* </div> */}
     </header>
   );
 }

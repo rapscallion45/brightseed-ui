@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import Alert from './alert';
 import NavBar from './navbar';
 import Footer from './footer';
 import Meta from './meta';
@@ -10,26 +9,34 @@ const variants = {
   exit: { opacity: 0, x: 0, y: -100 },
 };
 
-export default function Layout({ navMenuItems, preview, children }) {
+export default function Layout({ children }) {
   return (
     <>
       <Meta />
-      <div className="min-h-screen overflow-hidden">
-        <Alert preview={preview} />
-        <NavBar menuItems={navMenuItems} />
+      <div className="agency-shell">
+        <a href="#main-content" className="agency-skip-link">Skip to content</a>
+        <NavBar />
         <motion.main
+          id="main-content"
           role="main"
           initial="hidden"
           animate="enter"
           exit="exit"
           variants={variants}
-          transition={{ type: 'linear' }}
-          className="site-content"
+          transition={{ type: 'tween', ease: 'linear' }}
+          onAnimationComplete={(animation) => {
+            // Cross-page anchors must scroll after the incoming page is mounted.
+            if (animation === 'enter' && window.location.hash) {
+              const target = document.getElementById(window.location.hash.slice(1));
+              target?.scrollIntoView();
+            }
+          }}
+          className="agency-main"
         >
           {children}
+          <Footer />
         </motion.main>
       </div>
-      <Footer navItems={navMenuItems} />
     </>
   );
 }

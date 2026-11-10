@@ -28,12 +28,11 @@ export default function ClientLogos({ logos }) {
                 infiniteLoop
               >
                 {logos.map((logo) => {
-                  const { altText, sourceUrl } = logo.featuredImage.node;
+                  const { altText, sourceUrl } = logo.image;
                   return (
                     <div
                       key={logo.id}
-                      className="w-2/4 sm:w-1/3 mx-auto wow animated zoomIn"
-                      data-wow-delay="0.3s"
+                      className="w-2/4 sm:w-1/3 mx-auto"
                     >
                       <img
                         className="lazy loaded"
@@ -60,12 +59,11 @@ export default function ClientLogos({ logos }) {
                 {logoRows.map((row) => (
                   <div key={row[0].id} className="grid grid-cols-10">
                     {row.map((logo) => {
-                      const { altText, sourceUrl } = logo.featuredImage.node;
+                      const { altText, sourceUrl } = logo.image;
                       return (
                         <div
                           key={logo.id}
-                          className="col-span-2 px-10 mx-auto wow animated zoomIn"
-                          data-wow-delay="0.3s"
+                          className="col-span-2 px-10 mx-auto"
                         >
                           <img
                             className="lazy loaded"

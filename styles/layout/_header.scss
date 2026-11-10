@@ -2,11 +2,11 @@
  * File Name: _header.scss
  * Description: Brightseed website theme nav and header styling
  * Version: 1.0.0
- * Author: Carl Scrivener
+ * Author: Brightseed
  * Author URI: http://brightseed.io
  * Theme URI: http://brightseed.io
  *
- * Copyright: ©, 2020, Carl Scrivener. All rights reserved.
+ * Copyright: ©, 2020, Brightseed. All rights reserved.
  */
 #navigation {
   -webkit-transition: all 0.8s ease 0s;
@@ -270,17 +270,5 @@
     -ms-transform: rotate(0);
     -o-transform: rotate(0);
     transform: rotate(0);
-  }
-}
-
-/*============================================================
-	WordPress sticky header admin bar fix
-==============================================================*/
-.admin-bar {
-  #navigation {
-    top: 46px;
-    @include rwd(782) {
-      top: 32px;
-    }
   }
 }

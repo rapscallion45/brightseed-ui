@@ -1,0 +1,521 @@
+{
+  "slides": [
+    {
+      "id": "cG9zdDo1MTY=",
+      "title": "Websites, web apps and AI built around your business.",
+      "content": "Digital products built around your goals and the people who use them.",
+      "slug": "main-slide",
+      "excerpt": "Websites, web apps and AI built around your business.",
+      "image": {
+        "sourceUrl": "/media/uploads/2020/07/Meeting-1.jpg"
+      },
+      "buttonLink": {
+        "buttonLink": "introduction",
+        "buttonText": "Learn More",
+        "isAnchor": true
+      },
+      "videoLink": {
+        "sourceUrl": "/media/uploads/Videos/Meeting-1.mp4"
+      }
+    },
+    {
+      "id": "cG9zdDo1MTQ=",
+      "title": "Turn a clear brief into a useful first release.",
+      "content": "",
+      "slug": "how-we-work",
+      "excerpt": "Turn a clear brief into a useful first release.",
+      "image": {
+        "sourceUrl": "/media/uploads/2020/08/Laptopwork-1.jpg"
+      },
+      "buttonLink": {
+        "buttonLink": "how-we-work",
+        "buttonText": "How We Work",
+        "isAnchor": true
+      },
+      "videoLink": {
+        "sourceUrl": "/media/uploads/Videos/Laptopwork-1.mp4"
+      }
+    },
+    {
+      "id": "cG9zdDo1MTI=",
+      "title": "Agree the scope and a way of working.",
+      "content": "",
+      "slug": "pricing",
+      "excerpt": "Agree the scope and a way of working.",
+      "image": {
+        "sourceUrl": "/media/uploads/2020/08/Roundabout-1.jpg"
+      },
+      "buttonLink": {
+        "buttonLink": "price",
+        "buttonText": "Pricing",
+        "isAnchor": true
+      },
+      "videoLink": {
+        "sourceUrl": "/media/uploads/Videos/Roundabout-1.mp4"
+      }
+    },
+    {
+      "id": "cG9zdDo1MDk=",
+      "title": "Explore our selected websites and applications.",
+      "content": "",
+      "slug": "browse-portfolio",
+      "excerpt": "Explore our selected websites and applications.",
+      "image": {
+        "sourceUrl": "/media/uploads/2020/08/Containerterminal-1.jpg"
+      },
+      "buttonLink": {
+        "buttonLink": "recent-works",
+        "buttonText": "Our Work",
+        "isAnchor": true
+      },
+      "videoLink": {
+        "sourceUrl": "/media/uploads/Videos/Containerterminal-1.mp4"
+      }
+    },
+    {
+      "id": "cG9zdDo1MDg=",
+      "title": "Tell us what you want to build or improve.",
+      "content": "",
+      "slug": "contact-us",
+      "excerpt": "Tell us what you want to build or improve.",
+      "image": {
+        "sourceUrl": "/media/uploads/2020/08/Scrolling-Smartphone-1.jpg"
+      },
+      "buttonLink": {
+        "buttonLink": "/contact",
+        "buttonText": "Contact Us",
+        "isAnchor": null
+      },
+      "videoLink": {
+        "sourceUrl": "/media/uploads/Videos/Scrolling-Smartphone-1.mp4"
+      }
+    }
+  ],
+  "services": [
+    {
+      "id": "cG9zdDo1MDc=",
+      "title": "Services",
+      "excerpt": "Start with the problem you want to solve. We help you choose what to build and how to move it forward.",
+      "content": "",
+      "services": [
+        {
+          "id": "cG9zdDo2NzY=",
+          "title": "Project discovery",
+          "excerpt": "We turn business goals and user needs into a clear scope and delivery plan.",
+          "image": {
+            "sourceUrl": "/media/uploads/2020/08/analysis.png",
+            "altText": ""
+          }
+        },
+        {
+          "id": "cG9zdDo2Nzg=",
+          "title": "Website and application development",
+          "excerpt": "We build for agreed platforms and test the core journeys against the project requirements.",
+          "image": {
+            "sourceUrl": "/media/uploads/2020/08/webmobile.png",
+            "altText": ""
+          }
+        },
+        {
+          "id": "cG9zdDo2Nzk=",
+          "title": "Interface design",
+          "excerpt": "We plan user journeys and interfaces around the people using your product.",
+          "image": {
+            "sourceUrl": "/media/uploads/2020/08/uidesign.png",
+            "altText": ""
+          }
+        },
+        {
+          "id": "cG9zdDo2ODA=",
+          "title": "Development capacity",
+          "excerpt": "Agree the skills, capacity and responsibilities needed for ongoing product work.",
+          "image": {
+            "sourceUrl": "/media/uploads/2020/08/developers.png",
+            "altText": ""
+          }
+        },
+        {
+          "id": "cG9zdDo2ODE=",
+          "title": "Prototypes and first releases",
+          "excerpt": "Test an idea with a prototype or define a useful first release for real users.",
+          "image": {
+            "sourceUrl": "/media/uploads/2020/08/mvp2.png",
+            "altText": ""
+          }
+        },
+        {
+          "id": "cG9zdDo2ODI=",
+          "title": "E-commerce integrations",
+          "excerpt": "Plan a storefront and the connections needed to sell and manage your products.",
+          "image": {
+            "sourceUrl": "/media/uploads/2020/08/e-commerce.png",
+            "altText": ""
+          }
+        },
+        {
+          "id": "cG9zdDo2ODM=",
+          "title": "Business system integrations",
+          "excerpt": "Connect the tools and information your team needs, based on available APIs and data access.",
+          "image": {
+            "sourceUrl": "/media/uploads/2020/08/erp.png",
+            "altText": ""
+          }
+        },
+        {
+          "id": "cG9zdDo2ODQ=",
+          "title": "Support and improvement",
+          "excerpt": "Plan fixes, maintenance and future improvements as your business changes.",
+          "image": {
+            "sourceUrl": "/media/uploads/2020/08/support.png",
+            "altText": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "cG9zdDo1MDU=",
+      "title": "Workflow",
+      "excerpt": "We agree priorities and build in stages, with regular reviews of working features and the next release.",
+      "content": "![](/media/uploads/2020/08/agile.png)",
+      "services": null
+    },
+    {
+      "id": "cG9zdDo1MDY=",
+      "title": "Technologies",
+      "excerpt": "We select technologies to suit your product, integrations and maintenance needs. Licensing, hosting and third-party costs are considered as part of the scope.",
+      "content": "-   ![](/media/uploads/2020/08/android.png)\n-   ![](/media/uploads/2020/08/ios.png)\n-   ![](/media/uploads/2020/08/java.png)\n-   ![](/media/uploads/2020/08/stripe.png)\n-   ![](/media/uploads/2020/08/swift.png)\n-   ![](/media/uploads/2020/08/html5.png)\n-   ![](/media/uploads/2020/08/mongodb.png)\n-   ![](/media/uploads/2020/08/javascript.png)\n-   ![](/media/uploads/2020/08/sql.png)\n-   ![](/media/uploads/2020/08/woocommerce.png)\n-   ![](/media/uploads/2020/08/nodejs.png)\n-   ![](/media/uploads/2020/08/css3.png)\n-   ![](/media/uploads/2020/08/reactjs.png)\n-   ![](/media/uploads/2020/08/shopify.png)\n-   ![](/media/uploads/2020/08/expressjs.png)\n-   ![](/media/uploads/2020/08/wordpress.png)\n-   ![](/media/uploads/2020/08/paypal.png)\n-   ![](/media/uploads/2020/08/amazon.png)\n-   ![](/media/uploads/2020/08/php.png)\n-   ![](/media/uploads/2020/08/angular4.png)",
+      "services": null
+    }
+  ],
+  "projects": [
+    {
+      "id": "cG9zdDo3MTQ=",
+      "title": "BugTrakr issue tracking application",
+      "content": "brightseed developed BugTrakr with a JavaScript and TypeScript stack, combining project management features with user authentication.",
+      "projectDetails": {
+        "projectLink": "https://bugtrakr.vercel.app",
+        "fullDescription": "An issue-tracking application with user accounts, project creation and issue assignment.",
+        "yearCompleted": "2022",
+        "technologiesUsed": "PostgreSQL, ExpressJS, ReactJS, NodeJS (PERN), TypeScript, Redux, MUI v5"
+      },
+      "image": {
+        "srcSet": "/media/uploads/2022/08/phone-bugtrakr-150x300.png 150w, /media/uploads/2022/08/phone-bugtrakr.png 400w",
+        "sourceUrl": "/media/uploads/2022/08/phone-bugtrakr.png",
+        "altText": "BugTrakr issue tracking application displayed on a mobile screen",
+        "sizes": "(max-width: 150px) 100vw, 150px"
+      },
+      "slug": "bugtrakr",
+      "category": "Web Apps",
+      "caseStudy": {
+        "brief": "Create an application for organising software projects and the issues associated with them.",
+        "work": "brightseed developed BugTrakr with a JavaScript and TypeScript stack, combining project management features with user authentication.",
+        "delivered": [
+          "User authentication",
+          "Project and issue creation",
+          "Assigning users to projects"
+        ],
+        "service": "web-app-development"
+      }
+    },
+    {
+      "id": "cG9zdDo2OTQ=",
+      "title": "FPL Frog fantasy football prototype",
+      "content": "brightseed built a single-page application prototype for the UK-based FPL Frog blog, with sign-up and player statistics alongside weekly articles.",
+      "projectDetails": {
+        "projectLink": "https://fplfrog.co.uk",
+        "fullDescription": "A web application prototype combining fantasy football player statistics with blog content.",
+        "yearCompleted": "2022",
+        "technologiesUsed": "React/Redux, MaterialUI, WordPress Headless CMS"
+      },
+      "image": {
+        "srcSet": "/media/uploads/2021/11/phone-fplfrog_2-150x300.png 150w, /media/uploads/2021/11/phone-fplfrog_2.png 400w",
+        "sourceUrl": "/media/uploads/2021/11/phone-fplfrog_2.png",
+        "altText": "FPL Frog fantasy football prototype displayed on a mobile screen",
+        "sizes": "(max-width: 150px) 100vw, 150px"
+      },
+      "slug": "fpl-frog",
+      "category": "Web Apps",
+      "caseStudy": {
+        "brief": "Bring fantasy football statistics and editorial content together in a web application prototype.",
+        "work": "brightseed built a single-page application prototype for the UK-based FPL Frog blog, with sign-up and player statistics alongside weekly articles.",
+        "delivered": [
+          "User sign-up",
+          "Fantasy football player statistics",
+          "WordPress-backed editorial content"
+        ],
+        "service": "web-app-development"
+      }
+    },
+    {
+      "id": "cG9zdDozOTE=",
+      "title": "Tacoma Sound e-commerce website",
+      "content": "brightseed provided website development, maintenance and support using React, Next.js, TypeScript and Swell Commerce.",
+      "projectDetails": {
+        "projectLink": "https://tacoma-sound.com/",
+        "fullDescription": "Website development, maintenance and support for audio brand Tacoma Sound.",
+        "yearCompleted": "2022",
+        "technologiesUsed": "React, Next.js, TypeScript, Swell Commerce"
+      },
+      "image": {
+        "srcSet": "/media/uploads/2020/08/phone-tacoma_2-150x300.png 150w, /media/uploads/2020/08/phone-tacoma_2.png 400w",
+        "sourceUrl": "/media/uploads/2020/08/phone-tacoma_2.png",
+        "altText": "Tacoma Sound e-commerce website displayed on a mobile screen",
+        "sizes": "(max-width: 150px) 100vw, 150px"
+      },
+      "slug": "tacoma-sound",
+      "category": "Commerce",
+      "caseStudy": {
+        "brief": "Build and maintain the web presence of an audio brand selling sounds, samples and presets.",
+        "work": "brightseed provided website development, maintenance and support using React, Next.js, TypeScript and Swell Commerce.",
+        "delivered": [
+          "E-commerce website development",
+          "Storefront integration with Swell Commerce",
+          "Website maintenance and support"
+        ],
+        "service": "website-development"
+      }
+    },
+    {
+      "id": "cG9zdDozOTg=",
+      "title": "EuroCham Myanmar website redesign",
+      "content": "brightseed worked as the technology partner on the website update, using Laravel and PHP.",
+      "projectDetails": {
+        "projectLink": "https://eurocham-myanmar.org/",
+        "fullDescription": "A refreshed website for the European Chamber of Commerce in Myanmar.",
+        "yearCompleted": "2019",
+        "technologiesUsed": "Laravel, PHP"
+      },
+      "image": {
+        "srcSet": "/media/uploads/2020/08/phone-eurocham-150x300.png 150w, /media/uploads/2020/08/phone-eurocham.png 350w",
+        "sourceUrl": "/media/uploads/2020/08/phone-eurocham.png",
+        "altText": "EuroCham Myanmar website redesign displayed on a mobile screen",
+        "sizes": "(max-width: 150px) 100vw, 150px"
+      },
+      "slug": "eurocham-myanmar",
+      "category": "Websites",
+      "caseStudy": {
+        "brief": "Update the web presence of EuroCham Myanmar with a fresh visual design.",
+        "work": "brightseed worked as the technology partner on the website update, using Laravel and PHP.",
+        "delivered": [
+          "Website redesign",
+          "Implementation with Laravel and PHP"
+        ],
+        "service": "website-development"
+      }
+    },
+    {
+      "id": "cG9zdDozOTU=",
+      "title": "Conyat Create website rebuild",
+      "content": "brightseed rebuilt the Conyat Create website using WordPress and PHP.",
+      "projectDetails": {
+        "projectLink": "https://conyatcreate.com/",
+        "fullDescription": "A complete website rebuild for sustainability consultancy Conyat Create.",
+        "yearCompleted": null,
+        "technologiesUsed": "WordPress, PHP"
+      },
+      "image": {
+        "srcSet": "/media/uploads/2020/08/phone-conyat-150x300.png 150w, /media/uploads/2020/08/phone-conyat.png 350w",
+        "sourceUrl": "/media/uploads/2020/08/phone-conyat.png",
+        "altText": "Conyat Create website rebuild displayed on a mobile screen",
+        "sizes": "(max-width: 150px) 100vw, 150px"
+      },
+      "slug": "conyat-create",
+      "category": "Websites",
+      "caseStudy": {
+        "brief": "Modernise the online presence of a sustainability consultancy working in Myanmar.",
+        "work": "brightseed rebuilt the Conyat Create website using WordPress and PHP.",
+        "delivered": [
+          "Complete website rebuild",
+          "WordPress implementation"
+        ],
+        "service": "website-development"
+      }
+    }
+  ],
+  "featured": {
+    "id": "cG9zdDo1NzA=",
+    "title": "Ideas for your next digital project",
+    "content": "Practical notes on planning, building and improving websites, applications and AI features."
+  },
+  "testimonials": [
+    {
+      "id": "cG9zdDo0MjA=",
+      "title": "Super Quick, Always Contactable, And Took Care Of Everything We Wanted",
+      "content": "We have worked with **brightseed.** for the initial build and subsequent maintenance of our website. They were, and continue to be, fantastic. Super quick, always contactable, and took care of everything we wanted, even when our explanations of what we wanted were less than technically accurate. Would 100% recommend to any businesses looking for a website that stands out from the cookie-cutter designs you see everywhere.",
+      "image": {
+        "sourceUrl": "/media/uploads/2020/08/client-1.jpg",
+        "sizes": "(max-width: 200px) 100vw, 200px",
+        "srcSet": "/media/uploads/2020/08/client-1.jpg 200w, /media/uploads/2020/08/client-1-150x150.jpg 150w",
+        "altText": ""
+      },
+      "clientDetails": {
+        "clientName": "Steve Cowling",
+        "clientPosition": "Director",
+        "clientCompany": "Commen Athletics",
+        "clientUrl": "#"
+      }
+    },
+    {
+      "id": "cG9zdDo0MTg=",
+      "title": "Making Our Website Management A Smooth Process",
+      "content": "**brightseed.** have been managing our website back office for the last year, fixing any trouble appearing but also enhancing the website’s capacities. We appreciate their reactivity and the advice given, making the management of our website a smooth process.",
+      "image": {
+        "sourceUrl": "/media/uploads/2020/08/client-3.jpg",
+        "sizes": "(max-width: 293px) 100vw, 293px",
+        "srcSet": null,
+        "altText": ""
+      },
+      "clientDetails": {
+        "clientName": "Laurenne Sautier",
+        "clientPosition": "Head of Communication and Marketing",
+        "clientCompany": "EuroCham Myanmar",
+        "clientUrl": "https://www.eurocham-myanmar.org/"
+      }
+    },
+    {
+      "id": "cG9zdDo0MTY=",
+      "title": "Absolutely Outstanding!",
+      "content": "I love what you have done! Your choices of imagery and matching them to content is inspired – our new website looks great! Would recommend **brightseed.** to anyone looking to build a striking online presence! Absolutely outstanding!",
+      "image": {
+        "sourceUrl": "/media/uploads/2020/08/client-4.jpg",
+        "sizes": "(max-width: 191px) 100vw, 191px",
+        "srcSet": null,
+        "altText": ""
+      },
+      "clientDetails": {
+        "clientName": "Sally Johnson",
+        "clientPosition": "Founder & Director",
+        "clientCompany": "Fairfields Sustainability Consulting",
+        "clientUrl": "#"
+      }
+    }
+  ],
+  "clients": [
+    {
+      "id": "cG9zdDo1NTg=",
+      "image": {
+        "sourceUrl": "/media/uploads/2020/08/brand-eurocham.png",
+        "altText": "EuroCham Myanmar"
+      }
+    },
+    {
+      "id": "cG9zdDo1NTY=",
+      "image": {
+        "sourceUrl": "/media/uploads/2020/08/brand-conyat.png",
+        "altText": "Conyat Create"
+      }
+    },
+    {
+      "id": "cG9zdDo1NTQ=",
+      "image": {
+        "sourceUrl": "/media/uploads/2020/08/brand-ebowwn.png",
+        "altText": "Ebowwn"
+      }
+    },
+    {
+      "id": "cG9zdDo1NTI=",
+      "image": {
+        "sourceUrl": "/media/uploads/2020/08/brand-aerosoft.png",
+        "altText": "Aerosoft"
+      }
+    },
+    {
+      "id": "cG9zdDo1NTA=",
+      "image": {
+        "sourceUrl": "/media/uploads/2020/08/brand-karzo.png",
+        "altText": "Karzo"
+      }
+    },
+    {
+      "id": "cG9zdDo1NDg=",
+      "image": {
+        "sourceUrl": "/media/uploads/2020/08/brand-fairfields.png",
+        "altText": "Fairfields Sustainability Consulting"
+      }
+    },
+    {
+      "id": "cG9zdDo1NDY=",
+      "image": {
+        "sourceUrl": "/media/uploads/2020/08/brand-commen.png",
+        "altText": "Commen Athletics"
+      }
+    },
+    {
+      "id": "cG9zdDo1NDQ=",
+      "image": {
+        "sourceUrl": "/media/uploads/2020/08/brand-easior.png",
+        "altText": "Easior"
+      }
+    },
+    {
+      "id": "cG9zdDo1NDI=",
+      "image": {
+        "sourceUrl": "/media/uploads/2020/08/brand-organico.png",
+        "altText": "Organico"
+      }
+    },
+    {
+      "id": "cG9zdDo1NDA=",
+      "image": {
+        "sourceUrl": "/media/uploads/2020/08/brand-astro.png",
+        "altText": "Astro"
+      }
+    }
+  ],
+  "pricing": [
+    {
+      "id": "cG9zdDo0Njk=",
+      "title": "Dedicated capacity",
+      "priceDetails": {
+        "feeType": "Hourly",
+        "detailOne": "For ongoing product work that needs regular development capacity.",
+        "detailTwo": "Agree the capacity and priorities for each period.",
+        "detailThree": "Plan the review rhythm and responsibilities together.",
+        "priceLink": "/contact",
+        "priceLinkText": "Discuss Your Project"
+      },
+      "image": {
+        "srcSet": "/media/uploads/2020/08/team-300x300.png 300w, /media/uploads/2020/08/team-150x150.png 150w, /media/uploads/2020/08/team.png 512w",
+        "sourceUrl": "/media/uploads/2020/08/team.png",
+        "sizes": "(max-width: 300px) 100vw, 300px",
+        "altText": ""
+      }
+    },
+    {
+      "id": "cG9zdDo0Njg=",
+      "title": "Time-based work",
+      "priceDetails": {
+        "feeType": "Hourly",
+        "detailOne": "For improvements and support where priorities may evolve.",
+        "detailTwo": "Agree the rate and an initial estimate before work starts.",
+        "detailThree": "Review time spent and the next priorities as work progresses.",
+        "priceLink": "/contact",
+        "priceLinkText": "Discuss Your Project"
+      },
+      "image": {
+        "srcSet": "/media/uploads/2020/08/time-300x300.png 300w, /media/uploads/2020/08/time-150x150.png 150w, /media/uploads/2020/08/time.png 512w",
+        "sourceUrl": "/media/uploads/2020/08/time.png",
+        "sizes": "(max-width: 300px) 100vw, 300px",
+        "altText": ""
+      }
+    },
+    {
+      "id": "cG9zdDo0Njc=",
+      "title": "Defined project",
+      "priceDetails": {
+        "feeType": "Fixed, One Off",
+        "detailOne": "For a project with a clear scope and agreed deliverables.",
+        "detailTwo": "Agree the project price and acceptance criteria before work begins.",
+        "detailThree": "Discuss and price requested changes before starting them.",
+        "priceLink": "/contact",
+        "priceLinkText": "Discuss Your Project"
+      },
+      "image": {
+        "srcSet": "/media/uploads/2020/08/agreement-300x300.png 300w, /media/uploads/2020/08/agreement-150x150.png 150w, /media/uploads/2020/08/agreement.png 512w",
+        "sourceUrl": "/media/uploads/2020/08/agreement.png",
+        "sizes": "(max-width: 300px) 100vw, 300px",
+        "altText": ""
+      }
+    }
+  ]
+}

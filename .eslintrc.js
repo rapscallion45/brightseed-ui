@@ -12,7 +12,15 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['react'],
+  overrides: [
+    {
+      files: ['lib/*.mjs', 'tests/*.mjs', 'scripts/*.mjs'],
+      env: { node: true },
+      rules: { 'import/extensions': ['error', 'ignorePackages', { mjs: 'always' }] },
+    },
+  ],
   rules: {
+    'import/extensions': ['error', 'ignorePackages', { js: 'never', jsx: 'never', mjs: 'always' }],
     /* Next.js does not require us to import React in all components */
     'react/react-in-jsx-scope': 'off',
     /* Not worried about prop types for now, as possibly moving to TS */

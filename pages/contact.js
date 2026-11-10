@@ -1,29 +1,18 @@
-import Head from 'next/head';
-import parse from 'html-react-parser';
 import Layout from '../components/layout';
+import PageSeo from '../components/page-seo';
 import ContactForm from '../components/contact-form';
-import { getPageDataByUri, getPrimaryMenu } from '../lib/api';
+import { PageHeading } from '../components/agency-shared';
 
-const Contact = ({ menuData, pageData: { title, content, seo }, preview }) => (
-  <Layout preview={preview} navMenuItems={menuData}>
-    <Head>{parse(seo.fullHead)}</Head>
-    <section id="contact-header">
-      <div className="container max-w-6xl mx-auto pt-20 pb-5 px-5">
-        <div className="sec-title text-center">
-          <h2>{title}</h2>
-          {parse(content)}
+export default function Contact() {
+  return (
+    <Layout>
+      <PageSeo title="Discuss Your Website, Web App or AI Project" description="Tell brightseed about your business, the problem you want to solve and your project plans. Contact us about website, web app and AI development." path="/contact" />
+      <PageHeading eyebrow="Let’s work together" title="Tell us about your project">A new website, a custom application or a practical AI feature. Start with what you want to improve.</PageHeading>
+      <section className="agency-section agency-contact" id="contact">
+        <div className="agency-container">
+          <ContactForm />
         </div>
-        <ContactForm />
-      </div>
-    </section>
-  </Layout>
-);
-export default Contact;
-
-export async function getStaticProps({ preview = false }) {
-  const menuData = await getPrimaryMenu();
-  const pageData = await getPageDataByUri('/contact');
-  return {
-    props: { menuData, pageData, preview },
-  };
+      </section>
+    </Layout>
+  );
 }
