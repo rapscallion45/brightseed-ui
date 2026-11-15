@@ -191,20 +191,20 @@
     {
       "id": "reward-wing",
       "title": "RewardWing",
-      "content": "brightseed is developing RewardWing to help travellers find flights they could book with Avios.",
+      "content": "RewardWing helps travellers find reward flights with enough seats for their group.",
       "projectDetails": {
-        "fullDescription": "A flight finder in development for travellers using Avios. Search across dates and cabins to see which routes might have enough reward seats for everyone travelling.",
+        "fullDescription": "Search reward flights by date, cabin and group size. Compare reported seat counts before checking availability with the airline.",
         "technologiesUsed": "React, Vite, Python"
       },
       "image": {
-        "sourceUrl": "/design/agency/reward-wing.jpg",
-        "altText": "RewardWing’s mobile search form for finding flights with Avios"
+        "sourceUrl": "/design/agency/reward-wing-phone.webp",
+        "altText": "RewardWing on a phone, showing the reward programme selector and travel date fields"
       },
       "slug": "reward-wing",
       "category": "Web Apps",
       "caseStudy": {
         "brief": "A date marked as available doesn’t tell a family whether they can fly together. Help travellers distinguish a promising date from a flight with a reported seat count.",
-        "work": "brightseed is building a search that keeps calendar leads separate from itineraries with reported seat counts. Travellers can open a matching route and date on the airline’s website to check what they can book.",
+        "work": "RewardWing shows which dates have a signal of reward availability and which flights have a reported seat count. Travellers can open a matching route and date on the airline’s website to check what they can book.",
         "delivered": [
           "Search by airport, date range, cabin and number of travellers",
           "Pause a search and resume it without losing the results already found",
