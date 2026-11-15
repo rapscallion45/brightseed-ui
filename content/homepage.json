@@ -189,6 +189,31 @@
   ],
   "projects": [
     {
+      "id": "reward-wing",
+      "title": "RewardWing",
+      "content": "brightseed is developing RewardWing to help travellers find flights they could book with Avios.",
+      "projectDetails": {
+        "fullDescription": "A flight finder in development for travellers using Avios. Search across dates and cabins to see which routes might have enough reward seats for everyone travelling.",
+        "technologiesUsed": "React, Vite, Python"
+      },
+      "image": {
+        "sourceUrl": "/design/agency/reward-wing.jpg",
+        "altText": "RewardWing’s mobile search form for finding flights with Avios"
+      },
+      "slug": "reward-wing",
+      "category": "Web Apps",
+      "caseStudy": {
+        "brief": "A date marked as available doesn’t tell a family whether they can fly together. Help travellers distinguish a promising date from a flight with a reported seat count.",
+        "work": "brightseed is building a search that keeps calendar leads separate from itineraries with reported seat counts. Travellers can open a matching route and date on the airline’s website to check what they can book.",
+        "delivered": [
+          "Search by airport, date range, cabin and number of travellers",
+          "Pause a search and resume it without losing the results already found",
+          "Filter the results and download a shortlist as Excel or CSV"
+        ],
+        "service": "web-app-development"
+      }
+    },
+    {
       "id": "cG9zdDo3MTQ=",
       "title": "BugTrakr issue tracking application",
       "content": "brightseed developed BugTrakr with a JavaScript and TypeScript stack, combining project management features with user authentication.",
@@ -213,35 +238,6 @@
           "User authentication",
           "Project and issue creation",
           "Assigning users to projects"
-        ],
-        "service": "web-app-development"
-      }
-    },
-    {
-      "id": "cG9zdDo2OTQ=",
-      "title": "FPL Frog fantasy football prototype",
-      "content": "brightseed built a single-page application prototype for the UK-based FPL Frog blog, with sign-up and player statistics alongside weekly articles.",
-      "projectDetails": {
-        "projectLink": "https://fplfrog.co.uk",
-        "fullDescription": "A web application prototype combining fantasy football player statistics with blog content.",
-        "yearCompleted": "2022",
-        "technologiesUsed": "React/Redux, MaterialUI, WordPress Headless CMS"
-      },
-      "image": {
-        "srcSet": "/media/uploads/2021/11/phone-fplfrog_2-150x300.png 150w, /media/uploads/2021/11/phone-fplfrog_2.png 400w",
-        "sourceUrl": "/media/uploads/2021/11/phone-fplfrog_2.png",
-        "altText": "FPL Frog fantasy football prototype displayed on a mobile screen",
-        "sizes": "(max-width: 150px) 100vw, 150px"
-      },
-      "slug": "fpl-frog",
-      "category": "Web Apps",
-      "caseStudy": {
-        "brief": "Bring fantasy football statistics and editorial content together in a web application prototype.",
-        "work": "brightseed built a single-page application prototype for the UK-based FPL Frog blog, with sign-up and player statistics alongside weekly articles.",
-        "delivered": [
-          "User sign-up",
-          "Fantasy football player statistics",
-          "WordPress-backed editorial content"
         ],
         "service": "web-app-development"
       }
