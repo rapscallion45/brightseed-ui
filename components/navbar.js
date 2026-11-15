@@ -12,6 +12,12 @@ const links = [
   ['Work', '/portfolio'], ['Insights', '/blog'],
 ];
 
+function currentLink(pathname, href) {
+  if (pathname === href) return 'page';
+  const section = href === '/blog' ? '/posts' : href;
+  return pathname.startsWith(`${section}/`) ? 'location' : undefined;
+}
+
 export default function NavBar() {
   const [open, setOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -47,7 +53,7 @@ export default function NavBar() {
         </button>
         <nav id="primary-navigation" aria-label="Main navigation" className={`agency-navigation ${open ? 'is-open' : ''}`}>
           {links.map(([label, href]) => (
-            <Link href={href} key={label} onClick={close}>{label}</Link>
+            <Link href={href} key={label} className="agency-nav-link" aria-current={currentLink(router.pathname, href)} onClick={close}>{label}</Link>
           ))}
           <Link href="/contact" className="agency-mobile-quote agency-button" onClick={close}>Get A Quote</Link>
         </nav>
