@@ -55,6 +55,8 @@ section[id], article[id] { scroll-margin-top: 105px; }
 .agency-brand > img { display: block; width: 240px; height: auto; }
 .agency-navigation { display: flex; align-items: center; gap: 40px; color: var(--navy); }
 .agency-navigation > a, .agency-pages > button { font-size: 16px; white-space: nowrap; }
+.agency-nav-link { font-weight: 500; text-underline-offset: .3em; }
+.agency-nav-link:hover, .agency-nav-link:active, .agency-nav-link:focus-visible, .agency-nav-link[aria-current] { color: inherit; text-decoration: underline; }
 .agency-pages { position: relative; }
 .agency-pages > button { display: flex; align-items: center; gap: 10px; color: var(--navy); padding: 12px 0; }
 .agency-pages > button:hover { color: var(--brand-ink); }
