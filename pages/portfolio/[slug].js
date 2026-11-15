@@ -6,7 +6,7 @@ import { PageHeading } from '../../components/agency-shared';
 import ContactDetails from '../../components/contact-details';
 import { getHomepage } from '../../lib/content.mjs';
 import { breadcrumbSchema } from '../../lib/seo.mjs';
-import BrandText, { BrandName } from '../../components/brand-text';
+import BrandText from '../../components/brand-text';
 
 export default function Project({ project }) {
   const crumbs = [{ label: 'Home', path: '/' }, { label: 'Work', path: '/portfolio' }, { label: project.title, path: `/portfolio/${project.slug}` }];
@@ -18,18 +18,10 @@ export default function Project({ project }) {
       <article className="agency-prose agency-detail-prose">
         <figure className="agency-case-image">
           <img src={project.image.sourceUrl} alt={project.image.altText} width="400" height="808" />
-          <figcaption>
-            Project screenshot
-            {project.projectDetails.yearCompleted ? ` · ${project.projectDetails.yearCompleted}` : ''}
-            . The current external site may have changed since this work.
-          </figcaption>
         </figure>
         <h2>The brief</h2>
         <p><BrandText>{project.caseStudy.brief}</BrandText></p>
-        <h2>
-          <BrandName />
-          ’s work
-        </h2>
+        <h2>Work Completed</h2>
         <p><BrandText>{project.caseStudy.work}</BrandText></p>
         <h2>What was delivered</h2>
         <ul>
@@ -41,10 +33,12 @@ export default function Project({ project }) {
         <p>{project.projectDetails.technologiesUsed}</p>
         <p>
           <Link href={`/services/${project.caseStudy.service}`}>Explore the related development service</Link>
-          {' '}
-          or
-          {' '}
-          <a href={project.projectDetails.projectLink} target="_blank" rel="noopener noreferrer">visit the project website</a>
+          {project.projectDetails.projectLink && (
+            <>
+              {' or '}
+              <a href={project.projectDetails.projectLink} target="_blank" rel="noopener noreferrer">visit the project website</a>
+            </>
+          )}
           .
         </p>
       </article>

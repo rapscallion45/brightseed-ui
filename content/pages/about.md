@@ -11,7 +11,7 @@ Our focus is [website design and development](/services/website-development), [c
 
 ## Work you can explore
 
-Our selected projects include an issue-tracking application, a fantasy football prototype, an e-commerce website and business website rebuilds. Each project page explains brightseed's role and the work delivered.
+Our selected projects include a reward flight finder, an issue-tracking application, an e-commerce website and business website rebuilds. Each project page explains brightseed's role and the work delivered.
 
 [Explore our selected work](/portfolio).
 
