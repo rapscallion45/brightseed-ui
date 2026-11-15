@@ -17,7 +17,7 @@ export default function AgencyPortfolio({ projects, limit }) {
       <div className="agency-portfolio-grid">
         {visible.map((project) => (
           <article key={project.id} className="agency-project">
-            <Link className={`agency-project-art project-${projects.indexOf(project) % 4}`} href={`/portfolio/${project.slug}`} aria-label={`Read about ${project.title}`}>
+            <Link className={`agency-project-art project-${project.slug}`} href={`/portfolio/${project.slug}`} aria-label={`Read about ${project.title}`}>
               <div className="agency-project-art-caption">
                 <span>{project.category}</span>
                 <strong>{projectLabel(project)}</strong>

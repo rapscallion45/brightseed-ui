@@ -16,7 +16,7 @@ export default function Project({ project }) {
       <PageHeading eyebrow="Selected work" title={project.title}>{project.projectDetails.fullDescription}</PageHeading>
       <Breadcrumbs items={crumbs} />
       <article className="agency-prose agency-detail-prose">
-        <figure className="agency-case-image">
+        <figure className={`agency-case-image project-${project.slug}`}>
           <img src={project.image.sourceUrl} alt={project.image.altText} width="400" height="808" />
         </figure>
         <h2>The brief</h2>
