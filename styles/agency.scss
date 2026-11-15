@@ -17,6 +17,7 @@
 .brand-name { font-weight: 700; font-family: 'questrial regular', Arial, sans-serif; text-transform: none; }
 
 :root {
+  --header-height: 105px;
   --brand: #009ee3;
   --brand-ink: #0075a8;
   --brand-hover: #0088c4;
@@ -47,7 +48,7 @@ section[id], article[id] { scroll-margin-top: 105px; }
 .agency-skip-link:focus { top: 10px; }
 .agency-header { position: fixed; inset: 0 0 auto; z-index: 100; background: rgba(255,255,255,.97); transition: box-shadow .25s; }
 .agency-header.is-scrolled { box-shadow: 0 1px 12px #090e340d; backdrop-filter: blur(12px); }
-.agency-header-inner { position: relative; display: flex; align-items: center; height: 105px; gap: 64px; transition: height .25s; }
+.agency-header-inner { position: relative; display: flex; align-items: center; height: var(--header-height); gap: 64px; transition: height .25s; }
 .is-scrolled .agency-header-inner { height: 82px; }
 // The symbol's spark extends above the wordmark; align the lettering with the navigation.
 .agency-brand { display: inline-flex; align-items: center; flex-shrink: 0; gap: 14px; color: var(--brand-ink); transform: translateY(-8%); }
@@ -319,7 +320,7 @@ section[id], article[id] { scroll-margin-top: 105px; }
 .agency-about.agency-blue-gradient {
   background: linear-gradient(180deg, var(--brand) 0%, var(--brand) 60%, var(--navy) 100%);
 }
-.agency-outsourcing { padding: clamp(56px, 7vw, 100px) 0; }
+.agency-outsourcing { margin-top: var(--header-height); padding: clamp(56px, 7vw, 100px) 0; }
 .agency-outsourcing-copy { max-width: 920px; margin: 0 auto; font-size: clamp(18px, 1.6vw, 22px); line-height: 1.75; text-align: center; }
 .agency-outsourcing-copy p { margin: 0; }
 .agency-outsourcing-copy > p + p { margin-top: 28px; }
@@ -342,7 +343,8 @@ section[id], article[id] { scroll-margin-top: 105px; }
   .agency-price-card { padding: 36px 26px; }
 }
 @media (max-width: 991px) {
-  .agency-header-inner, .is-scrolled .agency-header-inner { height: 80px; gap: 16px; }
+  :root { --header-height: 80px; }
+  .agency-header-inner, .is-scrolled .agency-header-inner { height: var(--header-height); gap: 16px; }
   .agency-brand > img { width: 210px; }
   .agency-menu-toggle { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; width: 44px; height: 44px; margin-left: auto; font-size: 30px; color: var(--navy); }
   .agency-header-actions { display: none; }

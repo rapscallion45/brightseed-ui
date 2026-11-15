@@ -4,6 +4,10 @@ import { BrandName } from './brand-text';
 export default function AboutOutsourcing() {
   return (
     <section className="agency-outsourcing agency-blue-gradient" aria-label="Our approach to outsourcing">
+      <h1 className="sr-only">
+        {'About '}
+        <BrandName />
+      </h1>
       <div className="agency-container">
         <div className="agency-outsourcing-copy">
           <p>
