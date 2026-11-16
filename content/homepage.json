@@ -214,6 +214,32 @@
       }
     },
     {
+      "id": "space-zebras",
+      "title": "Space Zebras",
+      "content": "Space Zebras brings a pixel-art crew of zebra pilots into a wallet-connected NFT collection.",
+      "projectDetails": {
+        "projectLink": "https://space-zebras.vercel.app",
+        "fullDescription": "A minting site for a crew of pixel-art zebra pilots. Collectors can check their presale place and see which pilots belong to their wallet.",
+        "technologiesUsed": "Next.js, React, TypeScript, Material UI, wagmi, Solidity"
+      },
+      "image": {
+        "sourceUrl": "/design/agency/space-zebras-phone.webp",
+        "altText": "Space Zebras on a phone, with three zebra pilots flying above a planet beneath the pixel-art title"
+      },
+      "slug": "space-zebras",
+      "category": "Web Apps",
+      "caseStudy": {
+        "brief": "Give collectors a place to meet the Space Zebras crew, register for the presale and find the pilots they own.",
+        "work": "brightseed built the collection site around the illustrated crew. A collector signs a message with their wallet to register. When they return with the same wallet, the site shows their presale or waitlist place.",
+        "delivered": [
+          "A mobile-friendly collection homepage with pixel-art characters and animated flybys",
+          "Wallet registration with presale and waitlist places",
+          "Separate presale and public minting flows, plus a gallery of the connected wallet’s pilots"
+        ],
+        "service": "web-app-development"
+      }
+    },
+    {
       "id": "cG9zdDo3MTQ=",
       "title": "BugTrakr issue tracking application",
       "content": "brightseed developed BugTrakr with a JavaScript and TypeScript stack, combining project management features with user authentication.",

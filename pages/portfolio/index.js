@@ -8,7 +8,7 @@ import { getHomepage } from '../../lib/content.mjs';
 export default function Portfolio({ projects }) {
   return (
     <Layout>
-      <PageSeo title="Selected Website & Web App Projects" path="/portfolio" description="Explore brightseed’s website and application work, including RewardWing, BugTrakr, Tacoma Sound, EuroCham Myanmar and Conyat Create." />
+      <PageSeo title="Selected Website & Web App Projects" path="/portfolio" description="Explore brightseed’s website and application work, including RewardWing, Space Zebras, BugTrakr, Tacoma Sound, EuroCham Myanmar and Conyat Create." />
       <PageHeading eyebrow="Selected work" title="Websites and applications we’ve built">Explore the brief, the work and the technology behind each project.</PageHeading>
       <section className="agency-container agency-section"><AgencyPortfolio projects={projects} /></section>
       <ContactDetails />
