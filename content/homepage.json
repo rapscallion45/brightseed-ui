@@ -189,6 +189,32 @@
   ],
   "projects": [
     {
+      "id": "vecquon",
+      "title": "Vecquon",
+      "content": "A product website introducing FlightX and flightCORE, Vecquon’s flight-control software.",
+      "projectDetails": {
+        "projectLink": "https://vecquon-website.vercel.app",
+        "fullDescription": "A motorsport-inspired product website explaining Vecquon’s flight-control software, from motion processing and control to tuning and telemetry.",
+        "technologiesUsed": "React, Vite, JavaScript, CSS"
+      },
+      "image": {
+        "sourceUrl": "/design/agency/vecquon-phone.webp",
+        "altText": "Vecquon website on a mobile screen, introducing FlightX flight-control software with drone racing imagery"
+      },
+      "slug": "vecquon",
+      "category": "Websites",
+      "caseStudy": {
+        "brief": "Introduce Vecquon’s flight-control software with a clear product story and a visual identity inspired by motorsport.",
+        "work": "brightseed built a responsive React website around FlightX and flightCORE. Racing imagery and a red-and-charcoal palette establish the brand, while interactive architecture tabs explain how the software layers fit together.",
+        "delivered": [
+          "Responsive product website with self-hosted fonts",
+          "Keyboard-accessible architecture tabs and capability links",
+          "Product FAQs and a dedicated downloads page with release-status information"
+        ],
+        "service": "website-development"
+      }
+    },
+    {
       "id": "reward-wing",
       "title": "RewardWing",
       "content": "RewardWing helps travellers find reward flights with enough seats for their group.",
