@@ -10,3 +10,5 @@ These publicly served assets were downloaded on 2026-11-09 to recreate the visua
 - `inter.woff2`: `/_next/static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2`
 
 The React components and styles were implemented in this repository. Brightseed's original #009EE3 accent colour, page transitions, real client/project content, repository Markdown posts and email contact links are retained. Stock imagery illustrates services; it does not depict Brightseed staff. Original imported media remains in `public/media`.
+
+- `vecquon-phone.webp`: mobile screenshot of https://vecquon-website.vercel.app captured on 2026-11-23, framed locally for the portfolio card. The racing illustration is part of the Vecquon site.
